@@ -16,7 +16,7 @@ const AdmissionsPage = () => {
     <div className="flex min-h-screen flex-col">
       <AnnouncementBar />
       <Navbar />
-      <main className="flex flex-1 flex-col bg-slate-50">
+      <main className="flex flex-1 flex-col bg-white">
         <div className="bg-white py-12 shadow-sm">
           <Container className="space-y-3 text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-600">
@@ -69,7 +69,7 @@ const AdmissionsPage = () => {
           <div className="grid gap-4 md:grid-cols-3">
             {admissions.highlights.map((item) => (
               <FadeIn key={item.title}>
-                <div className="rounded-2xl bg-gradient-to-br from-emerald-50 to-sky-50 p-5 text-left shadow-sm">
+                <div className="rounded-2xl bg-white p-5 text-left shadow-sm">
                   <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
                   <p className="mt-2 text-sm text-slate-700">{item.detail}</p>
                 </div>

@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { useLanguage } from '../../providers/LanguageProvider'
 import FadeIn from '../FadeIn'
+import WideContainer from '../WideContainer'
 
 const AboutHero = () => {
   const { content } = useLanguage()
@@ -15,7 +16,7 @@ const AboutHero = () => {
         <div className='pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.2),transparent_35%),radial-gradient(circle_at_70%_10%,rgba(255,255,255,0.15),transparent_30%)]' />
 
         {/* CONTENT WRAPPER */}
-        <div id='home' className='relative space-y-8 max-w-3/5 mx-auto'>
+        <WideContainer id='home' className='relative space-y-8'>
           {/* TEXT CONTENT */}
           <div className='relative z-10 space-y-3 max-w-2xl'>
             <p className='inline-flex rounded-full bg-white/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em]'>
@@ -41,7 +42,7 @@ const AboutHero = () => {
               </div>
             ))}
           </div>
-        </div>
+        </WideContainer>
 
         {/* ABSOLUTE IMAGE */}
         <Image

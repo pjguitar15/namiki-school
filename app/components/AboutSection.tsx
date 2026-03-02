@@ -1,11 +1,19 @@
 'use client';
 
+import { HiSparkles } from "react-icons/hi2";
+import { LuHandshake, LuPresentation } from "react-icons/lu";
 import Container from "./Container";
 import { useLanguage } from "../providers/LanguageProvider";
 import FadeIn from "./FadeIn";
 
 const AboutSection = () => {
   const { content } = useLanguage();
+  const cardIcons = [HiSparkles, LuPresentation, LuHandshake];
+  const cardThemes = [
+    "bg-[#f43f7a] text-white",
+    "bg-[#0ea5e9] text-white",
+    "bg-[#f59e0b] text-slate-900",
+  ];
 
   return (
     <FadeIn>
@@ -32,15 +40,29 @@ const AboutSection = () => {
           </div>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
-          {content.features.map((feature) => (
+          {content.features.map((feature, index) => (
             <div
               key={feature.title}
-              className="rounded-2xl border border-slate-100 bg-slate-50/80 p-6 shadow-sm"
+              className={`rounded-2xl p-6 shadow-[0_12px_24px_rgba(15,23,42,0.16)] ${cardThemes[index % cardThemes.length]}`}
             >
-              <h3 className="text-xl font-semibold text-slate-900">
+              {(() => {
+                const Icon = cardIcons[index % cardIcons.length];
+
+                return (
+              <span
+                aria-hidden="true"
+                className={`inline-flex h-11 w-11 items-center justify-center rounded-full text-xl ${
+                  index % 3 === 2 ? "bg-slate-900/10" : "bg-white/20"
+                }`}
+              >
+                <Icon />
+              </span>
+                );
+              })()}
+              <h3 className="mt-4 text-xl font-semibold">
                 {feature.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-700">
+              <p className="mt-3 text-sm leading-relaxed opacity-90">
                 {feature.body}
               </p>
             </div>

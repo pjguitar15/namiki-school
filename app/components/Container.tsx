@@ -1,6 +1,7 @@
 'use client';
 
 import { ReactNode } from "react";
+import WideContainer from "./WideContainer";
 
 type Props = {
   id?: string;
@@ -10,12 +11,9 @@ type Props = {
 
 const Container = ({ id, className = "", children }: Props) => {
   return (
-    <section
-      id={id}
-      className={`w-full max-w-6xl px-6 md:px-10 lg:px-14 mx-auto ${className}`}
-    >
+    <WideContainer as="section" id={id} className={className}>
       {children}
-    </section>
+    </WideContainer>
   );
 };
 

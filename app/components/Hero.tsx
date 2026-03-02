@@ -2,9 +2,9 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import Container from './Container'
 import { useLanguage } from '../providers/LanguageProvider'
 import FadeIn from './FadeIn'
+import WideContainer from './WideContainer'
 
 const Hero = () => {
   const { content } = useLanguage()
@@ -12,15 +12,25 @@ const Hero = () => {
 
   return (
     <FadeIn>
-      <div className='relative isolate overflow-hidden bg-gradient-to-r from-emerald-500 to-sky-500 text-slate-900'>
-        <div className='pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.25),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.18),transparent_30%),radial-gradient(circle_at_40%_70%,rgba(255,255,255,0.18),transparent_30%)]' />
-        <div
+      <div className='relative isolate overflow-hidden text-slate-900'>
+        <Image
+          src='/student-class/workshops.jpg'
+          alt='Asian children learning in an English classroom'
+          fill
+          priority
+          className='object-cover object-center'
+          sizes='100vw'
+        />
+        <div className='pointer-events-none absolute inset-0 bg-slate-900/30' />
+        <div className='pointer-events-none absolute inset-0 bg-gradient-to-r from-teal-500/90 via-cyan-500/45 to-transparent' />
+        <div className='pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.25),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.15),transparent_30%),radial-gradient(circle_at_40%_70%,rgba(255,255,255,0.12),transparent_30%)]' />
+        <WideContainer
           id='home'
-          className='flex flex-col gap-12 md:flex-row md:items-stretch max-w-3/5 mx-auto'
+          className='relative z-10 flex min-h-[34rem] flex-col md:min-h-[40rem]'
         >
           {/* LEFT */}
-          <div className='flex-1'>
-            <div className='space-y-6 text-left text-white pt-10 pb-24'>
+          <div className='max-w-2xl'>
+            <div className='space-y-6 pb-20 pt-12 text-left text-white md:pb-24 md:pt-14'>
               <span className='inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-sm font-semibold uppercase tracking-wide backdrop-blur'>
                 <span className='h-2 w-2 rounded-full bg-orange-300' />
                 {hero.badge}
@@ -37,7 +47,7 @@ const Hero = () => {
               <div className='flex flex-col gap-3 sm:flex-row'>
                 <Link
                   href='#contact'
-                  className='inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-base font-semibold text-emerald-700 shadow-lg shadow-emerald-200 transition hover:-translate-y-0.5 hover:shadow-xl'
+                  className='inline-flex items-center justify-center rounded-full bg-[#ff7a1a] px-6 py-3 text-base font-bold text-white shadow-lg shadow-orange-300/70 transition hover:-translate-y-0.5 hover:bg-[#ef6c00] hover:shadow-xl'
                 >
                   {hero.ctaPrimary}
                 </Link>
@@ -63,23 +73,20 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* RIGHT */}
-          <div className='relative flex-1 min-h-[26rem] md:min-h-[34rem]'>
-            <Image
-              src='/student-models/landing-model.png'
-              alt='Student'
-              width={520}
-              height={840}
-              priority
-              className='
-        pointer-events-none
-        absolute bottom-0 right-0
-        w-auto
-        h-[22rem] sm:h-[26rem] md:h-[32rem] lg:h-[36rem]
-        drop-shadow-2xl
-      '
+        </WideContainer>
+
+        <div className='pointer-events-none absolute inset-x-0 bottom-0 z-20 h-[72px] md:h-[102px]'>
+          <svg
+            viewBox='0 0 1440 160'
+            preserveAspectRatio='none'
+            className='h-full w-full'
+            aria-hidden='true'
+          >
+            <path
+              d='M0,78 C220,18 480,20 720,78 C960,136 1220,138 1440,84 L1440,160 L0,160 Z'
+              fill='#f8fafc'
             />
-          </div>
+          </svg>
         </div>
       </div>
     </FadeIn>

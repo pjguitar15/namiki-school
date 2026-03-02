@@ -10,7 +10,7 @@ const ContactPage = () => {
     <div className="flex min-h-screen flex-col">
       <AnnouncementBar />
       <Navbar />
-      <main className="flex flex-1 flex-col bg-slate-50">
+      <main className="flex flex-1 flex-col bg-white">
         <ContactSection />
       </main>
       <Footer />

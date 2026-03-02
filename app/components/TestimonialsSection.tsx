@@ -27,7 +27,7 @@ const TestimonialsSection = () => {
           {content.testimonials.map((item) => (
             <div
               key={item.quote}
-              className="flex h-full flex-col rounded-3xl border border-slate-100 bg-slate-50 p-6 shadow-inner shadow-slate-100"
+              className="flex h-full flex-col rounded-3xl border border-slate-100 bg-white p-6 shadow-inner shadow-slate-100"
             >
               <div className="text-4xl text-teal-500">“</div>
               <p className="flex-1 text-sm leading-relaxed text-slate-700">

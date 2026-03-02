@@ -23,7 +23,7 @@ const ValuesSection = () => {
           {values.map((value) => (
             <div
               key={value.title}
-              className="rounded-2xl border border-slate-100 bg-slate-50 p-6 text-left shadow-sm"
+              className="rounded-2xl border border-slate-100 bg-white p-6 text-left shadow-sm"
             >
               <p className="text-sm font-semibold uppercase tracking-wide text-teal-600">
                 {value.title}

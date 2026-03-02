@@ -54,6 +54,62 @@ export type ContactCopy = {
   hours: string;
 };
 
+export type ColorSquaresSectionCopy = {
+  eyebrow: string;
+  heading: string;
+  description: string;
+  columns: 2 | 3 | 4;
+  items: {
+    id: string;
+    title: string;
+    lines: string[];
+    color: string;
+    textColor?: string;
+  }[];
+};
+
+export type SchoolShowcaseCopy = {
+  hero: {
+    imageSrc: string;
+    imageAlt: string;
+    title: string;
+    indexLabel: string;
+    description: string;
+  };
+  intro: {
+    eyebrow: string;
+    title: string;
+    paragraphs: string[];
+    imageSrc: string;
+    imageAlt: string;
+    statValue: string;
+    statLabel: string;
+    principalName: string;
+    principalRole: string;
+  };
+  mosaicTiles: (
+    | {
+        id: string;
+        type: "image";
+        imageSrc: string;
+        imageAlt: string;
+        colSpan?: 1 | 2;
+        rowSpan?: 1 | 2;
+      }
+    | {
+        id: string;
+        type: "color";
+        title: string;
+        description: string;
+        eyebrow?: string;
+        backgroundColor: string;
+        textColor?: string;
+        colSpan?: 1 | 2;
+        rowSpan?: 1 | 2;
+      }
+  )[];
+};
+
 export type LanguageContent = {
   navItems: NavItem[];
   hero: HeroCopy;
@@ -86,6 +142,7 @@ export type LanguageContent = {
     values: { title: string; body: string }[];
     highlights: { title: string; description: string; icon: string }[];
     faqs: { question: string; answer: string }[];
+    colorPaletteSection: ColorSquaresSectionCopy;
   };
   admissionsPage: {
     heroTitle: string;
@@ -97,6 +154,8 @@ export type LanguageContent = {
     heroTitle: string;
     heroDescription: string;
   };
+  colorSquaresSection: ColorSquaresSectionCopy;
+  schoolShowcaseSection: SchoolShowcaseCopy;
 };
 
 const partners = [
@@ -337,6 +396,40 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
             '短時間で取り組める復習タスクをお渡しし、習慣づくりをサポートします。',
         },
       ],
+      colorPaletteSection: {
+        eyebrow: 'Learning Atmosphere',
+        heading: '色でつくる、学びの空気感',
+        description:
+          '集中・安心・意欲をバランスよく引き出すために、教室運営で意識している色の役割です。',
+        columns: 4,
+        items: [
+          {
+            id: 'focus',
+            title: '集中',
+            color: '#2878d9',
+            lines: ['青系ゾーン', '静かな読解時間', '思考の整理を促進'],
+          },
+          {
+            id: 'calm',
+            title: '安心',
+            color: '#58b25a',
+            lines: ['緑系の壁面', '気持ちを落ち着ける', '自分のペースを維持'],
+          },
+          {
+            id: 'energy',
+            title: '活力',
+            color: '#f07f2f',
+            lines: ['オレンジの差し色', '会話練習を後押し', '参加意欲を高める'],
+          },
+          {
+            id: 'clarity',
+            title: '明瞭さ',
+            color: '#f3f0e7',
+            textColor: '#374151',
+            lines: ['オフホワイト背景', '視認性を確保', '教材を見やすくする'],
+          },
+        ],
+      },
     },
     admissionsPage: {
       heroTitle: '入学・お申込みの流れ',
@@ -373,6 +466,144 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
     programsPage: {
       heroTitle: 'プログラム・レベル一覧',
       heroDescription: '年齢や目的に合わせて選べるコースをご用意しています。',
+    },
+    colorSquaresSection: {
+      eyebrow: '教室の心理学',
+      heading: '学びを支える色の効果',
+      description:
+        '教室デザインや教材デザインで活かせる、色ごとの心理的なサポート効果を紹介します。',
+      columns: 3,
+      items: [
+        {
+          id: 'red',
+          title: '赤',
+          color: '#e3192d',
+          lines: ['注意喚起', 'わくわく感', '創造性'],
+        },
+        {
+          id: 'yellow',
+          title: '黄',
+          color: '#f4d61a',
+          textColor: '#243047',
+          lines: ['前向きさ', '集中の維持', '創造性'],
+        },
+        {
+          id: 'green',
+          title: '緑',
+          color: '#90c82c',
+          lines: ['集中', '安心感', '落ち着き'],
+        },
+        {
+          id: 'blue',
+          title: '青',
+          color: '#1f9bdb',
+          lines: ['静けさ', '思考の整理', '気持ちの安定'],
+        },
+        {
+          id: 'orange',
+          title: 'オレンジ',
+          color: '#f08a2d',
+          lines: ['活力', '高彩度は刺激的', '低彩度は穏やか'],
+        },
+        {
+          id: 'off-white',
+          title: 'オフホワイト',
+          color: '#f6f3eb',
+          textColor: '#3f3f46',
+          lines: ['前向きさ', '視認性', '明瞭さ'],
+        },
+      ],
+    },
+    schoolShowcaseSection: {
+      hero: {
+        imageSrc: '/student-class/student-class-1.jpg',
+        imageAlt: '教室で笑顔の子どもたち',
+        title: '小学校コース',
+        indexLabel: '01.',
+        description:
+          '会話の自信を伸ばすアクティビティ中心の授業で、毎日の英語表現を自然に身につけます。',
+      },
+      intro: {
+        eyebrow: '教育プログラム',
+        title: '私たちのスクール',
+        paragraphs: [
+          '身体を動かす活動やストーリー学習、チームゲームを取り入れ、楽しく英語を使う時間を増やします。',
+          '講師が一人ひとりの理解を確認しながら、スピーキング・リーディング・創作課題を丁寧に進めます。',
+          'ご家庭への共有を重視し、教室外でも自然に学びが続くようにサポートします。',
+          '発表やロールプレイを通じて、子どもたちの伝える力と自信を育てます。',
+        ],
+        imageSrc: '/student-class/young-learner.jpg',
+        imageAlt: '教室で制作活動をする児童',
+        statValue: '+76',
+        statLabel: '受講コース',
+        principalName: 'Emma Jhonson',
+        principalRole: 'スクール代表',
+      },
+      mosaicTiles: [
+        {
+          id: 'principal-card',
+          type: 'color',
+          eyebrow: 'スクール代表',
+          title: 'Hanna Williams',
+          description:
+            '英語を毎日自然に使える、安心感のあるクラス文化づくりを大切にしています。',
+          backgroundColor: '#5dc4de',
+          colSpan: 1,
+        },
+        {
+          id: 'teacher-photo-1',
+          type: 'image',
+          imageSrc: '/student-class/workshops.jpg',
+          imageAlt: '教室で指導する先生と生徒',
+          colSpan: 1,
+        },
+        {
+          id: 'playground-photo',
+          type: 'image',
+          imageSrc: '/student-class/student-class-1.jpg',
+          imageAlt: '活動中に笑顔を見せる子どもたち',
+          colSpan: 1,
+        },
+        {
+          id: 'students-photo-1',
+          type: 'image',
+          imageSrc: '/student-class/young-learner.jpg',
+          imageAlt: '授業で取り組む生徒たち',
+          colSpan: 1,
+        },
+        {
+          id: 'students-photo-2',
+          type: 'image',
+          imageSrc: '/student-class/student-class-1.jpg',
+          imageAlt: '教材を持って並ぶ生徒たち',
+          colSpan: 1,
+        },
+        {
+          id: 'sports-photo',
+          type: 'image',
+          imageSrc: '/student-class/workshops.jpg',
+          imageAlt: 'ボールを持って活動する生徒',
+          colSpan: 1,
+        },
+        {
+          id: 'teacher-highlight',
+          type: 'color',
+          eyebrow: '担当講師',
+          title: 'Andrew Taylor',
+          description:
+            'プロジェクト型レッスンで、発音・伝達力・協働スキルをバランスよく育てます。',
+          backgroundColor: '#e5be45',
+          textColor: '#1f2937',
+          colSpan: 1,
+        },
+        {
+          id: 'teacher-photo-2',
+          type: 'image',
+          imageSrc: '/student-class/young-learner.jpg',
+          imageAlt: '生徒をサポートする先生',
+          colSpan: 1,
+        },
+      ],
     },
   },
   en: {
@@ -611,6 +842,40 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
             'Short review tasks help build routine and keep progress steady.',
         },
       ],
+      colorPaletteSection: {
+        eyebrow: 'Learning Atmosphere',
+        heading: 'How We Use Color in Classrooms',
+        description:
+          'These color intentions help us balance focus, calm, and motivation during daily lessons.',
+        columns: 4,
+        items: [
+          {
+            id: 'focus',
+            title: 'Focus',
+            color: '#2878d9',
+            lines: ['Blue-led corners', 'Quiet reading periods', 'Supports organized thinking'],
+          },
+          {
+            id: 'calm',
+            title: 'Calm',
+            color: '#58b25a',
+            lines: ['Green visual cues', 'Reduces tension', 'Helps steady pacing'],
+          },
+          {
+            id: 'energy',
+            title: 'Energy',
+            color: '#f07f2f',
+            lines: ['Orange accents', 'Encourages speaking', 'Raises participation'],
+          },
+          {
+            id: 'clarity',
+            title: 'Clarity',
+            color: '#f3f0e7',
+            textColor: '#374151',
+            lines: ['Off-white base', 'Improves visibility', 'Keeps materials easy to read'],
+          },
+        ],
+      },
     },
     admissionsPage: {
       heroTitle: 'Admissions & Enrollment',
@@ -648,6 +913,148 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       heroTitle: 'Programs & Levels',
       heroDescription:
         'Choose the course that matches your age, pace, and goals.',
+    },
+    colorSquaresSection: {
+      eyebrow: 'Classroom Psychology',
+      heading: 'Which Colors Help Learning?',
+      description:
+        'Use this section to present color meanings, behavior cues, and how each classroom color can support student focus.',
+      columns: 3,
+      items: [
+        {
+          id: 'red',
+          title: 'Red',
+          color: '#e3192d',
+          lines: ['Alertness', 'Excitement', 'Creativity'],
+        },
+        {
+          id: 'yellow',
+          title: 'Yellow',
+          color: '#f4d61a',
+          textColor: '#243047',
+          lines: ['Positivity', 'Attention', 'Creativity'],
+        },
+        {
+          id: 'green',
+          title: 'Green',
+          color: '#90c82c',
+          lines: ['Focus', 'Restfulness', 'Calm'],
+        },
+        {
+          id: 'blue',
+          title: 'Blue',
+          color: '#1f9bdb',
+          lines: ['Tranquility', 'Creativity', 'Soothing'],
+        },
+        {
+          id: 'orange',
+          title: 'Orange',
+          color: '#f08a2d',
+          lines: [
+            'Invigoration',
+            'High saturation = stimulation',
+            'Low saturation = calming',
+          ],
+        },
+        {
+          id: 'off-white',
+          title: 'Off White',
+          color: '#f6f3eb',
+          textColor: '#3f3f46',
+          lines: ['Positivity', 'Attention', 'Clarity'],
+        },
+      ],
+    },
+    schoolShowcaseSection: {
+      hero: {
+        imageSrc: '/student-class/student-class-1.jpg',
+        imageAlt: 'Smiling students in a classroom',
+        title: 'Primary School',
+        indexLabel: '01.',
+        description:
+          'Interactive classes built around speaking confidence, playful projects, and daily communication practice.',
+      },
+      intro: {
+        eyebrow: 'Didactic Proposals',
+        title: 'Our School',
+        paragraphs: [
+          'We design lessons with movement, stories, and team games so students stay active while practicing language.',
+          'Teachers guide each student through speaking tasks, reading support, and short creative projects each week.',
+          'Family communication is built in, with regular updates so learning continues naturally at home.',
+          'Students gain confidence through presentations, roleplay, and collaborative classroom activities.',
+        ],
+        imageSrc: '/student-class/young-learner.jpg',
+        imageAlt: 'Young learner drawing in class',
+        statValue: '+76',
+        statLabel: 'Courses Available',
+        principalName: 'Emma Jhonson',
+        principalRole: 'School Principal',
+      },
+      mosaicTiles: [
+        {
+          id: 'principal-card',
+          type: 'color',
+          eyebrow: 'School Principal',
+          title: 'Hanna Williams',
+          description:
+            'Builds a positive classroom culture where learners practice English naturally every day.',
+          backgroundColor: '#5dc4de',
+          colSpan: 1,
+        },
+        {
+          id: 'teacher-photo-1',
+          type: 'image',
+          imageSrc: '/student-class/workshops.jpg',
+          imageAlt: 'Teacher with students in workshop class',
+          colSpan: 1,
+        },
+        {
+          id: 'playground-photo',
+          type: 'image',
+          imageSrc: '/student-class/student-class-1.jpg',
+          imageAlt: 'Kids smiling during class activity',
+          colSpan: 1,
+        },
+        {
+          id: 'students-photo-1',
+          type: 'image',
+          imageSrc: '/student-class/young-learner.jpg',
+          imageAlt: 'Students practicing in class',
+          colSpan: 1,
+        },
+        {
+          id: 'students-photo-2',
+          type: 'image',
+          imageSrc: '/student-class/student-class-1.jpg',
+          imageAlt: 'Group of students with school materials',
+          colSpan: 1,
+        },
+        {
+          id: 'sports-photo',
+          type: 'image',
+          imageSrc: '/student-class/workshops.jpg',
+          imageAlt: 'Students holding sports balls',
+          colSpan: 1,
+        },
+        {
+          id: 'teacher-highlight',
+          type: 'color',
+          eyebrow: 'Reference Teacher',
+          title: 'Andrew Taylor',
+          description:
+            'Supports project-based lessons that improve confidence, pronunciation, and team communication.',
+          backgroundColor: '#e5be45',
+          textColor: '#1f2937',
+          colSpan: 1,
+        },
+        {
+          id: 'teacher-photo-2',
+          type: 'image',
+          imageSrc: '/student-class/young-learner.jpg',
+          imageAlt: 'Teacher helping students in classroom',
+          colSpan: 1,
+        },
+      ],
     },
   },
 }

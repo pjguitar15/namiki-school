@@ -69,7 +69,7 @@ const ProgramsPage = () => {
     <div className="flex min-h-screen flex-col">
       <AnnouncementBar />
       <Navbar />
-      <main className="flex flex-1 flex-col bg-slate-50">
+      <main className="flex flex-1 flex-col bg-white">
         <div className="bg-white py-12 shadow-sm">
           <Container className="space-y-3 text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-600">

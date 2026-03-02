@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useLanguage } from "../providers/LanguageProvider";
+import WideContainer from "./WideContainer";
 
 const Navbar = () => {
   const { content, language, toggleLanguage } = useLanguage();
@@ -11,8 +12,8 @@ const Navbar = () => {
   const closeMenu = () => setOpen(false);
 
   return (
-    <header className="sticky top-0 z-30 w-full bg-white/90 shadow-sm backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10 lg:px-14">
+    <header className="sticky top-0 z-30 w-full bg-white shadow-sm backdrop-blur">
+      <WideContainer className="flex items-center justify-between py-4">
         <Link href="/" className="flex items-center gap-3">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-teal-500 to-blue-500 text-white font-semibold">
             NE
@@ -69,11 +70,11 @@ const Navbar = () => {
             <span className="block h-0.5 w-6 bg-slate-700" />
           </div>
         </button>
-      </div>
+      </WideContainer>
 
       {open && (
         <div className="fixed inset-0 z-40 bg-white">
-          <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10 lg:px-14">
+          <WideContainer className="flex items-center justify-between py-4">
             <Link href="#home" className="flex items-center gap-3" onClick={closeMenu}>
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-teal-500 to-blue-500 text-white font-semibold">
                 NE
@@ -105,7 +106,7 @@ const Navbar = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 6l12 12M6 18L18 6" />
               </svg>
             </button>
-          </div>
+          </WideContainer>
           <div className="space-y-4 px-6 md:px-10 lg:px-14 bg-white py-10">
             <nav className="flex flex-col divide-y divide-slate-200 text-base font-semibold text-slate-800">
               {content.navItems.map((item) => (

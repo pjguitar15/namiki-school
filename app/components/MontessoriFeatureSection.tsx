@@ -19,10 +19,11 @@ type MontessoriFeatureSectionProps = {
   ctaHref?: string;
   imageAlt?: LocalizedText;
   imageSrc?: string;
+  reverse?: boolean;
 };
 
 const DEFAULT_COPY: Required<
-  Omit<MontessoriFeatureSectionProps, "ctaHref" | "imageSrc">
+  Omit<MontessoriFeatureSectionProps, "ctaHref" | "imageSrc" | "reverse">
 > = {
   eyebrow: {
     ja: "モンテッソーリ教育",
@@ -54,6 +55,7 @@ const MontessoriFeatureSection = ({
   ctaHref = "#programs",
   imageAlt = DEFAULT_COPY.imageAlt,
   imageSrc = "/student-class/workshops.jpg",
+  reverse = false,
 }: MontessoriFeatureSectionProps) => {
   const { language } = useLanguage();
 
@@ -61,8 +63,12 @@ const MontessoriFeatureSection = ({
     <FadeIn>
       <section className="bg-white py-16 md:py-24">
         <Container className="py-0">
-          <div className="grid items-center gap-10 md:grid-cols-[0.9fr_1.45fr] md:gap-12">
-            <div className="space-y-6">
+          <div
+            className={`grid items-center gap-10 md:gap-12 ${
+              reverse ? "md:grid-cols-[1.45fr_0.9fr]" : "md:grid-cols-[0.9fr_1.45fr]"
+            }`}
+          >
+            <div className={`space-y-6 ${reverse ? "md:order-2" : ""}`}>
               <p className="text-sm font-semibold tracking-[0.06em] text-[#f05b42]">
                 {eyebrow[language]}
               </p>
@@ -80,7 +86,7 @@ const MontessoriFeatureSection = ({
               </Link>
             </div>
 
-            <div className="relative h-[280px] overflow-hidden md:h-[430px] lg:h-[520px]">
+            <div className={`relative h-[280px] overflow-hidden md:h-[430px] lg:h-[520px] ${reverse ? "md:order-1" : ""}`}>
               <div
                 className="relative h-full w-full overflow-hidden"
                 style={{

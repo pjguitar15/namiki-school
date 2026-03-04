@@ -43,6 +43,14 @@ export type Testimonial = {
   role: string;
 };
 
+export type BackToSchoolCopy = {
+  eyebrow: string;
+  title: string;
+  body: string;
+  ctaLabel: string;
+  ctaHref: string;
+};
+
 export type ContactCopy = {
   title: string;
   description: string;
@@ -112,6 +120,7 @@ export type SchoolShowcaseCopy = {
 
 export type LanguageContent = {
   navItems: NavItem[];
+  backToSchool: BackToSchoolCopy;
   hero: HeroCopy;
   about: {
     missionLabel: string;
@@ -171,8 +180,17 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       { label: 'ホーム', href: '/' },
       { label: '学校について', href: '/about' },
       { label: '入学・お申込み', href: '/admissions' },
+      { label: '料金', href: '/pricing' },
       { label: 'プログラム', href: '/programs' },
     ],
+    backToSchool: {
+      eyebrow: '新学期',
+      title: 'Back to School!',
+      body:
+        '新しい学期が始まります。ストーリー、ゲーム、プロジェクトを通じて、英語を自然に身につけられるクラスを用意しています。',
+      ctaLabel: 'プログラムを見る',
+      ctaHref: '/programs',
+    },
     hero: {
       badge: '明るく、のびのび学ぶ英語教室',
       headline: '英語をもっとやさしくしよう',
@@ -193,70 +211,70 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1400&q=80',
     },
     about: {
-      missionLabel: 'Our Mission',
-      headline: 'つくれる力を育てる英語スクール',
-      lead: 'ナミキイングリッシュスクールでは、「英語で考え、英語で伝える力」を大切にしています。3歳から大人まで、経験豊富な講師と温かいコミュニティで、自分らしく学び、挑戦し、成長できる環境を整えています。',
+      missionLabel: 'Vision · Mission · Philosophy',
+      headline: '信頼されるファミリースタイルの英語スクールへ',
+      lead: '日本において、子どもたちが自信・国際的な視野・高いコミュニケーション力を育む、信頼されるファミリースタイルのインターナショナル英語スクールを目指します。',
       body: [
-        '日本語のサポートを入れつつ、英語に触れる時間をたっぷり確保。ご家庭とも連携しながら、一人ひとりに合ったゴールを設定します。',
-        '歌やゲームだけでなく、リーディング・ライティング・スピーキング・フォニックスをバランスよく学び、ミニプロジェクトや発表でアウトプットを増やします。',
+        'Namiki English Schoolでは、英語学習は楽しく、自然で、意味のあるものであるべきだと考えています。子どもたちは安心し、励まされ、刺激を受ける環境で最もよく学びます。',
+        '私たちは英語力だけでなく、人格・思いやり・国際的な考え方も育てます。',
       ],
     },
     features: [
       {
-        title: '英語への好奇心を引き出す',
-        body: '歌やゲーム、ショートプロジェクトを通して、楽しみながら自然な英語力を身につけます。',
+        title: 'ビジョン',
+        body: '子どもたちが自信・国際的な視野・高いコミュニケーション力を育む、信頼されるファミリースタイルの英語スクールを目指します。',
       },
       {
-        title: '少人数でしっかりサポート',
-        body: '講師が一人ひとりの理解度を確認しながら進行。安心して質問できる空気づくりを大切にしています。',
+        title: 'ミッション',
+        body: '安心で温かな環境の中で質の高い英語教育を提供し、2歳から12歳までの子どもたち一人ひとりの成長を支えます。',
       },
       {
-        title: 'ご家庭との連携',
-        body: 'レッスンの振り返りや小テストで成長を共有。目標設定も一緒に行い、モチベーションを保ちます。',
+        title: '教育理念',
+        body: '英語学習を楽しく自然で意味のあるものにし、言語力だけでなく人格・思いやり・国際的な考え方を育てます。',
       },
     ],
     programs: [
       {
-        title: 'ブートキャンプ',
-        duration: '週3回 / 13週間',
-        category: '小学生・中学生向け',
+        title: 'デイケアプログラム',
+        duration: '月〜金 / 8:00-18:00',
+        category: '2歳以上対象',
         bulletPoints: [
-          '英語で考えるグループワーク',
-          'プロジェクト型の発表課題',
-          '発音とスピーキングを重点強化',
-          '国際的なトピックで視野を広げる',
+          '遊び・歌・フォニックス・日常活動を通じて英語に触れる',
+          '安心で温かい保育環境で生活習慣を身につける',
+          '幼児期に合わせた英語インプットとアウトプット',
+          '英語豊かなバイリンガル環境でのびのび成長',
         ],
-        ctaLabel: '詳細を見る',
+        ctaLabel: 'お問い合わせ',
         accentColor: 'bg-blue-500',
         image:
           'https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80',
       },
       {
-        title: '基礎コース',
-        duration: '週2回 / 4週間',
-        category: '初心者・低学年向け',
+        title: '英会話クラス',
+        duration: '平日開講',
+        category: '会話力・発音・語彙強化',
         bulletPoints: [
-          'フォニックスで音と文字を学ぶ',
-          '短い会話でリズムに慣れる',
-          'カードや絵本で語彙を増やす',
-          '保護者向けフィードバック付き',
+          '参加型レッスンで自信を育てる英会話トレーニング',
+          '発音と語彙をバランスよく伸ばすカリキュラム',
+          'コミュニケーション力を高める実践アクティビティ',
+          '年齢とレベルに合わせた丁寧なサポート',
         ],
-        ctaLabel: '詳細を見る',
+        ctaLabel: 'お問い合わせ',
         accentColor: 'bg-green-500',
         image:
           'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80',
       },
       {
-        title: 'ワークショップ',
-        duration: '月1回 / 90分',
-        category: 'ご家族・親子参加歓迎',
+        title: 'アフタースクール',
+        duration: '放課後プログラム',
+        category: '小学生〜中学生',
         bulletPoints: [
-          '季節イベントに合わせたテーマ',
-          'チームで取り組む問題解決ゲーム',
-          '発表とフィードバックで自信アップ',
-          '教室の雰囲気を気軽に体験',
+          'フォニックス・リーディング・ライティングを一体で学ぶ',
+          '宿題サポートで学校学習との両立を支援',
+          '創造的な活動で英語を使う機会を増やす',
+          '英語イマージョンで自然な表現力を育成',
         ],
-        ctaLabel: '参加する',
+        ctaLabel: 'お問い合わせ',
         accentColor: 'bg-orange-500',
         image:
           'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80',
@@ -611,8 +629,17 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       { label: 'Home', href: '/' },
       { label: 'About', href: '/about' },
       { label: 'Admission', href: '/admissions' },
+      { label: 'Pricing', href: '/pricing' },
       { label: 'Programs', href: '/programs' },
     ],
+    backToSchool: {
+      eyebrow: 'New Term',
+      title: 'Back to School!',
+      body:
+        'Fresh notebooks, bright ideas, and a classroom ready for curious minds. Join our welcoming space where stories, science, and songs make English feel natural.',
+      ctaLabel: 'View programs',
+      ctaHref: '/programs',
+    },
     hero: {
       badge: 'A bright, interactive English classroom',
       headline: 'Let’s Make English Feel Easy',
@@ -641,68 +668,68 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1400&q=80',
     },
     about: {
-      missionLabel: 'Our Mission',
-      headline: 'Grow the confidence to create and communicate',
-      lead: 'We help learners think and express ideas in English. From age 3 through adults, our experienced teachers and warm community give everyone space to learn, try, and grow.',
+      missionLabel: 'Vision · Mission · Philosophy',
+      headline: 'A trusted, family-style international English school',
+      lead: 'To become a trusted, family-style international English school in Japan where children grow with confidence, global awareness, and strong communication skills.',
       body: [
-        'We keep plenty of English immersion while giving supportive explanations when needed. We set goals together with each family.',
-        'Beyond songs and games, we cover reading, writing, speaking, and phonics with projects and presentations to grow confidence.',
+        'At Namiki English School, we believe learning English should be joyful, natural, and meaningful. Children learn best when they feel safe, encouraged, and inspired.',
+        'We focus not only on language skills, but also on character, kindness, and a global mindset.',
       ],
     },
     features: [
       {
-        title: 'Spark curiosity',
-        body: 'Songs, games, and short projects make English fun and memorable.',
+        title: 'Vision',
+        body: 'To become a trusted, family-style international English school where children grow with confidence, global awareness, and strong communication skills.',
       },
       {
-        title: 'Small, supported groups',
-        body: 'Teachers track each child’s pace so they feel safe asking questions.',
+        title: 'Mission',
+        body: 'To provide high-quality English education in a warm, safe environment and support each child from ages 2 to 12.',
       },
       {
-        title: 'Partner with families',
-        body: 'Quick feedback after lessons and simple reviews keep motivation high.',
+        title: 'Philosophy',
+        body: 'Learning should be joyful, natural, and meaningful, helping children build language skills, character, kindness, and a global mindset.',
       },
     ],
     programs: [
       {
-        title: 'Bootcamp',
-        duration: '3x weekly / 13 weeks',
-        category: 'Upper elementary & junior high',
+        title: 'Daycare Program',
+        duration: 'Mon-Fri / 8:00 AM-6:00 PM',
+        category: 'Ages 2 and up',
         bulletPoints: [
-          'Group work fully in English',
-          'Project-style presentations',
-          'Pronunciation and speaking focus',
-          'Global topics to broaden views',
+          'Safe and nurturing environment for young learners',
+          'Learn through play, songs, phonics, and daily routines',
+          'Natural English exposure in age-appropriate activities',
+          'Bilingual environment that supports confident growth',
         ],
-        ctaLabel: 'View details',
+        ctaLabel: 'Contact us',
         accentColor: 'bg-blue-500',
         image: '/student-class/student-class-1.jpg',
       },
       {
-        title: 'Foundations',
-        duration: '2x weekly / 4 weeks',
-        category: 'Beginners & younger learners',
+        title: 'Eikaiwa Classes',
+        duration: 'Weekday classes',
+        category: 'Conversation, pronunciation, and vocabulary',
         bulletPoints: [
-          'Phonics for sounds and letters',
-          'Short dialogues to build rhythm',
-          'Cards and storybooks for vocab',
-          'Parent feedback every session',
+          'Interactive English conversation classes',
+          'Build confidence through guided speaking practice',
+          'Improve pronunciation and practical communication skills',
+          'Level-based support for each learner',
         ],
-        ctaLabel: 'View details',
+        ctaLabel: 'Contact us',
         accentColor: 'bg-green-500',
         image: '/student-class/young-learner.jpg',
       },
       {
-        title: 'Workshops',
-        duration: 'Monthly / 90 minutes',
-        category: 'Open to families',
+        title: 'After School Program',
+        duration: 'After-school immersion',
+        category: 'Elementary to junior high',
         bulletPoints: [
-          'Seasonal themes and crafts',
-          'Team problem-solving games',
-          'Presentations with feedback',
-          'Easy way to try our classes',
+          'Includes phonics, reading, and writing support',
+          'Homework support and creative English activities',
+          'Immersion-style lessons for natural language use',
+          'Balanced structure for school and language growth',
         ],
-        ctaLabel: 'Join now',
+        ctaLabel: 'Contact us',
         accentColor: 'bg-orange-500',
         image: '/student-class/workshops.jpg',
       },

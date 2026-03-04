@@ -14,7 +14,7 @@ const Hero = () => {
     <FadeIn>
       <div className='relative isolate overflow-hidden text-slate-900'>
         <Image
-          src='/student-class/workshops.jpg'
+          src='/student-class/students-raise-hands.jpg'
           alt='Asian children learning in an English classroom'
           fill
           priority

@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { useLanguage } from '../../providers/LanguageProvider'
 import FadeIn from '../FadeIn'
 import WideContainer from '../WideContainer'
@@ -11,27 +12,47 @@ const AboutHero = () => {
 
   return (
     <FadeIn>
-      <div className='relative isolate overflow-hidden bg-gradient-to-r from-emerald-500 to-sky-500 pb-16 pt-12 text-white'>
-        {/* Background glow */}
-        <div className='pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.2),transparent_35%),radial-gradient(circle_at_70%_10%,rgba(255,255,255,0.15),transparent_30%)]' />
+      <section className='relative isolate overflow-hidden pb-16 pt-10 text-white md:pb-20 md:pt-14'>
+        <Image
+          src='/student-class/students-raise-hands.jpg'
+          alt='Students smiling and raising hands in class'
+          fill
+          priority
+          className='object-cover object-center'
+          sizes='100vw'
+        />
+        <div className='pointer-events-none absolute inset-0 bg-slate-900/45' />
+        <div className='pointer-events-none absolute inset-0 bg-gradient-to-r from-cyan-700/85 via-cyan-600/55 to-sky-500/35' />
+        <div className='pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.22),transparent_35%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.16),transparent_35%)]' />
 
-        {/* CONTENT WRAPPER */}
-        <WideContainer id='home' className='relative space-y-8'>
-          {/* TEXT CONTENT */}
-          <div className='relative z-10 space-y-3 max-w-2xl'>
-            <p className='inline-flex rounded-full bg-white/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em]'>
+        <WideContainer id='about' className='relative z-10 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end'>
+          <div className='space-y-5 max-w-3xl'>
+            <p className='inline-flex rounded-full bg-white/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] backdrop-blur'>
               {hero.eyebrow}
             </p>
 
-            <h1 className='text-4xl font-bold leading-tight md:text-5xl'>
+            <h1 className='text-4xl font-bold leading-tight md:text-5xl lg:text-6xl'>
               {hero.title}
             </h1>
 
-            <p className='text-lg text-white/90'>{hero.description}</p>
+            <p className='max-w-2xl text-lg text-white/90'>{hero.description}</p>
+            <div className='flex flex-wrap gap-3 pt-2'>
+              <Link
+                href='/admissions'
+                className='inline-flex h-11 items-center justify-center rounded-full bg-white px-6 text-sm font-bold text-cyan-700 shadow-md transition hover:bg-cyan-50'
+              >
+                Admissions
+              </Link>
+              <Link
+                href='/pricing'
+                className='inline-flex h-11 items-center justify-center rounded-full border border-white/70 px-6 text-sm font-bold text-white transition hover:bg-white/10'
+              >
+                View Pricing
+              </Link>
+            </div>
           </div>
 
-          {/* STATS */}
-          <div className='relative z-10 grid gap-4 sm:grid-cols-3 max-w-3xl'>
+          <div className='grid gap-3 sm:grid-cols-3 lg:grid-cols-1'>
             {hero.stats.map((stat) => (
               <div
                 key={stat.label}
@@ -44,22 +65,15 @@ const AboutHero = () => {
           </div>
         </WideContainer>
 
-        {/* ABSOLUTE IMAGE */}
-        <Image
-          src='/student-models/jap-model-text.png'
-          alt='Happy student'
-          width={520}
-          height={840}
-          priority
-          className='
-            pointer-events-none
-            absolute bottom-0 right-[8%]
-            w-auto
-            h-[22rem] sm:h-[26rem] md:h-[30rem] lg:h-[34rem]
-            drop-shadow-2xl
-          '
-        />
-      </div>
+        <div className='pointer-events-none absolute inset-x-0 bottom-0 z-20 h-[74px] md:h-[96px]'>
+          <svg viewBox='0 0 1440 160' preserveAspectRatio='none' className='h-full w-full' aria-hidden='true'>
+            <path
+              d='M0,90 C250,28 540,20 760,74 C980,128 1220,130 1440,84 L1440,160 L0,160 Z'
+              fill='#ffffff'
+            />
+          </svg>
+        </div>
+      </section>
     </FadeIn>
   )
 }

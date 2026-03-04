@@ -2,6 +2,7 @@
 
 import AnnouncementBar from "../components/AnnouncementBar";
 import Container from "../components/Container";
+import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import AboutHero from "../components/about/AboutHero";
@@ -16,15 +17,16 @@ const AboutPage = () => {
     <div className="flex min-h-screen flex-col">
       <AnnouncementBar />
       <Navbar />
-      <main className="flex flex-1 flex-col gap-10 bg-white">
+      <main className="flex flex-1 flex-col bg-white">
         <AboutHero />
-        <Container id="about" className="space-y-16 pb-16 md:pb-24">
+        <Container id="about" className="space-y-16 py-10 md:space-y-20 md:py-16">
           <StorySection />
+          <HighlightsSection />
           <ValuesSection />
           <ColorPaletteSection />
-          <HighlightsSection />
           <FAQSection />
         </Container>
+        <ContactSection />
       </main>
       <Footer />
     </div>

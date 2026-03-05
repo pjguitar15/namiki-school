@@ -1036,7 +1036,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
           id: 'principal-card',
           type: 'color',
           eyebrow: 'School Principal',
-          title: 'Hanna Williams',
+          title: 'Celia Mendez',
           description:
             'Builds a positive classroom culture where learners practice English naturally every day.',
           backgroundColor: '#5dc4de',
@@ -1081,7 +1081,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
           id: 'teacher-highlight',
           type: 'color',
           eyebrow: 'Reference Teacher',
-          title: 'Andrew Taylor',
+          title: 'Insert Teacher Name',
           description:
             'Supports project-based lessons that improve confidence, pronunciation, and team communication.',
           backgroundColor: '#e5be45',

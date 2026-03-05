@@ -124,7 +124,7 @@ export default function Home() {
         <ColorfulSchoolSectionLocalized />
         <AboutSection />
         <ClassesOverviewSection />
-        <ProjectsSection />
+        {/* <ProjectsSection /> */}
         <TestimonialsSection />
         <ContactSection />
       </main>

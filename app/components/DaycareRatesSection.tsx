@@ -26,17 +26,17 @@ const DaycareRatesSection = () => {
             "\u3054\u5165\u4f1a\u524d\u306b\u30b9\u30af\u30fc\u30eb\u306e\u96f0\u56f2\u6c17\u3092\u4f53\u9a13\u3067\u304d\u308b\u3001\u7121\u6599\u4f53\u9a13\u30ec\u30c3\u30b9\u30f3\u3092\u5b9f\u65bd\u3057\u3066\u3044\u307e\u3059\u3002",
           tuition: [
             { label: "\u90311\u56de", amount: "\u00a519,000" },
-            { label: "\u90312\u56de", amount: "\u00a532,000" },
-            { label: "\u90313\u56de", amount: "\u00a545,000" },
-            { label: "\u90314\u56de", amount: "\u00a558,000" },
-            { label: "\u90315\u65e5\uff08\u6708\u301c\u91d1\uff09", amount: "\u00a570,000" },
+            { label: "\u90312\u56de", amount: "\u00a532,500" },
+            { label: "\u90313\u56de", amount: "\u00a544,000" },
+            { label: "\u90314\u56de", amount: "\u00a553,000" },
+            { label: "\u90315\u65e5\uff08\u6708\u301c\u91d1\uff09", amount: "\u00a562,000" },
           ] as FeeLine[],
           otherFees: [
-            { label: "\u5165\u4f1a\u91d1\uff08\u521d\u56de\u306e\u307f\uff09", amount: "\u00a510,000" },
-            { label: "\u5e74\u9593\u6559\u6750\u8cbb", amount: "\u00a58,000" },
-            { label: "\u65bd\u8a2d\u8cbb\uff08\u5e74\u6b21\uff09", amount: "\u00a57,000" },
+            { label: "\u5165\u4f1a\u91d1\uff08\u521d\u56de\u306e\u307f\uff09", amount: "\u00a530,000" },
+            { label: "\u6559\u6750\u8cbb\uff086\u30f6\u6708\u3054\u3068\uff09", amount: "\u00a58,000" },
+            { label: "\u65bd\u8a2d\u8cbb\uff086\u30f6\u6708\u3054\u3068\uff09", amount: "\u00a58,000" },
             { label: "\u304a\u3084\u3064\u4ee3\uff08\u6708\u984d\uff09", amount: "\u00a53,000" },
-            { label: "\u5ef6\u9577\u6599\u91d1\uff0817:00\u4ee5\u964d\uff0930\u5206", amount: "\u00a5500" },
+            { label: "\u5ef6\u9577\u6599\u91d1\uff0817:00\u4ee5\u964d\uff0930\u5206", amount: "\u00a5700" },
           ] as FeeLine[],
         }
       : {
@@ -50,17 +50,17 @@ const DaycareRatesSection = () => {
             "We offer a free trial lesson so families can experience our English daycare before enrollment.",
           tuition: [
             { label: "Once a week", amount: "JPY 19,000" },
-            { label: "Twice a week", amount: "JPY 32,000" },
-            { label: "Three times a week", amount: "JPY 45,000" },
-            { label: "Four times a week", amount: "JPY 58,000" },
-            { label: "Five times a week (Mon-Fri)", amount: "JPY 70,000" },
+            { label: "Twice a week", amount: "JPY 32,500" },
+            { label: "Three times a week", amount: "JPY 44,000" },
+            { label: "Four times a week", amount: "JPY 53,000" },
+            { label: "Five times a week (Mon-Fri)", amount: "JPY 62,000" },
           ] as FeeLine[],
           otherFees: [
-            { label: "Admission fee (one-time)", amount: "JPY 10,000" },
-            { label: "Annual materials fee", amount: "JPY 8,000" },
-            { label: "Facility fee (annual)", amount: "JPY 7,000" },
+            { label: "Admission fee (one-time)", amount: "JPY 30,000" },
+            { label: "Materials fee (every 6 months)", amount: "JPY 8,000" },
+            { label: "Facility fee (every 6 months)", amount: "JPY 8,000" },
             { label: "Snacks fee (monthly)", amount: "JPY 3,000" },
-            { label: "Extension fee (after 17:00) / 30 mins", amount: "JPY 500" },
+            { label: "Extension fee (after 17:00) / 30 mins", amount: "JPY 700" },
           ] as FeeLine[],
         };
 

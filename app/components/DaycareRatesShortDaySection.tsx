@@ -30,10 +30,10 @@ const DaycareRatesShortDaySection = () => {
             { label: "\u90315\u65e5\uff08\u6708\u301c\u91d1\uff09", amount: "\u00a552,000" },
           ] as FeeLine[],
           otherFees: [
-            { label: "\u5165\u4f1a\u91d1\uff08\u521d\u56de\u306e\u307f\uff09", amount: "\u00a512,000" },
-            { label: "\u5e74\u9593\u6559\u6750\u8cbb", amount: "\u00a58,000" },
-            { label: "\u65bd\u8a2d\u8cbb\uff08\u5e741\u56de\uff09", amount: "\u00a57,000" },
-            { label: "\u5ef6\u9577\u6599\u91d1\uff0815:00\u4ee5\u964d\uff0930\u5206", amount: "\u00a5500" },
+            { label: "\u5165\u4f1a\u91d1\uff08\u521d\u56de\u306e\u307f\uff09", amount: "\u00a530,000" },
+            { label: "\u6559\u6750\u8cbb\uff086\u30f6\u6708\u3054\u3068\uff09", amount: "\u00a58,000" },
+            { label: "\u65bd\u8a2d\u8cbb\uff086\u30f6\u6708\u3054\u3068\uff09", amount: "\u00a58,000" },
+            { label: "\u5ef6\u9577\u6599\u91d1\uff0815:00\u4ee5\u964d\uff0930\u5206", amount: "\u00a5700" },
           ] as FeeLine[],
         }
       : {
@@ -51,10 +51,10 @@ const DaycareRatesShortDaySection = () => {
             { label: "Five times a week (Mon-Fri)", amount: "JPY 52,000" },
           ] as FeeLine[],
           otherFees: [
-            { label: "Admission fee (one-time)", amount: "JPY 12,000" },
-            { label: "Annual materials fee", amount: "JPY 8,000" },
-            { label: "Facility fee (annual)", amount: "JPY 7,000" },
-            { label: "Extension fee (after 15:00) / 30 mins", amount: "JPY 500" },
+            { label: "Admission fee (one-time)", amount: "JPY 30,000" },
+            { label: "Materials fee (every 6 months)", amount: "JPY 8,000" },
+            { label: "Facility fee (every 6 months)", amount: "JPY 8,000" },
+            { label: "Extension fee (after 15:00) / 30 mins", amount: "JPY 700" },
           ] as FeeLine[],
         };
 

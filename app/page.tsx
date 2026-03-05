@@ -2,7 +2,6 @@ import AboutSection from "./components/AboutSection";
 import AnnouncementBar from "./components/AnnouncementBar";
 import ClassesOverviewSection from './components/ClassesOverviewSection'
 import ColorfulSchoolSectionLocalized from "./components/ColorfulSchoolSectionLocalized";
-import ColorSquaresSectionLocalized from "./components/ColorSquaresSectionLocalized";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import HomeActionCtaSection from './components/HomeActionCtaSection'
@@ -124,7 +123,6 @@ export default function Home() {
         />
         <ColorfulSchoolSectionLocalized />
         <AboutSection />
-        <ColorSquaresSectionLocalized />
         <ClassesOverviewSection />
         <ProjectsSection />
         <TestimonialsSection />

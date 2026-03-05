@@ -6,13 +6,13 @@ import { useLanguage } from "../providers/LanguageProvider";
 import WideContainer from "./WideContainer";
 
 const Footer = () => {
-  const { content } = useLanguage();
-  const groupedNav = [content.navItems.slice(0, 3), content.navItems.slice(3)];
+  const { content, language } = useLanguage();
+  const isJa = language === "ja";
 
   return (
     <footer className="bg-white pt-6">
-      <div className="relative overflow-hidden bg-gradient-to-r from-emerald-500 to-sky-500 text-white">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,255,255,0.24),transparent_34%),radial-gradient(circle_at_82%_10%,rgba(255,255,255,0.18),transparent_30%),linear-gradient(to_bottom,rgba(255,255,255,0.08),rgba(255,255,255,0.02)_32%,rgba(0,0,0,0.1))]" />
+      <div className="relative overflow-hidden bg-gradient-to-r from-emerald-700 to-sky-700 text-white">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,255,255,0.2),transparent_34%),radial-gradient(circle_at_82%_10%,rgba(255,255,255,0.14),transparent_30%),linear-gradient(to_bottom,rgba(255,255,255,0.05),rgba(255,255,255,0.01)_32%,rgba(0,0,0,0.26))]" />
 
         <div className="pointer-events-none absolute inset-x-0 top-0 h-16 -translate-y-[55%]">
           <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="h-full w-full">
@@ -31,53 +31,96 @@ const Footer = () => {
           </svg>
         </div>
 
-        <WideContainer className="relative z-10 flex flex-col gap-8 pb-10 pt-24 md:flex-row md:items-start md:justify-between">
-          <div className="space-y-4">
+        <WideContainer className="relative z-10 grid gap-8 pb-10 pt-24 md:grid-cols-[1.2fr_0.8fr] md:items-start">
+          <div className="space-y-5">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white font-semibold">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/20 text-sm font-bold text-white">
                 NE
               </div>
               <div>
-                <p className="text-sm uppercase tracking-wide text-white/80">
+                <p className="text-xs uppercase tracking-[0.2em] text-white/90">
                   Namiki English School
                 </p>
                 <p className="text-lg font-semibold text-white">
-                  ナミキイングリッシュスクール
+                  {isJa ? "ナミキイングリッシュスクール" : "Namiki English School"}
                 </p>
               </div>
             </div>
-            <p className="max-w-sm text-sm text-white/90">
-              子どもたちが英語で自信を持って話せる未来をサポートします。体験レッスンはいつでもお気軽に。
+
+            <p className="max-w-xl text-sm leading-relaxed text-white md:text-base">
+              {isJa
+                ? "子どもたちが英語で自信を持って話せる未来へ。少人数クラスと楽しい実践レッスンで、毎週の成長をサポートします。"
+                : "Helping children speak English with confidence through small classes, practical activities, and weekly progress support."}
             </p>
+
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/contact"
+                className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-teal-800 transition hover:bg-slate-100"
+              >
+                {isJa ? "無料体験を予約" : "Book Trial"}
+              </Link>
+              <Link
+                href="/programs"
+                className="rounded-full border border-white/70 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/20"
+              >
+                {isJa ? "プログラムを見る" : "View Programs"}
+              </Link>
+            </div>
           </div>
-          <div className="flex flex-col items-start gap-5 md:items-end">
-            <div className="grid grid-cols-2 gap-6 text-sm text-white/90">
-              {groupedNav.map((group, index) => (
-                <div key={index} className="space-y-3">
-                  {group.map((item) => (
+
+          <div className="grid gap-5 rounded-3xl border border-white/45 bg-slate-900/25 p-5 backdrop-blur-sm">
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-white/95">
+                  {isJa ? "サイトマップ" : "Quick Links"}
+                </p>
+                <div className="mt-3 space-y-2 text-sm">
+                  {content.navItems.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="block transition hover:text-white"
+                      className="block text-white transition hover:text-cyan-200"
                     >
                       {item.label}
                     </Link>
                   ))}
                 </div>
-              ))}
+              </div>
+
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-white/95">
+                  {isJa ? "お問い合わせ" : "Contact"}
+                </p>
+                <div className="mt-3 space-y-2 text-sm text-white">
+                  <a href={`mailto:${content.contact.email}`} className="block break-all text-cyan-100 hover:text-cyan-200">
+                    {content.contact.email}
+                  </a>
+                  <a href={`tel:${content.contact.phone}`} className="block text-cyan-100 hover:text-cyan-200">
+                    {content.contact.phoneLabel}
+                  </a>
+                  <p>{content.contact.hours}</p>
+                </div>
+              </div>
             </div>
-            <Image
-              src="/illustrations/footer-kids.png"
-              alt="Three kids illustration"
-              width={190}
-              height={190}
-              className="h-auto w-[130px] md:w-[190px]"
-              sizes="(min-width: 768px) 190px, 130px"
-            />
+
+            <div className="flex items-end justify-between gap-3">
+              <p className="text-xs text-white/95">
+                {isJa ? "体験レッスンは随時受付中です。" : "Trial lessons available year-round."}
+              </p>
+              <Image
+                src="/illustrations/footer-kids.png"
+                alt={isJa ? "子どものイラスト" : "Kids illustration"}
+                width={190}
+                height={190}
+                className="h-auto w-[110px] md:w-[150px]"
+                sizes="(min-width: 768px) 150px, 110px"
+              />
+            </div>
           </div>
         </WideContainer>
 
-        <div className="border-t border-white/25 py-4 text-center text-xs text-white/90">
+        <div className="border-t border-white/35 py-4 text-center text-xs text-white">
           {content.footerCredit}
         </div>
       </div>

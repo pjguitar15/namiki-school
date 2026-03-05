@@ -186,8 +186,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
     backToSchool: {
       eyebrow: '新学期',
       title: 'Back to School!',
-      body:
-        '新しい学期が始まります。ストーリー、ゲーム、プロジェクトを通じて、英語を自然に身につけられるクラスを用意しています。',
+      body: '新しい学期が始まります。ストーリー、ゲーム、プロジェクトを通じて、英語を自然に身につけられるクラスを用意しています。',
       ctaLabel: 'プログラムを見る',
       ctaHref: '/programs',
     },
@@ -635,8 +634,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
     backToSchool: {
       eyebrow: 'New Term',
       title: 'Back to School!',
-      body:
-        'Fresh notebooks, bright ideas, and a classroom ready for curious minds. Join our welcoming space where stories, science, and songs make English feel natural.',
+      body: 'Fresh notebooks, bright ideas, and a classroom ready for curious minds. Join our welcoming space where stories, science, and songs make English feel natural.',
       ctaLabel: 'View programs',
       ctaHref: '/programs',
     },
@@ -880,26 +878,42 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
             id: 'focus',
             title: 'Focus',
             color: '#2878d9',
-            lines: ['Blue-led corners', 'Quiet reading periods', 'Supports organized thinking'],
+            lines: [
+              'Blue-led corners',
+              'Quiet reading periods',
+              'Supports organized thinking',
+            ],
           },
           {
             id: 'calm',
             title: 'Calm',
             color: '#58b25a',
-            lines: ['Green visual cues', 'Reduces tension', 'Helps steady pacing'],
+            lines: [
+              'Green visual cues',
+              'Reduces tension',
+              'Helps steady pacing',
+            ],
           },
           {
             id: 'energy',
             title: 'Energy',
             color: '#f07f2f',
-            lines: ['Orange accents', 'Encourages speaking', 'Raises participation'],
+            lines: [
+              'Orange accents',
+              'Encourages speaking',
+              'Raises participation',
+            ],
           },
           {
             id: 'clarity',
             title: 'Clarity',
             color: '#f3f0e7',
             textColor: '#374151',
-            lines: ['Off-white base', 'Improves visibility', 'Keeps materials easy to read'],
+            lines: [
+              'Off-white base',
+              'Improves visibility',
+              'Keeps materials easy to read',
+            ],
           },
         ],
       },
@@ -1012,10 +1026,10 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         ],
         imageSrc: '/student-class/young-learner.jpg',
         imageAlt: 'Young learner drawing in class',
-        statValue: '+76',
-        statLabel: 'Courses Available',
-        principalName: 'Emma Jhonson',
-        principalRole: 'School Principal',
+        statValue: '5',
+        statLabel: 'Teachers',
+        principalName: 'Celia Mendez',
+        principalRole: 'School Owner',
       },
       mosaicTiles: [
         {

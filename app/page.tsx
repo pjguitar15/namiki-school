@@ -31,8 +31,8 @@ export default function Home() {
             en: 'Natural English growth in a safe daycare setting',
           }}
           description={{
-            ja: '2歳からのお子さまを対象に、歌・遊び・日常活動を通して英語に触れる時間をしっかり確保。温かい保育と英語イマージョンを両立した学びを提供します。',
-            en: 'For children ages 2 and up, we combine songs, play, and daily routines with consistent English exposure in a warm and nurturing daycare environment.',
+            ja: '2歳以上のお子さまを対象に、安全で温かく、英語に触れる豊かな環境を提供します。月曜日から金曜日、午前8時から午後6時まで開校し、遊びを通した英語イマージョン、歌・フォニックス・絵本活動、日常生活習慣と社会性の育成、創造活動と身体活動を通して、自然に英語コミュニケーション力を身につける、自信に満ちた子どもたちを育てます。',
+            en: 'Our Day Care Program provides a safe, warm, and English-rich environment for children aged 2 years old and up. Operating Monday to Friday from 8:00 AM to 6:00 PM, we focus on play-based English immersion, songs/phonics/storytelling, daily routines and social skill development, and creative arts and physical activities to nurture confident, happy learners who naturally acquire English communication skills.',
           }}
           ctaLabel={{
             ja: 'デイケア料金を見る',
@@ -43,7 +43,7 @@ export default function Home() {
             ja: 'デイケアクラスで学ぶ子どもたち',
             en: 'Children learning in daycare class',
           }}
-          imageSrc='/student-class/young-learner.jpg'
+          imageSrc='/assets/asset-1.jpg'
           reverse={false}
         />
         <MontessoriFeatureSection
@@ -56,8 +56,8 @@ export default function Home() {
             en: 'Our Concept',
           }}
           description={{
-            ja: 'Namiki English School\u306f2\u6b73\u4ee5\u4e0a\u3092\u5bfe\u8c61\u3068\u3057\u3001\u6e29\u304b\u304f\u5b89\u5168\u306a\u82f1\u8a9e\u30a4\u30de\u30fc\u30b8\u30e7\u30f3\u74b0\u5883\u3092\u63d0\u4f9b\u3059\u308b\u30d5\u30a1\u30df\u30ea\u30fc\u30b9\u30bf\u30a4\u30eb\u306e\u30d0\u30a4\u30ea\u30f3\u30ac\u30eb\u82f1\u8a9e\u30b9\u30af\u30fc\u30eb\u3067\u3059\u3002\u30c7\u30a4\u30b1\u30a2\u30fb\u82f1\u4f1a\u8a71\u30fb\u30a2\u30d5\u30bf\u30fc\u30b9\u30af\u30fc\u30eb\u3092\u7d44\u307f\u5408\u308f\u305b\u3001\u5b50\u3069\u3082\u305f\u3061\u306e\u81ea\u4fe1\u3068\u56fd\u969b\u7684\u306a\u8996\u91ce\u3092\u80b2\u3066\u307e\u3059\u3002',
-            en: 'Namiki English School is a family-style bilingual English school for children aged 2 and up, providing a warm, safe, and immersive environment. We combine daycare, eikaiwa, and after-school support to build confidence, communication skills, and global awareness.',
+            ja: '私たちのコンセプトは、英語力だけでなく、人間性と自信を育てることです。少人数で一人ひとりに寄り添い、フォニックス・会話・リーディング・ライティング・創造活動をバランスよく組み合わせ、年齢に合わせて段階的に伸ばします。ご家庭との連携を大切にし、英語を「学ぶ教科」ではなく「日常で使う生きた言語」として自然に身につけられる学びを目指しています。',
+            en: 'Our concept goes beyond language lessons. We aim to develop confidence, character, and communication through a balanced approach to phonics, conversation, reading, writing, and creative activities. In small classes, each learner is guided at the right pace for their age and stage. We also work closely with families so English becomes a living language children can use naturally in daily life.',
           }}
           ctaLabel={{
             ja: '\u8a73\u3057\u304f\u898b\u308b',
@@ -68,7 +68,7 @@ export default function Home() {
             ja: '\u6559\u5ba4\u3067\u5b66\u3076\u5b50\u3069\u3082\u305f\u3061',
             en: 'Students learning in class',
           }}
-          imageSrc='/student-class/workshops.jpg'
+          imageSrc='/classoom/1.jpg'
           reverse={true}
         />
         {/* <MontessoriFeatureSection
@@ -93,7 +93,7 @@ export default function Home() {
             ja: '放課後プログラムに参加する子どもたち',
             en: 'Students in after-school program',
           }}
-          imageSrc='/student-class/student-class-1.jpg'
+          imageSrc='/assets/asset-7.jpg'
           reverse={true}
         /> */}
         <MontessoriFeatureSection
@@ -106,8 +106,8 @@ export default function Home() {
             en: 'Conversation-first Eikaiwa that builds confidence',
           }}
           description={{
-            ja: '1時間の集中レッスンで、発音・語彙・実践会話を強化。楽しく自然に話せる力を育て、自己表現の幅を広げます。',
-            en: 'In focused one-hour lessons, students strengthen pronunciation, vocabulary, and practical communication while gaining confidence to express themselves.',
+            ja: '2歳以上のお子さまを対象に、参加型の英会話レッスンを提供しています。自信・発音・語彙力・自然なコミュニケーション力を育て、スピーキングとリスニング練習、フォニックスと発音強化、語彙力と文章作り、ロールプレイと参加型アクティビティを通して、自然で効果的に英語で自己表現ができる、自信あるコミュニケーターを育てます。',
+            en: 'Our Eikaiwa Program provides interactive English conversation lessons for children aged 2 years old and up. Classes focus on building confidence, pronunciation, vocabulary, and natural communication skills. Through speaking and listening practice, phonics and pronunciation, vocabulary and sentence building, and role play with interactive activities, we develop confident English communicators who can express themselves naturally and effectively.',
           }}
           ctaLabel={{
             ja: '英会話料金を見る',
@@ -118,7 +118,7 @@ export default function Home() {
             ja: '英会話レッスンで学ぶ生徒',
             en: 'Students in Eikaiwa lesson',
           }}
-          imageSrc='/student-class/workshops.jpg'
+          imageSrc='/assets/asset-8.jpg'
           reverse={false}
         />
         <ColorfulSchoolSectionLocalized />

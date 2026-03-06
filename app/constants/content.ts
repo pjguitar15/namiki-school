@@ -143,6 +143,14 @@ export type LanguageContent = {
       description: string;
       stats: { label: string; value: string }[];
     };
+    messageToParents: {
+      title: string;
+      subtitle: string;
+      greeting: string;
+      body: string[];
+      signoff: string;
+      signerTitle: string;
+    };
     story: {
       title: string;
       paragraphs: string[];
@@ -168,10 +176,10 @@ export type LanguageContent = {
 };
 
 const partners = [
-  "https://placehold.co/180x70/png?text=School+Partner",
-  "https://placehold.co/180x70/png?text=Community",
-  "https://placehold.co/180x70/png?text=Education",
-  "https://placehold.co/180x70/png?text=Local+Gov",
+  "/assets/asset-2.jpg",
+  "/assets/asset-3.jpg",
+  "/classoom/2.jpg",
+  "/classoom/5.jpg",
 ];
 
 export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
@@ -194,7 +202,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       badge: '明るく、のびのび学ぶ英語教室',
       headline: '英語をもっとやさしくしよう',
       subheadline:
-        '3歳から大人まで、自信を持って英語を話せるように。少人数クラスと楽しいアクティビティで、学ぶ喜びを育てます。',
+        '2歳から大人まで、自信を持って英語を話せるように。少人数クラスと楽しいアクティビティで、学ぶ喜びを育てます。',
       ctaPrimary: '体験レッスンを予約',
       ctaSecondary: '詳しく見る',
       stats: [
@@ -207,10 +215,10 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         },
       ],
       image:
-        'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1400&q=80',
+        '/assets/asset-7.jpg',
     },
     about: {
-      missionLabel: 'Vision · Mission · Philosophy',
+      missionLabel: 'ビジョン • ミッション • 教育理念',
       headline: '信頼されるファミリースタイルの英語スクールへ',
       lead: '日本において、子どもたちが自信・国際的な視野・高いコミュニケーション力を育む、信頼されるファミリースタイルのインターナショナル英語スクールを目指します。',
       body: [
@@ -225,7 +233,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       },
       {
         title: 'ミッション',
-        body: '安心で温かな環境の中で質の高い英語教育を提供し、2歳から12歳までの子どもたち一人ひとりの成長を支えます。',
+        body: '安心で温かい環境の中で質の高い英語教育を提供し、2歳から12歳までの子どもたちの自信ある英語力を育てます。さらに一人ひとりの個性と成長を大切にし、ご家庭や地域との強い信頼関係を築きます。',
       },
       {
         title: '教育理念',
@@ -238,45 +246,47 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         duration: '月〜金 / 8:00-18:00',
         category: '2歳以上対象',
         bulletPoints: [
-          '遊び・歌・フォニックス・日常活動を通じて英語に触れる',
-          '安心で温かい保育環境で生活習慣を身につける',
-          '幼児期に合わせた英語インプットとアウトプット',
-          '英語豊かなバイリンガル環境でのびのび成長',
+          '遊びを通した英語イマージョン',
+          '歌・フォニックス・絵本活動',
+          '日常生活習慣と社会性の育成',
+          '創造活動と身体活動',
         ],
         ctaLabel: 'お問い合わせ',
         accentColor: 'bg-blue-500',
         image:
-          'https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80',
+          '/assets/asset-1.jpg',
       },
       {
         title: '英会話クラス',
         duration: '平日開講',
-        category: '会話力・発音・語彙強化',
+        category: '2歳以上対象の英会話プログラム',
         bulletPoints: [
-          '参加型レッスンで自信を育てる英会話トレーニング',
-          '発音と語彙をバランスよく伸ばすカリキュラム',
-          'コミュニケーション力を高める実践アクティビティ',
-          '年齢とレベルに合わせた丁寧なサポート',
+          'スピーキングとリスニング練習',
+          'フォニックスと発音強化',
+          '語彙力と文章作り',
+          'ロールプレイと参加型アクティビティ',
+          '自然で効果的に自己表現できる力を育成',
         ],
         ctaLabel: 'お問い合わせ',
         accentColor: 'bg-green-500',
         image:
-          'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80',
+          '/assets/asset-5.jpg',
       },
       {
         title: 'アフタースクール',
-        duration: '放課後プログラム',
-        category: '小学生〜中学生',
+        duration: '月〜金（放課後）',
+        category: '6歳〜12歳対象',
         bulletPoints: [
-          'フォニックス・リーディング・ライティングを一体で学ぶ',
-          '宿題サポートで学校学習との両立を支援',
-          '創造的な活動で英語を使う機会を増やす',
-          '英語イマージョンで自然な表現力を育成',
+          'フォニックスと発音強化',
+          'リーディング・ライティング力向上',
+          '文法と語彙力の強化',
+          '英会話およびプレゼンテーション力',
+          '宿題サポートと創造的活動',
         ],
         ctaLabel: 'お問い合わせ',
         accentColor: 'bg-orange-500',
         image:
-          'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80',
+          '/assets/asset-1.jpg',
       },
     ],
     projects: [
@@ -285,14 +295,14 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         summary:
           '学んだ表現を使い、チームで短いプレゼンを作成。保護者の前で発表し、達成感を共有します。',
         tag: '発表会',
-        image: 'https://placehold.co/640x400/png?text=Showcase',
+        image: '/classoom/4.jpg',
       },
       {
         title: 'ストーリーテリング',
         summary:
           '好きな物語を英語で朗読し、絵や小物を使ってシーンを再現。表現の幅を広げる人気の時間です。',
         tag: '表現力',
-        image: 'https://placehold.co/640x400/png?text=Story+Time',
+        image: '/classoom/3.jpg',
       },
     ],
     testimonials: [
@@ -333,24 +343,36 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
     aboutPage: {
       hero: {
         eyebrow: 'About the School',
-        title: '英語で伝える力を、3歳から大人まで',
+        title: '英語で伝える力を、2歳から大人まで',
         description:
           'ナミキイングリッシュスクールは、学ぶ楽しさと自信を育むために、少人数と実践的なアクティビティを大切にしています。',
         stats: [
-          { label: '開校', value: '2014年' },
-          { label: '年齢層', value: '3歳〜大人' },
-          { label: '講師', value: '経験10年以上' },
+          { label: '開校予定', value: '2026年4月' },
+          { label: '年齢層', value: '2歳〜大人' },
+          { label: '講師', value: '英語に堪能な講師陣' },
         ],
+      },
+      messageToParents: {
+        title: 'Message to Parents',
+        subtitle: '保護者の皆さまへ',
+        greeting: '平素よりNamiki English Schoolの教育活動にご理解とご協力を賜り、誠にありがとうございます。',
+        body: [
+          '私たちは、すべての子どもたちがそれぞれの可能性を持っていると信じています。安心で温かく、刺激に満ちた環境の中で、自信を育み、英語によるコミュニケーション力を伸ばしていきます。',
+          '英語だけでなく、思いやりや創造力、国際的な視野を育てることを大切にし、一人ひとりの成長を保護者の皆さまと共に支えてまいります。',
+          '今後ともどうぞよろしくお願い申し上げます。',
+        ],
+        signoff: 'Sincerely,',
+        signerTitle: '校長',
       },
       story: {
         title: '私たちのストーリー',
         paragraphs: [
           '地域の子どもたちが、英語で自分の気持ちを伝えられるように。そんな思いからスタートしました。',
           '歌やゲームだけで終わらず、リーディング・ライティング・スピーキング・フォニックスをバランスよく学び、アウトプットを重ねることで自信を育てています。',
-          '3歳から大人まで、一人ひとりに合わせたサポートで「できた！」を積み重ねます。',
+          '2歳から大人まで、一人ひとりに合わせたサポートで「できた！」を積み重ねます。',
         ],
         image:
-          'https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80',
+          '/classoom/4.jpg',
       },
       values: [
         {
@@ -533,7 +555,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
     },
     schoolShowcaseSection: {
       hero: {
-        imageSrc: '/student-class/student-class-1.jpg',
+        imageSrc: '/classoom/1.jpg',
         imageAlt: '教室で笑顔の子どもたち',
         title: '小学校コース',
         indexLabel: '01.',
@@ -549,11 +571,11 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
           'ご家庭への共有を重視し、教室外でも自然に学びが続くようにサポートします。',
           '発表やロールプレイを通じて、子どもたちの伝える力と自信を育てます。',
         ],
-        imageSrc: '/student-class/young-learner.jpg',
+        imageSrc: '/assets/asset-4.jpg',
         imageAlt: '教室で制作活動をする児童',
-        statValue: '+76',
-        statLabel: '受講コース',
-        principalName: 'Emma Jhonson',
+        statValue: '5',
+        statLabel: '講師',
+        principalName: 'セリア・メンデス',
         principalRole: 'スクール代表',
       },
       mosaicTiles: [
@@ -561,7 +583,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
           id: 'principal-card',
           type: 'color',
           eyebrow: 'スクール代表',
-          title: 'Hanna Williams',
+          title: 'セリア・メンデス',
           description:
             '英語を毎日自然に使える、安心感のあるクラス文化づくりを大切にしています。',
           backgroundColor: '#5dc4de',
@@ -570,43 +592,43 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         {
           id: 'teacher-photo-1',
           type: 'image',
-          imageSrc: '/student-class/workshops.jpg',
+          imageSrc: '/assets/asset-8.jpg',
           imageAlt: '教室で指導する先生と生徒',
           colSpan: 1,
         },
         {
           id: 'playground-photo',
           type: 'image',
-          imageSrc: '/student-class/student-class-1.jpg',
+          imageSrc: '/classoom/1.jpg',
           imageAlt: '活動中に笑顔を見せる子どもたち',
           colSpan: 1,
         },
         {
           id: 'students-photo-1',
           type: 'image',
-          imageSrc: '/student-class/young-learner.jpg',
+          imageSrc: '/assets/asset-4.jpg',
           imageAlt: '授業で取り組む生徒たち',
           colSpan: 1,
         },
         {
           id: 'students-photo-2',
           type: 'image',
-          imageSrc: '/student-class/student-class-1.jpg',
-          imageAlt: '教材を持って並ぶ生徒たち',
+          imageSrc: '/classoom/4.jpg',
+          imageAlt: '教材が並ぶ教室スペース',
           colSpan: 1,
         },
         {
           id: 'sports-photo',
           type: 'image',
-          imageSrc: '/student-class/workshops.jpg',
-          imageAlt: 'ボールを持って活動する生徒',
+          imageSrc: '/classoom/2.jpg',
+          imageAlt: '教室で遊びに取り組む子どもたち',
           colSpan: 1,
         },
         {
           id: 'teacher-highlight',
           type: 'color',
           eyebrow: '担当講師',
-          title: 'Andrew Taylor',
+          title: 'アンドリュー・テイラー',
           description:
             'プロジェクト型レッスンで、発音・伝達力・協働スキルをバランスよく育てます。',
           backgroundColor: '#e5be45',
@@ -616,8 +638,8 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         {
           id: 'teacher-photo-2',
           type: 'image',
-          imageSrc: '/student-class/young-learner.jpg',
-          imageAlt: '生徒をサポートする先生',
+          imageSrc: '/classoom/3.jpg',
+          imageAlt: '学習教材のある教室の様子',
           colSpan: 1,
         },
       ],
@@ -642,7 +664,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       badge: 'A bright, interactive English classroom',
       headline: 'Let’s Make English Feel Easy',
       subheadline:
-        'For learners ages 3 and up. Small classes, friendly teachers, and activity-based lessons that build confidence.',
+        'For learners ages 2 and up. Small classes, friendly teachers, and activity-based lessons that build confidence.',
       ctaPrimary: 'Book a trial lesson',
       ctaSecondary: 'Explore programs',
       stats: [
@@ -663,10 +685,10 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         },
       ],
       image:
-        'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1400&q=80',
+        '/assets/asset-7.jpg',
     },
     about: {
-      missionLabel: 'Vision · Mission · Philosophy',
+      missionLabel: 'Vision • Mission • Philosophy',
       headline: 'A trusted, family-style international English school',
       lead: 'To become a trusted, family-style international English school in Japan where children grow with confidence, global awareness, and strong communication skills.',
       body: [
@@ -677,11 +699,11 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
     features: [
       {
         title: 'Vision',
-        body: 'To become a trusted, family-style international English school where children grow with confidence, global awareness, and strong communication skills.',
+        body: 'To become a trusted, family-style international English school in Japan where children grow with confidence, global awareness, and strong communication skills.',
       },
       {
         title: 'Mission',
-        body: 'To provide high-quality English education in a warm, safe environment and support each child from ages 2 to 12.',
+        body: 'To provide high-quality English education in a warm and safe environment, nurture confident speakers from ages 2 to 12, support each child’s unique learning journey, and build strong partnerships with families and the community.',
       },
       {
         title: 'Philosophy',
@@ -694,42 +716,44 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         duration: 'Mon-Fri / 8:00 AM-6:00 PM',
         category: 'Ages 2 and up',
         bulletPoints: [
-          'Safe and nurturing environment for young learners',
-          'Learn through play, songs, phonics, and daily routines',
-          'Natural English exposure in age-appropriate activities',
-          'Bilingual environment that supports confident growth',
+          'Play-based English immersion',
+          'Songs, phonics, and storytelling',
+          'Daily routines and social skill development',
+          'Creative arts and physical activities',
         ],
         ctaLabel: 'Contact us',
         accentColor: 'bg-blue-500',
-        image: '/student-class/student-class-1.jpg',
+        image: '/assets/asset-1.jpg',
       },
       {
         title: 'Eikaiwa Classes',
         duration: 'Weekday classes',
-        category: 'Conversation, pronunciation, and vocabulary',
+        category: 'Interactive classes for ages 2 and up',
         bulletPoints: [
-          'Interactive English conversation classes',
-          'Build confidence through guided speaking practice',
-          'Improve pronunciation and practical communication skills',
-          'Level-based support for each learner',
+          'Speaking and listening practice',
+          'Phonics and pronunciation',
+          'Vocabulary and sentence building',
+          'Role play and interactive activities',
+          'Builds confident communicators who express naturally and effectively',
         ],
         ctaLabel: 'Contact us',
         accentColor: 'bg-green-500',
-        image: '/student-class/young-learner.jpg',
+        image: '/assets/asset-4.jpg',
       },
       {
         title: 'After School Program',
-        duration: 'After-school immersion',
-        category: 'Elementary to junior high',
+        duration: 'Monday-Friday (after school hours)',
+        category: 'Ages 6-12',
         bulletPoints: [
-          'Includes phonics, reading, and writing support',
-          'Homework support and creative English activities',
-          'Immersion-style lessons for natural language use',
-          'Balanced structure for school and language growth',
+          'Phonics and pronunciation development',
+          'Reading and writing skills',
+          'Grammar and vocabulary building',
+          'English conversation and presentation skills',
+          'Homework support and creative activities',
         ],
         ctaLabel: 'Contact us',
         accentColor: 'bg-orange-500',
-        image: '/student-class/workshops.jpg',
+        image: '/assets/asset-8.jpg',
       },
     ],
     projects: [
@@ -738,14 +762,14 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         summary:
           'Students build a short team presentation and share it with families, celebrating growth together.',
         tag: 'Showcase',
-        image: 'https://placehold.co/640x400/png?text=Showcase',
+        image: '/classoom/4.jpg',
       },
       {
         title: 'Storytelling',
         summary:
           'Kids read favorite tales in English, using drawings and props to bring each scene to life.',
         tag: 'Expression',
-        image: 'https://placehold.co/640x400/png?text=Story+Time',
+        image: '/classoom/3.jpg',
       },
     ],
     testimonials: [
@@ -786,14 +810,26 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
     aboutPage: {
       hero: {
         eyebrow: 'About the School',
-        title: 'English confidence for ages 3 and up',
+        title: 'English confidence for ages 2 and up',
         description:
           'We keep classes small and hands-on so learners of any age can enjoy English and speak with confidence.',
         stats: [
-          { label: 'Founded', value: '2014' },
-          { label: 'Ages', value: '3+ years' },
-          { label: 'Teachers', value: '10+ yrs experience' },
+          { label: 'Opening', value: 'April 2026' },
+          { label: 'Ages', value: '2+ years' },
+          { label: 'Teachers', value: 'English-proficient team' },
         ],
+      },
+      messageToParents: {
+        title: '保護者の皆さまへ',
+        subtitle: '保護者の皆さまへ',
+        greeting: 'Dear Parents,',
+        body: [
+          'Thank you for trusting Namiki English School with your child’s education. We believe that every child has unique potential, and our mission is to provide a safe, warm, and inspiring environment where children can grow with confidence and develop strong English communication skills.',
+          'Our programs are designed to nurture not only language ability, but also character, kindness, creativity, and a global mindset. We are committed to supporting each child’s individual learning journey and building a strong partnership with families.',
+          'We sincerely appreciate your continued support and cooperation as we work together for your child’s bright future.',
+        ],
+        signoff: '敬具',
+        signerTitle: 'School Director',
       },
       story: {
         title: 'Our Story',
@@ -803,19 +839,19 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
           'From preschoolers to adults, we tailor support so everyone can stack up “I did it!” moments.',
         ],
         image:
-          'https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80',
+          '/classoom/4.jpg',
       },
       values: [
         {
-          title: 'Curiosity',
+          title: '好奇心',
           body: 'We keep English fun and approachable so learners stay curious.',
         },
         {
-          title: 'Confidence',
+          title: '自信',
           body: 'Frequent, small wins build the courage to speak in their own words.',
         },
         {
-          title: 'Community',
+          title: 'つながり',
           body: 'Families and teachers partner to celebrate growth together.',
         },
       ],
@@ -1008,7 +1044,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
     },
     schoolShowcaseSection: {
       hero: {
-        imageSrc: '/student-class/student-class-1.jpg',
+        imageSrc: '/classoom/1.jpg',
         imageAlt: 'Smiling students in a classroom',
         title: 'Primary School',
         indexLabel: '01.',
@@ -1024,7 +1060,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
           'Family communication is built in, with regular updates so learning continues naturally at home.',
           'Students gain confidence through presentations, roleplay, and collaborative classroom activities.',
         ],
-        imageSrc: '/student-class/young-learner.jpg',
+        imageSrc: '/assets/asset-4.jpg',
         imageAlt: 'Young learner drawing in class',
         statValue: '5',
         statLabel: 'Teachers',
@@ -1045,43 +1081,43 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         {
           id: 'teacher-photo-1',
           type: 'image',
-          imageSrc: '/student-class/workshops.jpg',
+          imageSrc: '/assets/asset-8.jpg',
           imageAlt: 'Teacher with students in workshop class',
           colSpan: 1,
         },
         {
           id: 'playground-photo',
           type: 'image',
-          imageSrc: '/student-class/student-class-1.jpg',
+          imageSrc: '/classoom/1.jpg',
           imageAlt: 'Kids smiling during class activity',
           colSpan: 1,
         },
         {
           id: 'students-photo-1',
           type: 'image',
-          imageSrc: '/student-class/young-learner.jpg',
+          imageSrc: '/assets/asset-4.jpg',
           imageAlt: 'Students practicing in class',
           colSpan: 1,
         },
         {
           id: 'students-photo-2',
           type: 'image',
-          imageSrc: '/student-class/student-class-1.jpg',
-          imageAlt: 'Group of students with school materials',
+          imageSrc: '/classoom/4.jpg',
+          imageAlt: 'Classroom table with learning materials',
           colSpan: 1,
         },
         {
           id: 'sports-photo',
           type: 'image',
-          imageSrc: '/student-class/workshops.jpg',
-          imageAlt: 'Students holding sports balls',
+          imageSrc: '/classoom/2.jpg',
+          imageAlt: 'Children engaging with classroom play materials',
           colSpan: 1,
         },
         {
           id: 'teacher-highlight',
           type: 'color',
           eyebrow: 'Reference Teacher',
-          title: 'Insert Teacher Name',
+          title: 'Andrew Taylor',
           description:
             'Supports project-based lessons that improve confidence, pronunciation, and team communication.',
           backgroundColor: '#e5be45',
@@ -1091,8 +1127,8 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         {
           id: 'teacher-photo-2',
           type: 'image',
-          imageSrc: '/student-class/young-learner.jpg',
-          imageAlt: 'Teacher helping students in classroom',
+          imageSrc: '/classoom/3.jpg',
+          imageAlt: 'Learning tools displayed in the classroom',
           colSpan: 1,
         },
       ],

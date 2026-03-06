@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { LuBaby, LuBookOpenCheck, LuClock3, LuPencilLine } from "react-icons/lu";
 import Container from "./Container";
 import FadeIn from "./FadeIn";
@@ -27,29 +28,29 @@ const ClassesOverviewSection = () => {
               title: "プリスクール",
               age: "2〜3歳",
               description:
-                "歌・フォニックス・絵本・日常活動を通じて、安心できる環境で英語に自然に触れます。",
-              points: ["遊び中心の英語導入", "生活リズムを大切にした学び"],
+                "安全で温かい環境の中、歌・フォニックス・絵本・日常活動を通して楽しく英語を学びます。",
+              points: ["歌・フォニックス・絵本・日常活動", "安全で温かい学習環境"],
             },
             {
               title: "キンダーガーテン",
               age: "4〜6歳",
               description:
-                "参加型レッスンと創造的な活動で、語彙力・スピーキング力・初期の読み書きを育てます。",
-              points: ["会話の自信づくり", "創造性を引き出す活動"],
+                "参加型レッスンと創造的な活動を通して、語彙力・スピーキング力・初期の読み書き力を育てます。",
+              points: ["参加型レッスン", "創造的な活動で実践力を育成"],
             },
             {
               title: "エレメンタリー",
               age: "6〜12歳",
               description:
-                "フォニックス・文法・リーディング・ライティング・英会話を体系的に学びます。",
-              points: ["宿題サポート対応", "構造化された英語イマージョン"],
+                "フォニックス・文法・リーディング・ライティング・英会話・宿題サポートを含む体系的な英語イマージョンプログラムです。",
+              points: ["体系的な英語イマージョン", "宿題サポート対応"],
             },
             {
               title: "アフタースクール",
               age: "月〜金",
               description:
-                "放課後の学習サポートと英語コミュニケーション強化で、学力と表現力を伸ばします。",
-              points: ["平日毎日開講", "学習習慣と実践英語を両立"],
+                "月曜日から金曜日まで実施し、学習サポートとコミュニケーション力向上を目指します。",
+              points: ["月曜日〜金曜日開講", "学習サポートと表現力向上"],
             },
           ] as ClassCard[],
         }
@@ -64,28 +65,28 @@ const ClassesOverviewSection = () => {
               age: "Ages 2-3",
               description:
                 "Play-based English learning through songs, phonics, storytelling, and daily routines in a safe environment.",
-              points: ["Gentle first English exposure", "Nurturing and secure classroom routine"],
+              points: ["Songs, phonics, storytelling, and daily routines", "Safe and nurturing environment"],
             },
             {
               title: "Kindergarten Class",
               age: "Ages 4-6",
               description:
                 "Interactive lessons and creative activities to develop vocabulary, speaking confidence, and early literacy.",
-              points: ["Confidence through participation", "Creative, hands-on language learning"],
+              points: ["Builds vocabulary and speaking confidence", "Develops early reading and writing skills"],
             },
             {
               title: "Elementary Class",
               age: "Ages 6-12",
               description:
                 "Structured immersion covering phonics, grammar, reading, writing, conversation, and homework support.",
-              points: ["Balanced core English skills", "Academic support included"],
+              points: ["Phonics, grammar, reading, writing, and conversation", "Homework support included"],
             },
             {
               title: "After School Program",
               age: "Monday-Friday",
               description:
-                "Extended English learning program supporting academic growth and communication skills after school.",
-              points: ["Weekday availability", "Steady language and study growth"],
+                "Extended English learning program available Monday to Friday, supporting academic growth and communication skills.",
+              points: ["Available Monday to Friday", "Supports academic and communication growth"],
             },
           ] as ClassCard[],
         };
@@ -136,6 +137,8 @@ const ClassesOverviewSection = () => {
             {copy.cards.map((card, index) => {
               const Icon = icons[index % icons.length];
               const theme = themes[index % themes.length];
+              const isFourToSixCard = card.age.includes("4") && card.age.includes("6");
+              const isSixToTwelveCard = card.age.includes("6") && card.age.includes("12");
 
               return (
                 <article
@@ -157,6 +160,59 @@ const ClassesOverviewSection = () => {
                   <p className="mt-3 text-sm leading-relaxed text-slate-700 md:text-base">
                     {card.description}
                   </p>
+                  {isFourToSixCard ? (
+                    <div className="mt-4 grid grid-cols-2 gap-2">
+                      <div className="relative h-24 overflow-hidden rounded-xl">
+                        <Image
+                          src="/assets/asset-4.jpg"
+                          alt="Kindergarten activity"
+                          fill
+                          className="object-cover"
+                          sizes="(min-width: 1280px) 140px, 45vw"
+                        />
+                      </div>
+                      <div className="relative h-24 overflow-hidden rounded-xl">
+                        <Image
+                          src="/assets/asset-5.jpg"
+                          alt="Kindergarten classroom"
+                          fill
+                          className="object-cover"
+                          sizes="(min-width: 1280px) 140px, 45vw"
+                        />
+                      </div>
+                    </div>
+                  ) : null}
+                  {isSixToTwelveCard ? (
+                    <div className="mt-4 grid grid-cols-3 gap-2">
+                      <div className="relative h-24 overflow-hidden rounded-xl">
+                        <Image
+                          src="/assets/asset-6.jpg"
+                          alt="Elementary classroom activity"
+                          fill
+                          className="object-cover"
+                          sizes="(min-width: 1280px) 96px, 30vw"
+                        />
+                      </div>
+                      <div className="relative h-24 overflow-hidden rounded-xl">
+                        <Image
+                          src="/assets/asset-7.jpg"
+                          alt="Elementary lesson in progress"
+                          fill
+                          className="object-cover"
+                          sizes="(min-width: 1280px) 96px, 30vw"
+                        />
+                      </div>
+                      <div className="relative h-24 overflow-hidden rounded-xl">
+                        <Image
+                          src="/assets/asset-8.jpg"
+                          alt="Elementary students in class"
+                          fill
+                          className="object-cover"
+                          sizes="(min-width: 1280px) 96px, 30vw"
+                        />
+                      </div>
+                    </div>
+                  ) : null}
 
                   <ul className="mt-4 space-y-2 text-sm text-slate-700">
                     {card.points.map((point) => (

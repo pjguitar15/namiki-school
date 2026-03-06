@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Container from "./Container";
@@ -37,33 +37,33 @@ const PricingSection = () => {
   const copy =
     language === "ja"
       ? {
-          label: "料金プラン",
-          title: "最新の料金一覧",
+          label: "æ–™é‡‘ãƒ—ãƒ©ãƒ³",
+          title: "æœ€æ–°ã®æ–™é‡‘ä¸€è¦§",
           subtitle:
-            "デイケア（通常・短時間）、アフタースクール、英会話の月謝をまとめて確認できます。",
-          cta: "体験・相談はこちら",
-          featuredLabel: "おすすめ",
+            "ãƒ‡ã‚¤ã‚±ã‚¢ï¼ˆé€šå¸¸ãƒ»çŸ­æ™‚é–“ï¼‰ã€ã‚¢ãƒ•ã‚¿ãƒ¼ã‚¹ã‚¯ãƒ¼ãƒ«ã€è‹±ä¼šè©±ã®æœˆè¬ã‚’ã¾ã¨ã‚ã¦ç¢ºèªã§ãã¾ã™ã€‚",
+          cta: "ä½“é¨“ãƒ»ç›¸è«‡ã¯ã“ã¡ã‚‰",
+          featuredLabel: "ãŠã™ã™ã‚",
           note:
-            "デイケア・アフタースクールの入会金は ¥30,000（初回のみ）です。英会話は入会金 ¥15,000 です。",
+            "ãƒ‡ã‚¤ã‚±ã‚¢ãƒ»ã‚¢ãƒ•ã‚¿ãƒ¼ã‚¹ã‚¯ãƒ¼ãƒ«ã®å…¥ä¼šé‡‘ã¯ Â¥30,000ï¼ˆåˆå›žã®ã¿ï¼‰ã§ã™ã€‚è‹±ä¼šè©±ã¯å…¥ä¼šé‡‘ Â¥15,000 ã§ã™ã€‚",
           plans: [
             {
-              name: "デイケア（通常・短時間）",
-              price: "¥15,000〜¥62,000 / 月",
-              meta: "月〜金（8:00〜17:00 / 10:00〜15:00）",
-              features: ["週1〜5回", "通常デイケア: おやつ代 月額 ¥3,000", "延長: 30分 ¥700（17:00以降 / 15:00以降）"],
+              name: "ãƒ‡ã‚¤ã‚±ã‚¢ï¼ˆé€šå¸¸ãƒ»çŸ­æ™‚é–“ï¼‰",
+              price: "Â¥15,000ã€œÂ¥62,000 / æœˆ",
+              meta: "æœˆã€œé‡‘ï¼ˆ8:00ã€œ17:00 / 10:00ã€œ15:00ï¼‰",
+              features: ["é€±1ã€œ5å›ž", "é€šå¸¸ãƒ‡ã‚¤ã‚±ã‚¢: ãŠã‚„ã¤ä»£ æœˆé¡ Â¥3,000", "å»¶é•·: 30åˆ† Â¥700ï¼ˆ17:00ä»¥é™ / 15:00ä»¥é™ï¼‰"],
             },
             {
-              name: "アフタースクール（14:00〜18:00）",
-              price: "¥14,000〜¥46,000 / 月",
-              meta: "月〜金",
-              features: ["週1〜5回", "おやつ代 月額 ¥3,000", "教材費・施設費: 各¥8,000（6ヶ月ごと）"],
+              name: "ã‚¢ãƒ•ã‚¿ãƒ¼ã‚¹ã‚¯ãƒ¼ãƒ«ï¼ˆ14:00ã€œ18:00ï¼‰",
+              price: "Â¥14,000ã€œÂ¥46,000 / æœˆ",
+              meta: "æœˆã€œé‡‘",
+              features: ["é€±1ã€œ5å›ž", "ãŠã‚„ã¤ä»£ æœˆé¡ Â¥3,000", "æ•™æè²»ãƒ»æ–½è¨­è²»: å„Â¥8,000ï¼ˆ6ãƒ¶æœˆã”ã¨ï¼‰"],
               featured: true,
             },
             {
-              name: "英会話（1時間レッスン）",
-              price: "¥11,000〜¥40,000 / 月",
-              meta: "週1〜5回",
-              features: ["入会金 ¥15,000（初回のみ）", "年間教材費 ¥9,000", "施設費（年1回）¥7,000"],
+              name: "è‹±ä¼šè©±ï¼ˆ1æ™‚é–“ãƒ¬ãƒƒã‚¹ãƒ³ï¼‰",
+              price: "Â¥11,000ã€œÂ¥40,000 / æœˆ",
+              meta: "é€±1ã€œ5å›ž",
+              features: ["å…¥ä¼šé‡‘ Â¥15,000ï¼ˆåˆå›žã®ã¿ï¼‰", "å¹´é–“æ•™æè²» Â¥9,000", "æ–½è¨­è²»ï¼ˆå¹´1å›žï¼‰Â¥7,000"],
             },
           ] as Plan[],
         }
@@ -75,37 +75,37 @@ const PricingSection = () => {
           cta: "Book trial / consult",
           featuredLabel: "Recommended",
           note:
-            "Daycare and after-school admission fee is JPY 30,000 (one-time). Eikaiwa admission fee is JPY 15,000.",
+            "Daycare and after-school admission fee is ¥30,000 (one-time). Eikaiwa admission fee is ¥15,000.",
           plans: [
             {
               name: "Daycare (full & short day)",
-              price: "JPY 15,000-62,000 / month",
+              price: "¥15,000-62,000 / month",
               meta: "Monday-Friday (8:00-17:00 / 10:00-15:00)",
               features: [
                 "1 to 5 days per week",
-                "Full-day daycare snack fee: JPY 3,000 monthly",
-                "Extension: JPY 700 / 30 mins (after 17:00 or 15:00)",
+                "Full-day daycare snack fee: ¥3,000 monthly",
+                "Extension: ¥700 / 30 mins (after 17:00 or 15:00)",
               ],
             },
             {
               name: "After-School (14:00-18:00)",
-              price: "JPY 14,000-46,000 / month",
+              price: "¥14,000-46,000 / month",
               meta: "Monday-Friday",
               features: [
                 "1 to 5 days per week",
-                "Snack fee: JPY 3,000 monthly",
-                "Materials and facility: JPY 8,000 each (every 6 months)",
+                "Snack fee: ¥3,000 monthly",
+                "Materials and facility: ¥8,000 each (every 6 months)",
               ],
               featured: true,
             },
             {
               name: "Eikaiwa (1-hour lessons)",
-              price: "JPY 11,000-40,000 / month",
+              price: "¥11,000-40,000 / month",
               meta: "1 to 5 lessons per week",
               features: [
-                "Admission fee: JPY 15,000 (one-time)",
-                "Annual materials fee: JPY 9,000",
-                "Facility fee: JPY 7,000 (annual)",
+                "Admission fee: ¥15,000 (one-time)",
+                "Annual materials fee: ¥9,000",
+                "Facility fee: ¥7,000 (annual)",
               ],
             },
           ] as Plan[],
@@ -175,3 +175,4 @@ const PricingSection = () => {
 };
 
 export default PricingSection;
+

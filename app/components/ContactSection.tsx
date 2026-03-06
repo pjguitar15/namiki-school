@@ -6,7 +6,23 @@ import { useLanguage } from "../providers/LanguageProvider";
 import FadeIn from "./FadeIn";
 
 const ContactSection = () => {
-  const { content } = useLanguage();
+  const { content, language } = useLanguage();
+  const flyerCopy =
+    language === "ja"
+      ? {
+          programs: "デイケア・英会話・アフタースクール",
+          schedule: "月曜日〜金曜日 | 8:00〜17:00",
+          ages: "2歳から対象",
+          trial: "無料体験レッスン実施中！",
+          callout: "お電話でお気軽にお問い合わせください！",
+        }
+      : {
+          programs: "Daycare • Eikaiwa • After School",
+          schedule: "Monday-Friday | 8:00-17:00",
+          ages: "Ages 2 Years Old and Up",
+          trial: "Free Trial Lesson Available!",
+          callout: "Call us today to reserve your spot!",
+        };
 
   return (
     <FadeIn>
@@ -43,6 +59,13 @@ const ContactSection = () => {
               <p className="text-xs font-semibold text-white">
                 {content.contact.hours}
               </p>
+              <div className="mt-2 w-full rounded-2xl border border-white/35 bg-white/10 p-4 text-left md:max-w-md">
+                <p className="text-sm font-semibold text-white">{flyerCopy.programs}</p>
+                <p className="mt-1 text-xs text-white/90">{flyerCopy.schedule}</p>
+                <p className="mt-1 text-xs text-white/90">{flyerCopy.ages}</p>
+                <p className="mt-3 text-base font-extrabold text-white">{flyerCopy.trial}</p>
+                <p className="mt-1 text-sm text-white/95">{flyerCopy.callout}</p>
+              </div>
             </div>
           </div>
         </div>

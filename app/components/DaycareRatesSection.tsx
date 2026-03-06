@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { LuBadgeDollarSign, LuCalendarDays, LuClock3, LuGift } from "react-icons/lu";
 import Container from "./Container";
@@ -17,8 +17,10 @@ const DaycareRatesSection = () => {
     language === "ja"
       ? {
           eyebrow: "\u30c7\u30a4\u30b1\u30a2\u6599\u91d1",
-          title: "Daycare Courses & Rates",
+          title: "English Daycare Program",
           schedule: "\u6708\u301c\u91d1 8:00\u301c17:00",
+          intro:
+            "è‹±èªžãƒ‡ã‚¤ã‚±ã‚¢ã§ã¯ã€éŠã³ã‚„æ­Œã€ã‚¢ã‚¯ãƒ†ã‚£ãƒ“ãƒ†ã‚£ã€æ—¥å¸¸ä¼šè©±ã‚’é€šã—ã¦è‡ªç„¶ã«è‹±èªžã‚’å­¦ã³ã¾ã™ã€‚å®‰å¿ƒã§æ¥½ã—ã„ç’°å¢ƒã®ä¸­ã§ã€è‹±èªžã‚’èžãåŠ›ãƒ»è©±ã™åŠ›ã‚’è‚²ã¦ã¾ã™ã€‚",
           tuitionTitle: "\u6708\u984d\u6388\u696d\u6599",
           otherFeesTitle: "\u305d\u306e\u4ed6\u8cbb\u7528",
           trialTitle: "\u7121\u6599\u4f53\u9a13\u30ec\u30c3\u30b9\u30f3\u5b9f\u65bd\u4e2d",
@@ -41,26 +43,28 @@ const DaycareRatesSection = () => {
         }
       : {
           eyebrow: "Daycare Pricing",
-          title: "Daycare Courses & Rates",
+          title: "English Daycare Program",
           schedule: "Mon-Fri 8:00-17:00",
+          intro:
+            "Our English daycare provides a full-day environment where children learn English naturally through play, songs, activities, and daily communication.",
           tuitionTitle: "Tuition Fees (Monthly)",
           otherFeesTitle: "Other Fees",
           trialTitle: "Free Trial Available",
           trialBody:
             "We offer a free trial lesson so families can experience our English daycare before enrollment.",
           tuition: [
-            { label: "Once a week", amount: "JPY 19,000" },
-            { label: "Twice a week", amount: "JPY 32,500" },
-            { label: "Three times a week", amount: "JPY 44,000" },
-            { label: "Four times a week", amount: "JPY 53,000" },
-            { label: "Five times a week (Mon-Fri)", amount: "JPY 62,000" },
+            { label: "Once a week", amount: "¥19,000" },
+            { label: "Twice a week", amount: "¥32,500" },
+            { label: "Three times a week", amount: "¥44,000" },
+            { label: "Four times a week", amount: "¥53,000" },
+            { label: "Five times a week (Mon-Fri)", amount: "¥62,000" },
           ] as FeeLine[],
           otherFees: [
-            { label: "Admission fee (one-time)", amount: "JPY 30,000" },
-            { label: "Materials fee (every 6 months)", amount: "JPY 8,000" },
-            { label: "Facility fee (every 6 months)", amount: "JPY 8,000" },
-            { label: "Snacks fee (monthly)", amount: "JPY 3,000" },
-            { label: "Extension fee (after 17:00) / 30 mins", amount: "JPY 700" },
+            { label: "Admission fee (one-time)", amount: "¥30,000" },
+            { label: "Materials fee (every 6 months)", amount: "¥8,000" },
+            { label: "Facility fee (every 6 months)", amount: "¥8,000" },
+            { label: "Snacks fee (monthly)", amount: "¥3,000" },
+            { label: "Extension fee (after 17:00) / 30 mins", amount: "¥700" },
           ] as FeeLine[],
         };
 
@@ -80,6 +84,7 @@ const DaycareRatesSection = () => {
               <LuCalendarDays className="text-cyan-600" />
               <span>{copy.schedule}</span>
             </div>
+            <p className="text-sm leading-relaxed text-slate-600 md:text-base">{copy.intro}</p>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-2">
@@ -145,3 +150,4 @@ const DaycareRatesSection = () => {
 };
 
 export default DaycareRatesSection;
+

@@ -68,7 +68,7 @@ const ProgramsPage = () => {
       body: isJa
         ? "歌・遊び・フォニックスで英語の音に自然に親しみ、話す土台を作ります。"
         : "Songs, play, and phonics build a natural ear for English and early speaking confidence.",
-      image: "/student-class/student-class-1.jpg",
+      image: "/assets/asset-1.jpg",
     },
     {
       title: isJa ? "小学生" : "Elementary",
@@ -76,7 +76,7 @@ const ProgramsPage = () => {
       body: isJa
         ? "会話に加えて読解・語彙・ライティングを強化。学校英語との相乗効果を高めます。"
         : "Strengthens conversation, reading, vocabulary, and writing with school-aligned support.",
-      image: "/student-class/young-learner.jpg",
+      image: "/assets/asset-4.jpg",
     },
     {
       title: isJa ? "中学生" : "Junior High",
@@ -84,7 +84,7 @@ const ProgramsPage = () => {
       body: isJa
         ? "ディスカッションや発表で、自分の考えを英語で伝える力を育てます。"
         : "Discussion and presentation-focused classes to communicate ideas clearly in English.",
-      image: "/student-class/workshops.jpg",
+      image: "/assets/asset-8.jpg",
     },
   ];
 
@@ -231,7 +231,7 @@ const ProgramsPage = () => {
               <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-xl shadow-slate-200">
                 <div className="relative h-64 md:h-full md:min-h-[420px]">
                   <Image
-                    src="/student-class/student-class-1.jpg"
+                    src="/assets/asset-7.jpg"
                     alt={isJa ? "英語クラスの子どもたち" : "Kids in English class"}
                     fill
                     sizes="(min-width: 768px) 40vw, 100vw"

@@ -14,7 +14,7 @@ const AboutHero = () => {
     <FadeIn>
       <section className='relative isolate overflow-hidden pb-16 pt-10 text-white md:pb-20 md:pt-14'>
         <Image
-          src='/student-class/students-raise-hands.jpg'
+          src='/assets/asset-7.jpg'
           alt='Students smiling and raising hands in class'
           fill
           priority

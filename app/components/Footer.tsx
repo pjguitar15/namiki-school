@@ -109,11 +109,11 @@ const Footer = () => {
                 {isJa ? "体験レッスンは随時受付中です。" : "Trial lessons available year-round."}
               </p>
               <Image
-                src="/illustrations/footer-kids.png"
-                alt={isJa ? "子どものイラスト" : "Kids illustration"}
+                src="/classoom/3.jpg"
+                alt={isJa ? "教室で使う学習教材" : "Learning materials used in the classroom"}
                 width={190}
                 height={190}
-                className="h-auto w-[110px] md:w-[150px]"
+                className="h-auto w-[110px] rounded-xl object-cover md:w-[150px]"
                 sizes="(min-width: 768px) 150px, 110px"
               />
             </div>

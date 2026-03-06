@@ -9,6 +9,7 @@ import AboutHero from "../components/about/AboutHero";
 import ColorPaletteSection from "../components/about/ColorPaletteSection";
 import FAQSection from "../components/about/FAQSection";
 import HighlightsSection from "../components/about/HighlightsSection";
+import MessageToParentsSection from "../components/about/MessageToParentsSection";
 import StorySection from "../components/about/StorySection";
 import ValuesSection from "../components/about/ValuesSection";
 
@@ -21,6 +22,7 @@ const AboutPage = () => {
         <AboutHero />
         <Container id="about" className="space-y-16 py-10 md:space-y-20 md:py-16">
           <StorySection />
+          <MessageToParentsSection />
           <HighlightsSection />
           <ValuesSection />
           <ColorPaletteSection />

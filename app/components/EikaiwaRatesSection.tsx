@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { LuBadgeDollarSign, LuBookText, LuGift } from "react-icons/lu";
 import Container from "./Container";
@@ -16,25 +16,25 @@ const EikaiwaRatesSection = () => {
   const copy =
     language === "ja"
       ? {
-          eyebrow: "英会話料金",
+          eyebrow: "è‹±ä¼šè©±æ–™é‡‘",
           title: "Eikaiwa Program (1 Hour Lessons)",
-          subtitle: "英会話プログラム（1時間レッスン）",
-          tuitionTitle: "月額授業料",
-          otherFeesTitle: "その他費用",
-          trialTitle: "無料体験レッスン実施中",
+          subtitle: "è‹±ä¼šè©±ãƒ—ãƒ­ã‚°ãƒ©ãƒ ï¼ˆ1æ™‚é–“ãƒ¬ãƒƒã‚¹ãƒ³ï¼‰",
+          tuitionTitle: "æœˆé¡æŽˆæ¥­æ–™",
+          otherFeesTitle: "ãã®ä»–è²»ç”¨",
+          trialTitle: "ç„¡æ–™ä½“é¨“ãƒ¬ãƒƒã‚¹ãƒ³å®Ÿæ–½ä¸­",
           trialBody:
-            "ご入会前に1時間英会話レッスンを体験できる無料体験レッスンを実施しております。",
+            "ã”å…¥ä¼šå‰ã«1æ™‚é–“è‹±ä¼šè©±ãƒ¬ãƒƒã‚¹ãƒ³ã‚’ä½“é¨“ã§ãã‚‹ç„¡æ–™ä½“é¨“ãƒ¬ãƒƒã‚¹ãƒ³ã‚’å®Ÿæ–½ã—ã¦ãŠã‚Šã¾ã™ã€‚",
           tuition: [
-            { label: "1時間 週1回", amount: "¥11,000" },
-            { label: "1時間 週2回", amount: "¥20,000" },
-            { label: "1時間 週3回", amount: "¥28,000" },
-            { label: "1時間 週4回", amount: "¥35,000" },
-            { label: "1時間 週5回", amount: "¥40,000" },
+            { label: "1æ™‚é–“ é€±1å›ž", amount: "Â¥11,000" },
+            { label: "1æ™‚é–“ é€±2å›ž", amount: "Â¥20,000" },
+            { label: "1æ™‚é–“ é€±3å›ž", amount: "Â¥28,000" },
+            { label: "1æ™‚é–“ é€±4å›ž", amount: "Â¥35,000" },
+            { label: "1æ™‚é–“ é€±5å›ž", amount: "Â¥40,000" },
           ] as FeeLine[],
           otherFees: [
-            { label: "入会金（初回のみ）", amount: "¥15,000" },
-            { label: "年間教材費", amount: "¥9,000" },
-            { label: "施設費（年1回）", amount: "¥7,000" },
+            { label: "å…¥ä¼šé‡‘ï¼ˆåˆå›žã®ã¿ï¼‰", amount: "Â¥15,000" },
+            { label: "å¹´é–“æ•™æè²»", amount: "Â¥9,000" },
+            { label: "æ–½è¨­è²»ï¼ˆå¹´1å›žï¼‰", amount: "Â¥7,000" },
           ] as FeeLine[],
         }
       : {
@@ -47,16 +47,16 @@ const EikaiwaRatesSection = () => {
           trialBody:
             "We offer a free trial lesson so students can experience our one-hour Eikaiwa class before enrollment.",
           tuition: [
-            { label: "1 hour / once a week", amount: "JPY 11,000" },
-            { label: "1 hour / twice a week", amount: "JPY 20,000" },
-            { label: "1 hour / three times a week", amount: "JPY 28,000" },
-            { label: "1 hour / four times a week", amount: "JPY 35,000" },
-            { label: "1 hour / five times a week", amount: "JPY 40,000" },
+            { label: "1 hour / once a week", amount: "¥11,000" },
+            { label: "1 hour / twice a week", amount: "¥20,000" },
+            { label: "1 hour / three times a week", amount: "¥28,000" },
+            { label: "1 hour / four times a week", amount: "¥35,000" },
+            { label: "1 hour / five times a week", amount: "¥40,000" },
           ] as FeeLine[],
           otherFees: [
-            { label: "Admission fee (one-time)", amount: "JPY 15,000" },
-            { label: "Annual materials fee", amount: "JPY 9,000" },
-            { label: "Facility fee (annual)", amount: "JPY 7,000" },
+            { label: "Admission fee (one-time)", amount: "¥15,000" },
+            { label: "Annual materials fee", amount: "¥9,000" },
+            { label: "Facility fee (annual)", amount: "¥7,000" },
           ] as FeeLine[],
         };
 
@@ -136,3 +136,4 @@ const EikaiwaRatesSection = () => {
 };
 
 export default EikaiwaRatesSection;
+

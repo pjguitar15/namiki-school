@@ -30,7 +30,7 @@ const AdmissionsPage = () => {
           supportBody:
             "年齢・レベル・スケジュールに合わせて最適な学習プランをご提案します。",
           photoAlt1: "教室で活動する子どもたち",
-          photoAlt2: "先生と相談する保護者",
+          photoAlt2: "教材が整った教室の本棚",
         }
       : {
           eyebrow: "Admissions",
@@ -46,7 +46,7 @@ const AdmissionsPage = () => {
           supportBody:
             "We recommend the best class setup based on age, level, and your weekly schedule.",
           photoAlt1: "Students participating in class",
-          photoAlt2: "Parent consultation with teacher",
+          photoAlt2: "Classroom shelf with learning materials",
         };
 
   const stepThemes = [
@@ -70,7 +70,7 @@ const AdmissionsPage = () => {
         <FadeIn>
           <section className="relative isolate overflow-hidden pb-14 pt-10 text-white md:pb-18 md:pt-14">
             <Image
-              src="/student-class/students-raise-hands.jpg"
+              src="/assets/asset-7.jpg"
               alt="Students in classroom"
               fill
               priority
@@ -113,7 +113,7 @@ const AdmissionsPage = () => {
             <section className="grid gap-5 md:grid-cols-2">
               <article className="relative h-64 overflow-hidden rounded-3xl shadow-[0_16px_30px_rgba(15,23,42,0.12)] md:h-80">
                 <Image
-                  src="/student-class/workshops.jpg"
+                  src="/assets/asset-4.jpg"
                   alt={labels.photoAlt1}
                   fill
                   sizes="(min-width: 768px) 50vw, 100vw"
@@ -122,7 +122,7 @@ const AdmissionsPage = () => {
               </article>
               <article className="relative h-64 overflow-hidden rounded-3xl shadow-[0_16px_30px_rgba(15,23,42,0.12)] md:h-80">
                 <Image
-                  src="/student-class/student-class-1.jpg"
+                  src="/classoom/5.jpg"
                   alt={labels.photoAlt2}
                   fill
                   sizes="(min-width: 768px) 50vw, 100vw"

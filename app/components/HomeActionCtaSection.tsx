@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { LuCalendarCheck2, LuCircleDollarSign, LuFilePenLine } from "react-icons/lu";
+import { LuCalendarCheck2, LuFilePenLine, LuJapaneseYen } from "react-icons/lu";
 import Container from "./Container";
 import FadeIn from "./FadeIn";
 import { useLanguage } from "../providers/LanguageProvider";
@@ -20,7 +20,7 @@ const HomeActionCtaSection = () => {
               body: "デイケア・英会話・アフタースクールの最新料金を一覧でチェック。",
               href: "/pricing",
               cta: "料金ページへ",
-              icon: LuCircleDollarSign,
+              icon: LuJapaneseYen,
               tone: "bg-[#ffe8ef] border-[#ffbfd0]",
               button: "bg-[#ff5f91] hover:bg-[#ec4a81]",
             },
@@ -53,7 +53,7 @@ const HomeActionCtaSection = () => {
               body: "View daycare, Eikaiwa, and after-school rates in one place.",
               href: "/pricing",
               cta: "Open pricing",
-              icon: LuCircleDollarSign,
+              icon: LuJapaneseYen,
               tone: "bg-[#ffe8ef] border-[#ffbfd0]",
               button: "bg-[#ff5f91] hover:bg-[#ec4a81]",
             },

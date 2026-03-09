@@ -43,7 +43,7 @@ const ContactSection = () => {
             <div className="flex flex-col gap-3 md:items-end">
               <Link
                 href={`mailto:${content.contact.email}`}
-                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-emerald-700 shadow-lg shadow-emerald-200 transition hover:-translate-y-0.5 hover:shadow-xl"
+                className="inline-flex w-full max-w-full items-center justify-center rounded-full bg-white px-6 py-3 text-center text-sm font-semibold text-emerald-700 shadow-lg shadow-emerald-200 transition hover:-translate-y-0.5 hover:shadow-xl md:w-auto md:max-w-none whitespace-normal break-all"
               >
                 {content.contact.emailLabel}
               </Link>

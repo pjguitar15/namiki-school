@@ -116,7 +116,7 @@ const ColorfulSchoolSection = ({
           </div>
         </article>
 
-        <section className='grid auto-rows-[180px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4'>
+        <section className='grid auto-rows-auto grid-cols-1 gap-4 sm:auto-rows-[180px] sm:grid-cols-2 lg:grid-cols-4'>
           {mosaicTiles.map((tile) => {
             const colSpanClass = spanClass(tile.colSpan, 'col')
             const rowSpanClass = spanClass(tile.rowSpan, 'row')
@@ -125,13 +125,14 @@ const ColorfulSchoolSection = ({
               return (
                 <article
                   key={tile.id}
-                  className={`group relative overflow-hidden rounded-2xl ${colSpanClass} ${rowSpanClass}`}
+                  className={`group overflow-hidden rounded-2xl bg-white sm:relative ${colSpanClass} ${rowSpanClass}`}
                 >
                   <Image
                     src={tile.imageSrc}
                     alt={tile.imageAlt}
-                    fill
-                    className='object-cover object-center transition duration-500 group-hover:scale-105'
+                    width={1200}
+                    height={900}
+                    className='h-auto w-full object-contain object-center transition duration-500 group-hover:scale-105 sm:h-full sm:object-cover'
                     sizes='(min-width: 1024px) 24vw, (min-width: 640px) 50vw, 100vw'
                   />
                 </article>

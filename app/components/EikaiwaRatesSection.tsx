@@ -16,25 +16,25 @@ const EikaiwaRatesSection = () => {
   const copy =
     language === "ja"
       ? {
-          eyebrow: "è‹±ä¼šè©±æ–™é‡‘",
+          eyebrow: "英会話料金",
           title: "Eikaiwa Program (1 Hour Lessons)",
-          subtitle: "è‹±ä¼šè©±ãƒ—ãƒ­ã‚°ãƒ©ãƒ ï¼ˆ1æ™‚é–“ãƒ¬ãƒƒã‚¹ãƒ³ï¼‰",
-          tuitionTitle: "æœˆé¡æŽˆæ¥­æ–™",
-          otherFeesTitle: "ãã®ä»–è²»ç”¨",
-          trialTitle: "ç„¡æ–™ä½“é¨“ãƒ¬ãƒƒã‚¹ãƒ³å®Ÿæ–½ä¸­",
+          subtitle: "英会話プログラム（1時間レッスン）",
+          tuitionTitle: "月額授業料",
+          otherFeesTitle: "その他費用",
+          trialTitle: "無料体験レッスン実施中",
           trialBody:
-            "ã”å…¥ä¼šå‰ã«1æ™‚é–“è‹±ä¼šè©±ãƒ¬ãƒƒã‚¹ãƒ³ã‚’ä½“é¨“ã§ãã‚‹ç„¡æ–™ä½“é¨“ãƒ¬ãƒƒã‚¹ãƒ³ã‚’å®Ÿæ–½ã—ã¦ãŠã‚Šã¾ã™ã€‚",
+            "ご入会前に1時間英会話レッスンを体験できる無料体験レッスンを実施しています。",
           tuition: [
-            { label: "1æ™‚é–“ é€±1å›ž", amount: "Â¥11,000" },
-            { label: "1æ™‚é–“ é€±2å›ž", amount: "Â¥20,000" },
-            { label: "1æ™‚é–“ é€±3å›ž", amount: "Â¥28,000" },
-            { label: "1æ™‚é–“ é€±4å›ž", amount: "Â¥35,000" },
-            { label: "1æ™‚é–“ é€±5å›ž", amount: "Â¥40,000" },
+            { label: "1時間 週1回", amount: "¥11,000" },
+            { label: "1時間 週2回", amount: "¥20,000" },
+            { label: "1時間 週3回", amount: "¥28,000" },
+            { label: "1時間 週4回", amount: "¥35,000" },
+            { label: "1時間 週5回", amount: "¥40,000" },
           ] as FeeLine[],
           otherFees: [
-            { label: "å…¥ä¼šé‡‘ï¼ˆåˆå›žã®ã¿ï¼‰", amount: "Â¥15,000" },
-            { label: "å¹´é–“æ•™æè²»", amount: "Â¥9,000" },
-            { label: "æ–½è¨­è²»ï¼ˆå¹´1å›žï¼‰", amount: "Â¥7,000" },
+            { label: "入会金（初回のみ）", amount: "¥15,000" },
+            { label: "年間教材費", amount: "¥9,000" },
+            { label: "施設費（年1回）", amount: "¥7,000" },
           ] as FeeLine[],
         }
       : {

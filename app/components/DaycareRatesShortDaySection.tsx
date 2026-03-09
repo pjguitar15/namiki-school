@@ -10,6 +10,11 @@ type FeeLine = {
   amount: string;
 };
 
+type HourLine = {
+  label: string;
+  time: string;
+};
+
 const DaycareRatesShortDaySection = () => {
   const { language } = useLanguage();
 
@@ -17,54 +22,64 @@ const DaycareRatesShortDaySection = () => {
     language === "ja"
       ? {
           eyebrow: "\u30c7\u30a4\u30b1\u30a2\u6599\u91d1\uff08\u77ed\u6642\u9593\uff09",
-          title: "English Daycare Program",
-          subtitle: "\u82f1\u8a9e\u30c7\u30a4\u30b1\u30a2\u30d7\u30ed\u30b0\u30e9\u30e0\uff08\u6708\u301c\u91d1 10:00\u301c15:00\uff09",
-          schedule: "\u6708\u301c\u91d1 10:00\u301c15:00",
+          title: "Short-Hour English Daycare",
+          subtitle: "\u77ed\u6642\u9593\u82f1\u8a9e\u30c7\u30a4\u30b1\u30a2 \u30b3\u30fc\u30b9\u30fb\u6599\u91d1",
+          schedule: "\u6708\u301c\u91d1\u958b\u8b1b",
+          programHoursTitle: "\u30d7\u30ed\u30b0\u30e9\u30e0\u6642\u9593",
+          programHours: [
+            { label: "\u30aa\u30d7\u30b7\u30e7\u30f31", time: "\u6708\u301c\u91d1 9:00\u301c12:00" },
+            { label: "\u30aa\u30d7\u30b7\u30e7\u30f32", time: "\u6708\u301c\u91d1 10:00\u301c14:00" },
+          ] as HourLine[],
           intro:
-            "è‹±èªžãƒ‡ã‚¤ã‚±ã‚¢ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã§ã¯ã€ã‚²ãƒ¼ãƒ ã‚„æ­Œã€ã‚¢ã‚¯ãƒ†ã‚£ãƒ“ãƒ†ã‚£ã€æ—¥å¸¸ã®ä¼šè©±ã‚’é€šã—ã¦å­ã©ã‚‚ãŸã¡ãŒè‡ªç„¶ã«è‹±èªžã‚’å­¦ã¹ã‚‹ç’°å¢ƒã‚’æä¾›ã—ã¦ã„ã¾ã™ã€‚",
+            "\u77ed\u6642\u9593\u82f1\u8a9e\u30c7\u30a4\u30b1\u30a2\u3067\u306f\u3001\u904a\u3073\u30fb\u6b4c\u30fb\u30a2\u30af\u30c6\u30a3\u30d3\u30c6\u30a3\u30fb\u30b3\u30df\u30e5\u30cb\u30b1\u30fc\u30b7\u30e7\u30f3\u3092\u901a\u3057\u3066\u3001\u5b50\u3069\u3082\u305f\u3061\u304c\u81ea\u7136\u306b\u82f1\u8a9e\u3092\u5b66\u3079\u308b\u74b0\u5883\u3092\u63d0\u4f9b\u3057\u307e\u3059\u3002",
           tuitionTitle: "\u6708\u984d\u6388\u696d\u6599",
           otherFeesTitle: "\u305d\u306e\u4ed6\u8cbb\u7528",
-          trialTitle: "ç„¡æ–™ä½“é¨“ãƒ¬ãƒƒã‚¹ãƒ³",
+          trialTitle: "無料体験レッスン",
           trialBody:
-            "ã”å…¥ä¼šå‰ã«è‹±èªžãƒ‡ã‚¤ã‚±ã‚¢ã‚’ä½“é¨“ã§ãã‚‹ç„¡æ–™ä½“é¨“ãƒ¬ãƒƒã‚¹ãƒ³ã‚’ã”ç”¨æ„ã—ã¦ã„ã¾ã™ã€‚",
+            "ご入会前に英語デイケアを体験できる無料体験レッスンをご用意しています。",
           tuition: [
-            { label: "\u90311\u56de", amount: "\u00a515,000" },
-            { label: "\u90312\u56de", amount: "\u00a525,000" },
-            { label: "\u90313\u56de", amount: "\u00a535,000" },
-            { label: "\u90314\u56de", amount: "\u00a544,000" },
-            { label: "\u90315\u65e5\uff08\u6708\u301c\u91d1\uff09", amount: "\u00a552,000" },
+            { label: "\u90311\u56de", amount: "\u00a512,000" },
+            { label: "\u90312\u56de", amount: "\u00a520,000" },
+            { label: "\u90313\u56de", amount: "\u00a528,000" },
+            { label: "\u90314\u56de", amount: "\u00a535,000" },
+            { label: "\u90315\u56de", amount: "\u00a542,000" },
           ] as FeeLine[],
           otherFees: [
-            { label: "\u5165\u4f1a\u91d1\uff08\u521d\u56de\u306e\u307f\uff09", amount: "\u00a530,000" },
+            { label: "\u5165\u4f1a\u91d1\uff08\u521d\u56de\u306e\u307f\uff09", amount: "\u00a540,000" },
             { label: "\u6559\u6750\u8cbb\uff086\u30f6\u6708\u3054\u3068\uff09", amount: "\u00a58,000" },
-            { label: "\u65bd\u8a2d\u8cbb\uff086\u30f6\u6708\u3054\u3068\uff09", amount: "\u00a58,000" },
-            { label: "\u5ef6\u9577\u6599\u91d1 30\u5206", amount: "\u00a5700" },
+            { label: "\u65bd\u8a2d\u8cbb\uff086\u30f6\u6708\u3054\u3068\uff09", amount: "\u00a57,000" },
+            { label: "\u5ef6\u9577\u6599\u91d1 30\u5206", amount: "\u00a5600" },
           ] as FeeLine[],
         }
       : {
-          eyebrow: "Daycare Pricing (Short Day)",
-          title: "English Daycare Program",
-          subtitle: "English Daycare Program (Monday-Friday 10:00-15:00)",
-          schedule: "Mon-Fri 10:00-15:00",
+          eyebrow: "Daycare Pricing (Short Hour)",
+          title: "Short-Hour English Daycare",
+          subtitle: "Courses & Rates",
+          schedule: "Monday-Friday",
+          programHoursTitle: "Program Hours",
+          programHours: [
+            { label: "Option 1", time: "Monday-Friday, 9:00-12:00" },
+            { label: "Option 2", time: "Monday-Friday, 10:00-14:00" },
+          ] as HourLine[],
           intro:
-            "Our English daycare program provides a friendly environment where children can learn English naturally through games, songs, activities, and daily communication.",
+            "Our short-hour daycare program provides a fun and safe English immersion environment where children learn naturally through play, songs, activities, and communication.",
           tuitionTitle: "Tuition Fees (Monthly)",
           otherFeesTitle: "Other Fees",
           trialTitle: "Free Trial Lesson",
           trialBody:
             "We offer a free trial lesson so families can experience our English daycare before enrollment.",
           tuition: [
-            { label: "Once a week", amount: "¥15,000" },
-            { label: "Twice a week", amount: "¥25,000" },
-            { label: "Three times a week", amount: "¥35,000" },
-            { label: "Four times a week", amount: "¥44,000" },
-            { label: "Five times a week (Mon-Fri)", amount: "¥52,000" },
+            { label: "1 day per week", amount: "¥12,000" },
+            { label: "2 days per week", amount: "¥20,000" },
+            { label: "3 days per week", amount: "¥28,000" },
+            { label: "4 days per week", amount: "¥35,000" },
+            { label: "5 days per week", amount: "¥42,000" },
           ] as FeeLine[],
           otherFees: [
-            { label: "Admission fee (one-time)", amount: "¥30,000" },
+            { label: "Admission fee (one-time)", amount: "¥40,000" },
             { label: "Materials fee (every 6 months)", amount: "¥8,000" },
-            { label: "Facility fee (every 6 months)", amount: "¥8,000" },
-            { label: "Extension fee / 30 mins", amount: "¥700" },
+            { label: "Facility fee (every 6 months)", amount: "¥7,000" },
+            { label: "Extension fee / 30 minutes", amount: "¥600" },
           ] as FeeLine[],
         };
 
@@ -84,6 +99,22 @@ const DaycareRatesShortDaySection = () => {
             <div className="inline-flex items-center gap-2 rounded-full bg-slate-50 px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm">
               <LuCalendarDays className="text-rose-500" />
               <span>{copy.schedule}</span>
+            </div>
+            <div className="mx-auto w-full max-w-xl rounded-2xl border border-rose-100 bg-white p-4 text-left shadow-sm">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-rose-600">
+                {copy.programHoursTitle}
+              </p>
+              <ul className="mt-3 space-y-2">
+                {copy.programHours.map((item) => (
+                  <li
+                    key={item.label}
+                    className="flex items-center justify-between gap-2 rounded-xl bg-rose-50 px-3 py-2"
+                  >
+                    <span className="text-sm font-semibold text-slate-700">{item.label}</span>
+                    <span className="text-sm font-semibold text-slate-700">{item.time}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
             <p className="text-sm leading-relaxed text-slate-600 md:text-base">{copy.intro}</p>
           </div>

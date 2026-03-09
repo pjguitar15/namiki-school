@@ -1,4 +1,4 @@
-export type LanguageCode = "ja" | "en";
+﻿export type LanguageCode = "ja" | "en";
 
 export type NavItem = {
   label: string;
@@ -214,8 +214,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
           description: 'のレッスンスタイル',
         },
       ],
-      image:
-        '/assets/asset-7.jpg',
+      image: '/assets/asset-7.jpg',
     },
     about: {
       missionLabel: 'ビジョン • ミッション • 教育理念',
@@ -253,8 +252,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         ],
         ctaLabel: 'お問い合わせ',
         accentColor: 'bg-blue-500',
-        image:
-          '/assets/asset-1.jpg',
+        image: '/assets/asset-1.jpg',
       },
       {
         title: '英会話クラス',
@@ -269,8 +267,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         ],
         ctaLabel: 'お問い合わせ',
         accentColor: 'bg-green-500',
-        image:
-          '/assets/asset-5.jpg',
+        image: '/assets/asset-5.jpg',
       },
       {
         title: 'アフタースクール',
@@ -285,8 +282,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         ],
         ctaLabel: 'お問い合わせ',
         accentColor: 'bg-orange-500',
-        image:
-          '/assets/asset-1.jpg',
+        image: '/assets/asset-1.jpg',
       },
     ],
     projects: [
@@ -330,10 +326,10 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       title: '体験レッスン・資料請求はこちらから',
       description:
         'ご希望の日時や現在の英語レベルをお知らせください。講師が最適なプランをご提案します。',
-      emailLabel: 'Tsukubanamikienglishschool@gmail.com',
-      email: 'Tsukubanamikienglishschool@gmail.com',
+      emailLabel: 'tsukubanamikienglishschool@gmail.com',
+      email: 'tsukubanamikienglishschool@gmail.com',
       phoneLabel: '080-2015-6832（8:00-18:00）',
-      phone: '+818020156832',
+      phone: '080-2015-6832',
       note: 'ご返信は通常1営業日以内に差し上げます。',
       hours: 'クラス時間: 8:00-18:00',
     },
@@ -355,14 +351,15 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       messageToParents: {
         title: 'Message to Parents',
         subtitle: '保護者の皆さまへ',
-        greeting: '平素よりNamiki English Schoolの教育活動にご理解とご協力を賜り、誠にありがとうございます。',
+        greeting:
+          '平素よりNamiki English Schoolの教育活動にご理解とご協力を賜り、誠にありがとうございます。',
         body: [
           '私たちは、すべての子どもたちがそれぞれの可能性を持っていると信じています。安心で温かく、刺激に満ちた環境の中で、自信を育み、英語によるコミュニケーション力を伸ばしていきます。',
           '英語だけでなく、思いやりや創造力、国際的な視野を育てることを大切にし、一人ひとりの成長を保護者の皆さまと共に支えてまいります。',
           '今後ともどうぞよろしくお願い申し上げます。',
         ],
         signoff: 'Sincerely,',
-        signerTitle: '校長',
+        signerTitle: 'Namiki English Schoolより',
       },
       story: {
         title: '私たちのストーリー',
@@ -371,8 +368,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
           '歌やゲームだけで終わらず、リーディング・ライティング・スピーキング・フォニックスをバランスよく学び、アウトプットを重ねることで自信を育てています。',
           '2歳から大人まで、一人ひとりに合わせたサポートで「できた！」を積み重ねます。',
         ],
-        image:
-          '/classoom/4.jpg',
+        image: '/classoom/4.jpg',
       },
       values: [
         {
@@ -573,8 +569,8 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         ],
         imageSrc: '/assets/asset-4.jpg',
         imageAlt: '教室で制作活動をする児童',
-        statValue: '5',
-        statLabel: '講師',
+        statValue: '毎日',
+        statLabel: '英語の時間',
         principalName: 'セリア・メンデス',
         principalRole: 'スクール代表',
       },
@@ -627,10 +623,10 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         {
           id: 'teacher-highlight',
           type: 'color',
-          eyebrow: '担当講師',
-          title: 'アンドリュー・テイラー',
+          eyebrow: '学習ハイライト',
+          title: 'プロジェクト学習',
           description:
-            'プロジェクト型レッスンで、発音・伝達力・協働スキルをバランスよく育てます。',
+            '体験型の活動を通して、発音・伝達力・協働スキルをバランスよく伸ばします。',
           backgroundColor: '#e5be45',
           textColor: '#1f2937',
           colSpan: 1,
@@ -684,8 +680,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
           description: 'More speaking time',
         },
       ],
-      image:
-        '/assets/asset-7.jpg',
+      image: '/assets/asset-7.jpg',
     },
     about: {
       missionLabel: 'Vision • Mission • Philosophy',
@@ -797,10 +792,10 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       title: 'Book a trial lesson or request info',
       description:
         'Share the current level and schedule you prefer. We’ll suggest the best plan for you.',
-      emailLabel: 'Tsukubanamikienglishschool@gmail.com',
-      email: 'Tsukubanamikienglishschool@gmail.com',
-      phoneLabel: '+81-80-2015-6832 (8:00-18:00)',
-      phone: '+818020156832',
+      emailLabel: 'tsukubanamikienglishschool@gmail.com',
+      email: 'tsukubanamikienglishschool@gmail.com',
+      phoneLabel: '080-2015-6832 (8:00-18:00)',
+      phone: '080-2015-6832',
       note: 'We usually reply within one business day.',
       hours: 'Class hours: 8:00-18:00',
     },
@@ -829,7 +824,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
           'We sincerely appreciate your continued support and cooperation as we work together for your child’s bright future.',
         ],
         signoff: '敬具',
-        signerTitle: 'School Director',
+        signerTitle: 'Namiki English School Team',
       },
       story: {
         title: 'Our Story',
@@ -838,8 +833,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
           'We balance reading, writing, speaking, listening, and phonics—plus projects and presentations to lock in confidence.',
           'From preschoolers to adults, we tailor support so everyone can stack up “I did it!” moments.',
         ],
-        image:
-          '/classoom/4.jpg',
+        image: '/classoom/4.jpg',
       },
       values: [
         {
@@ -1062,8 +1056,8 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         ],
         imageSrc: '/assets/asset-4.jpg',
         imageAlt: 'Young learner drawing in class',
-        statValue: '5',
-        statLabel: 'Teachers',
+        statValue: 'Every Day',
+        statLabel: 'English Practice',
         principalName: 'Celia Mendez',
         principalRole: 'School Owner',
       },
@@ -1116,10 +1110,10 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         {
           id: 'teacher-highlight',
           type: 'color',
-          eyebrow: 'Reference Teacher',
-          title: 'Andrew Taylor',
+          eyebrow: 'Learning Highlight',
+          title: 'Project-Based Learning',
           description:
-            'Supports project-based lessons that improve confidence, pronunciation, and team communication.',
+            'Hands-on activities build confidence, pronunciation, and team communication through meaningful practice.',
           backgroundColor: '#e5be45',
           textColor: '#1f2937',
           colSpan: 1,

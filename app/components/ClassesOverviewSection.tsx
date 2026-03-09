@@ -17,79 +17,94 @@ const ClassesOverviewSection = () => {
   const { language } = useLanguage();
 
   const copy =
-    language === "ja"
+    language === 'ja'
       ? {
-          eyebrow: "クラス概要",
-          heading: "Namiki English School クラス案内",
+          eyebrow: 'クラス概要',
+          heading: 'Namiki English School クラス案内',
           subheading:
-            "年齢と発達に合わせた4つのクラスで、楽しく実践的に英語力を育てます。",
+            '年齢と発達に合わせた4つのクラスで、楽しく実践的に英語力を育てます。',
           cards: [
             {
-              title: "プリスクール",
-              age: "2〜3歳",
+              title: 'プリスクール',
+              age: '2〜3歳',
               description:
-                "安全で温かい環境の中、歌・フォニックス・絵本・日常活動を通して楽しく英語を学びます。",
-              points: ["歌・フォニックス・絵本・日常活動", "安全で温かい学習環境"],
+                '安全で温かい環境の中、歌・フォニックス・絵本・日常活動を通して楽しく英語を学びます。',
+              points: [
+                '歌・フォニックス・絵本・日常活動',
+                '安全で温かい学習環境',
+              ],
             },
             {
-              title: "キンダーガーテン",
-              age: "4〜6歳",
+              title: 'キンダーガーテン',
+              age: '4〜6歳',
               description:
-                "参加型レッスンと創造的な活動を通して、語彙力・スピーキング力・初期の読み書き力を育てます。",
-              points: ["参加型レッスン", "創造的な活動で実践力を育成"],
+                '参加型レッスンと創造的な活動を通して、語彙力・スピーキング力・初期の読み書き力を育てます。',
+              points: ['参加型レッスン', '創造的な活動で実践力を育成'],
             },
             {
-              title: "エレメンタリー",
-              age: "6〜12歳",
+              title: 'エレメンタリー',
+              age: '6〜12歳',
               description:
-                "フォニックス・文法・リーディング・ライティング・英会話・宿題サポートを含む体系的な英語イマージョンプログラムです。",
-              points: ["体系的な英語イマージョン", "宿題サポート対応"],
+                'フォニックス・文法・リーディング・ライティング・英会話・宿題サポートを含む体系的な英語イマージョンプログラムです。',
+              points: ['体系的な英語イマージョン', '宿題サポート対応'],
             },
             {
-              title: "アフタースクール",
-              age: "月〜金",
+              title: 'アフタースクール',
+              age: '月〜金',
               description:
-                "月曜日から金曜日まで実施し、学習サポートとコミュニケーション力向上を目指します。",
-              points: ["月曜日〜金曜日開講", "学習サポートと表現力向上"],
+                '月曜日から金曜日まで実施し、学習サポートとコミュニケーション力向上を目指します。',
+              points: ['月曜日〜金曜日開講', '学習サポートと表現力向上'],
             },
           ] as ClassCard[],
         }
       : {
-          eyebrow: "Classes Overview",
-          heading: "Namiki English School Class Guide",
+          eyebrow: 'Classes Overview',
+          heading: 'Namiki English School Class Guide',
           subheading:
-            "Four age-based classes designed to build practical English skills in a joyful way.",
+            'For age-based classes designed to build practical English skills in a joyful way.',
           cards: [
             {
-              title: "Preschool Class",
-              age: "Ages 2-3",
+              title: 'Preschool Class',
+              age: 'Ages 2-3',
               description:
-                "Play-based English learning through songs, phonics, storytelling, and daily routines in a safe environment.",
-              points: ["Songs, phonics, storytelling, and daily routines", "Safe and nurturing environment"],
+                'Play-based English learning through songs, phonics, storytelling, and daily routines in a safe environment.',
+              points: [
+                'Songs, phonics, storytelling, and daily routines',
+                'Safe and nurturing environment',
+              ],
             },
             {
-              title: "Kindergarten Class",
-              age: "Ages 4-6",
+              title: 'Kindergarten Class',
+              age: 'Ages 4-6',
               description:
-                "Interactive lessons and creative activities to develop vocabulary, speaking confidence, and early literacy.",
-              points: ["Builds vocabulary and speaking confidence", "Develops early reading and writing skills"],
+                'Interactive lessons and creative activities to develop vocabulary, speaking confidence, and early literacy.',
+              points: [
+                'Builds vocabulary and speaking confidence',
+                'Develops early reading and writing skills',
+              ],
             },
             {
-              title: "Elementary Class",
-              age: "Ages 6-12",
+              title: 'Elementary Class',
+              age: 'Ages 6-12',
               description:
-                "Structured immersion covering phonics, grammar, reading, writing, conversation, and homework support.",
-              points: ["Phonics, grammar, reading, writing, and conversation", "Homework support included"],
+                'Structured immersion covering phonics, grammar, reading, writing, conversation, and homework support.',
+              points: [
+                'Phonics, grammar, reading, writing, and conversation',
+                'Homework support included',
+              ],
             },
             {
-              title: "After School Program",
-              age: "Monday-Friday",
+              title: 'After School Program',
+              age: 'Monday-Friday',
               description:
-                "Extended English learning program available Monday to Friday, supporting academic growth and communication skills.",
-              points: ["Available Monday to Friday", "Supports academic and communication growth"],
+                'Extended English learning program available Monday to Friday, supporting academic growth and communication skills.',
+              points: [
+                'Available Monday to Friday',
+                'Supports academic and communication growth',
+              ],
             },
           ] as ClassCard[],
-        };
+        }
 
   const themes = [
     {

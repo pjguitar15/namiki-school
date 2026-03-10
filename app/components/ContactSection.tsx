@@ -7,6 +7,8 @@ import FadeIn from "./FadeIn";
 
 const ContactSection = () => {
   const { content, language } = useLanguage();
+  const mapUrl = "https://maps.app.goo.gl/YMADehE4bSCPtSHL9";
+  const mapLabel = language === "ja" ? "Open in Google Maps" : "Open in Google Maps";
   const flyerCopy =
     language === "ja"
       ? {
@@ -52,6 +54,14 @@ const ContactSection = () => {
                 className="inline-flex items-center justify-center rounded-full border border-white/70 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
               >
                 {content.contact.phoneLabel}
+              </Link>
+              <Link
+                href={mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full border border-white/70 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              >
+                {mapLabel}
               </Link>
               <p className="text-xs text-white/80">
                 {content.contact.note}

@@ -1,4 +1,4 @@
-'use client';
+import type { Metadata } from "next";
 
 import AnnouncementBar from "../components/AnnouncementBar";
 import Container from "../components/Container";
@@ -12,6 +12,21 @@ import HighlightsSection from "../components/about/HighlightsSection";
 import MessageToParentsSection from "../components/about/MessageToParentsSection";
 import StorySection from "../components/about/StorySection";
 import ValuesSection from "../components/about/ValuesSection";
+import { createPageMetadata } from "../constants/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "About Namiki English School",
+  description:
+    "Learn about Namiki English School's vision, teaching approach, values, and family-centered English education in Tsukuba.",
+  path: "/about",
+  keywords: [
+    "About Namiki English School",
+    "Tsukuba English school philosophy",
+    "English education values",
+    "Family style English school Japan",
+  ],
+  image: "/classoom/4.jpg",
+});
 
 const AboutPage = () => {
   return (

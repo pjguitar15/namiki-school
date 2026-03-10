@@ -5,6 +5,7 @@ import { useLanguage } from "../providers/LanguageProvider";
 
 const AnnouncementBar = () => {
   const { language } = useLanguage();
+  const mapUrl = "https://maps.app.goo.gl/YMADehE4bSCPtSHL9";
 
   const copy = {
     en: {
@@ -32,10 +33,15 @@ const AnnouncementBar = () => {
           <span>{text.phone}</span>
         </a>
 
-        <p className="inline-flex items-center gap-2">
+        <a
+          href={mapUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 transition hover:opacity-80"
+        >
           <FiMapPin aria-hidden="true" />
           <span>{text.address}</span>
-        </p>
+        </a>
 
         <p className="inline-flex items-center gap-2">
           <FiClock aria-hidden="true" />

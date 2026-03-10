@@ -156,66 +156,80 @@ const ContactSection = ({ variant = "compact" }: ContactSectionProps) => {
   return (
     <FadeIn>
       <Container id="contact" className="py-16 md:py-20">
-        <div className="overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-500 to-sky-500 p-8 text-white shadow-2xl shadow-emerald-200 md:p-12">
-          <div className="grid gap-8 md:grid-cols-2 md:items-center">
-            <div className="space-y-4">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em]">
-                Contact
-              </p>
-              <h3 className="text-3xl font-bold leading-tight">
+        <section className="overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-500 to-sky-500 p-7 text-white shadow-2xl shadow-emerald-200 md:p-10">
+          <div className="grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-start">
+            <div className="space-y-5">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/90">Contact</p>
+              <h3 className="max-w-xl text-3xl font-extrabold leading-tight md:text-4xl">
                 {content.contact.title}
               </h3>
-              <p className="text-base text-white/90">
+              <p className="max-w-xl text-base leading-relaxed text-white/90">
                 {content.contact.description}
               </p>
+
+              <div className="flex flex-wrap gap-2">
+                <Link
+                  href={`mailto:${content.contact.email}`}
+                  className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-emerald-700 shadow-md transition hover:-translate-y-0.5 hover:shadow-lg"
+                >
+                  Email Us
+                </Link>
+                <Link
+                  href={`tel:${content.contact.phone}`}
+                  className="inline-flex items-center justify-center rounded-full border border-white/70 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                  Call Us
+                </Link>
+                <Link
+                  href={mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full border border-white/70 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                  {mapLabel}
+                </Link>
+              </div>
+
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="rounded-2xl border border-white/35 bg-white/10 p-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/80">Email</p>
+                  <p className="mt-2 break-all text-sm font-semibold text-white">
+                    {content.contact.emailLabel}
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-white/35 bg-white/10 p-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/80">Phone</p>
+                  <p className="mt-2 text-sm font-semibold text-white">{content.contact.phoneLabel}</p>
+                </div>
+                <div className="rounded-2xl border border-white/35 bg-white/10 p-4 sm:col-span-2">
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/80">Hours</p>
+                  <p className="mt-2 text-sm text-white/95">{content.contact.hours}</p>
+                  <p className="mt-1 text-xs text-white/80">{content.contact.note}</p>
+                </div>
+              </div>
             </div>
-            <div className="flex flex-col gap-3 md:items-end">
-              <Link
-                href={`mailto:${content.contact.email}`}
-                className="inline-flex w-full max-w-full items-center justify-center rounded-full bg-white px-6 py-3 text-center text-sm font-semibold text-emerald-700 shadow-lg shadow-emerald-200 transition hover:-translate-y-0.5 hover:shadow-xl md:w-auto md:max-w-none whitespace-normal break-all"
-              >
-                {content.contact.emailLabel}
-              </Link>
-              <Link
-                href={`tel:${content.contact.phone}`}
-                className="inline-flex items-center justify-center rounded-full border border-white/70 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-              >
-                {content.contact.phoneLabel}
-              </Link>
-              <Link
-                href={mapUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full border border-white/70 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-              >
-                {mapLabel}
-              </Link>
-              <p className="text-xs text-white/80">
-                {content.contact.note}
-              </p>
-              <p className="text-xs font-semibold text-white">
-                {content.contact.hours}
-              </p>
-              <div className="mt-2 w-full rounded-2xl border border-white/35 bg-white/10 p-4 text-left md:max-w-md">
+
+            <div className="space-y-4">
+              <div className="rounded-2xl border border-white/35 bg-white/10 p-4">
                 <p className="text-sm font-semibold text-white">{flyerCopy.programs}</p>
                 <p className="mt-1 text-xs text-white/90">{flyerCopy.schedule}</p>
                 <p className="mt-1 text-xs text-white/90">{flyerCopy.ages}</p>
                 <p className="mt-3 text-base font-extrabold text-white">{flyerCopy.trial}</p>
                 <p className="mt-1 text-sm text-white/95">{flyerCopy.callout}</p>
               </div>
-              <div className="mt-2 w-full overflow-hidden rounded-2xl border border-white/35 shadow-lg md:max-w-md">
+              <div className="overflow-hidden rounded-2xl border border-white/35 bg-white/10 shadow-lg">
                 <iframe
                   src={mapEmbedUrl}
                   title={mapTitle}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="h-56 w-full border-0"
+                  className="h-64 w-full border-0 md:h-72"
                   allowFullScreen
                 />
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </Container>
     </FadeIn>
   );

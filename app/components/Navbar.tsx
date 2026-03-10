@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { useLanguage } from "../providers/LanguageProvider";
@@ -15,9 +16,15 @@ const Navbar = () => {
     <header className="sticky top-0 z-30 w-full bg-white shadow-sm backdrop-blur">
       <WideContainer className="flex items-center justify-between py-4">
         <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-teal-500 to-blue-500 text-white font-semibold">
-            NE
-          </div>
+          <Image
+            src="/namiki-logo.png"
+            alt="Namiki English School logo"
+            width={44}
+            height={44}
+            className="h-11 w-11 rounded-full object-cover"
+            sizes="44px"
+            priority
+          />
           <div className="leading-tight hidden sm:block">
             <p className="text-sm uppercase tracking-wide text-slate-500">
               Namiki English
@@ -76,9 +83,14 @@ const Navbar = () => {
         <div className="fixed inset-0 z-40 bg-white">
           <WideContainer className="flex items-center justify-between py-4">
             <Link href="#home" className="flex items-center gap-3" onClick={closeMenu}>
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-teal-500 to-blue-500 text-white font-semibold">
-                NE
-              </div>
+              <Image
+                src="/namiki-logo.png"
+                alt="Namiki English School logo"
+                width={44}
+                height={44}
+                className="h-11 w-11 rounded-full object-cover"
+                sizes="44px"
+              />
               <div className="leading-tight">
                 <p className="text-sm uppercase tracking-wide text-slate-500">
                   Namiki English

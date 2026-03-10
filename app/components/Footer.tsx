@@ -34,9 +34,14 @@ const Footer = () => {
         <WideContainer className="relative z-10 grid gap-8 pb-10 pt-24 md:grid-cols-[1.2fr_0.8fr] md:items-start">
           <div className="space-y-5">
             <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/20 text-sm font-bold text-white">
-                NE
-              </div>
+              <Image
+                src="/namiki-logo.png"
+                alt="Namiki English School logo"
+                width={44}
+                height={44}
+                className="h-11 w-11 rounded-full object-cover"
+                sizes="44px"
+              />
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-white/90">
                   Namiki English School

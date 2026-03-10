@@ -26,7 +26,7 @@ const ContactPage = () => {
       <AnnouncementBar />
       <Navbar />
       <main className="flex flex-1 flex-col bg-white">
-        <ContactSection />
+        <ContactSection variant="page" />
       </main>
       <Footer />
     </div>

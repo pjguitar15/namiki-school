@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Nunito } from "next/font/google";
-import { defaultOgImage, siteName, siteUrl } from "./constants/seo";
+import { brandIcon, defaultOgImage, siteName, siteUrl } from "./constants/seo";
 import "./globals.css";
 import { LanguageProvider } from "./providers/LanguageProvider";
 
@@ -40,6 +40,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: [
+      { url: brandIcon, type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: [{ url: brandIcon, type: "image/png" }],
+    apple: [{ url: brandIcon, type: "image/png" }],
+  },
   openGraph: {
     type: "website",
     url: "/",
@@ -59,7 +67,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteName,
     description: defaultDescription,
-    images: [defaultOgImage],
+    images: [
+      {
+        url: defaultOgImage,
+        alt: `${siteName} classroom`,
+      },
+    ],
   },
   robots: {
     index: true,

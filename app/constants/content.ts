@@ -571,7 +571,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         imageAlt: '教室で制作活動をする児童',
         statValue: '毎日',
         statLabel: '英語の時間',
-        principalName: 'セリア・メンデス',
+        principalName: 'セリア・ケイノ',
         principalRole: 'スクール代表',
       },
       mosaicTiles: [
@@ -579,7 +579,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
           id: 'principal-card',
           type: 'color',
           eyebrow: 'スクール代表',
-          title: 'セリア・メンデス',
+          title: 'セリア・ケイノ',
           description:
             '英語を毎日自然に使える、安心感のあるクラス文化づくりを大切にしています。',
           backgroundColor: '#5dc4de',

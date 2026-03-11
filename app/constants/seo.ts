@@ -4,7 +4,8 @@ export const siteName = "Namiki English School";
 export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
   "https://namikienglishschool.com";
-export const defaultOgImage = "/assets/asset-7.jpg";
+export const defaultOgImage = "/og-thumbnail.png";
+export const brandIcon = "/namiki-logo.png";
 
 type PageMetadataInput = {
   title: string;
@@ -46,7 +47,12 @@ export const createPageMetadata = ({
     card: "summary_large_image",
     title,
     description,
-    images: [image],
+    images: [
+      {
+        url: image,
+        alt: `${title} | ${siteName}`,
+      },
+    ],
   },
   robots: {
     index: true,

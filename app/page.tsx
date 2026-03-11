@@ -24,7 +24,7 @@ export const metadata: Metadata = createPageMetadata({
     "Eikaiwa for kids Tsukuba",
     "After-school English Tsukuba",
   ],
-  image: "/assets/asset-1.jpg",
+  image: "/og-thumbnail.png",
 });
 
 export default function Home() {

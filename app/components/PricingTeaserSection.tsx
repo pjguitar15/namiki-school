@@ -10,31 +10,55 @@ const PricingTeaserSection = () => {
   const { language } = useLanguage();
 
   const copy =
-    language === "ja"
+    language === 'ja'
       ? {
-          eyebrow: "料金のご案内",
-          title: "お子さまに合うプランを見つけよう",
+          eyebrow: '料金のご案内',
+          title: 'お子さまに合うプランを見つけよう',
           description:
-            "デイケア、アフタースクール、英会話の料金をまとめてチェック。回数や時間に合わせて選べます。",
-          cta: "料金ページを見る",
+            'デイケア、アフタースクール、英会話の料金をまとめてチェック。回数や時間に合わせて選べます。',
+          cta: '料金ページを見る',
           cards: [
-            { icon: LuCoins, title: "通いやすい料金", text: "週1回から週5回まで、家庭に合わせて選択可能。" },
-            { icon: LuCalendarDays, title: "時間帯いろいろ", text: "8:00〜17:00、10:00〜15:00、放課後の各コースあり。" },
-            { icon: LuGift, title: "無料体験あり", text: "はじめてでも安心。入会前に教室の雰囲気を体験できます。" },
+            {
+              icon: LuCoins,
+              title: '通いやすい料金',
+              text: '週1回から週5回まで、家庭に合わせて選択可能。',
+            },
+            {
+              icon: LuCalendarDays,
+              title: '時間帯いろいろ',
+              text: '8:00〜17:00、10:00〜15:00、放課後の各コースあり。',
+            },
+            {
+              icon: LuGift,
+              title: '無料体験あり',
+              text: 'はじめてでも安心。入会前に教室の雰囲気を体験できます。',
+            },
           ],
         }
       : {
-          eyebrow: "Pricing Guide",
-          title: "Find the best plan for your child",
+          eyebrow: 'Pricing Guide',
+          title: 'Find the best plan for your child',
           description:
-            "Compare daycare, after-school, and one-hour Eikaiwa plans in one place. Choose by days and schedule.",
-          cta: "View Pricing",
+            'Compare daycare, after-school, and one-hour Eikaiwa plans in one place. Choose by days and schedule.',
+          cta: 'View Pricing',
           cards: [
-            { icon: LuCoins, title: "Flexible tuition", text: "Choose from 1 to 5 days per week based on your needs." },
-            { icon: LuCalendarDays, title: "Multiple time slots", text: "Includes 8:00-17:00, 10:00-15:00, and after-school options." },
-            { icon: LuGift, title: "Free trial", text: "Try a class first and feel confident before enrollment." },
+            {
+              icon: LuCoins,
+              title: 'Flexible tuition',
+              text: 'Choose from 1 to 5 days per week based on your needs.',
+            },
+            {
+              icon: LuCalendarDays,
+              title: 'Multiple time slots',
+              text: 'Includes 8:00-17:00 / 9:00-12:00 / 10:00-14:00 or 15:00, and after-school options.',
+            },
+            {
+              icon: LuGift,
+              title: 'Free trial',
+              text: 'Try a class first and feel confident before enrollment.',
+            },
           ],
-        };
+        }
 
   return (
     <FadeIn>

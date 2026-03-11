@@ -1058,7 +1058,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         imageAlt: 'Young learner drawing in class',
         statValue: 'Every Day',
         statLabel: 'English Practice',
-        principalName: 'Celia Mendez',
+        principalName: 'Celia Keino',
         principalRole: 'School Owner',
       },
       mosaicTiles: [
@@ -1066,7 +1066,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
           id: 'principal-card',
           type: 'color',
           eyebrow: 'School Principal',
-          title: 'Celia Mendez',
+          title: 'Celia Keino',
           description:
             'Builds a positive classroom culture where learners practice English naturally every day.',
           backgroundColor: '#5dc4de',

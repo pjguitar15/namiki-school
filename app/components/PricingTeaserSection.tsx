@@ -26,7 +26,7 @@ const PricingTeaserSection = () => {
             {
               icon: LuCalendarDays,
               title: '時間帯いろいろ',
-              text: '8:00〜17:00、9:00〜12:00、9:00〜12:00、10:00〜14:00、15:00 放課後の各コースあり。',
+              text: '8:00〜17:00、9:00〜12:00、10:00〜14:00、15:00 放課後の各コースあり。',
             },
             {
               icon: LuGift,
@@ -50,7 +50,7 @@ const PricingTeaserSection = () => {
             {
               icon: LuCalendarDays,
               title: 'Multiple time slots',
-              text: 'Includes 8:00-17:00 / 9:00-12:00 / 9:00-12:00 / 10:00-14:00, plus after-school options from 15:00.',
+              text: 'Includes 8:00-17:00 / 9:00-12:00 / 10:00-14:00, plus after-school options from 15:00.',
             },
             {
               icon: LuGift,

@@ -25,11 +25,14 @@ const Navbar = () => {
             sizes="44px"
             priority
           />
-          <div className="leading-tight hidden sm:block">
-            <p className="text-sm uppercase tracking-wide text-slate-500">
+          <div className="leading-tight">
+            <p className="text-sm font-semibold text-slate-900 sm:hidden">
+              Namiki English School
+            </p>
+            <p className="hidden text-sm uppercase tracking-wide text-slate-500 sm:block">
               Namiki English
             </p>
-            <p className="text-lg font-semibold text-slate-900">
+            <p className="hidden text-lg font-semibold text-slate-900 sm:block">
               ナミキイングリッシュスクール
             </p>
           </div>

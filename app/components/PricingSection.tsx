@@ -38,18 +38,18 @@ const PricingSection = () => {
     language === "ja"
       ? {
           label: "料金プラン",
-          title: "最新の料金一覧",
+          title: "料金一覧",
           subtitle:
-            "デイケア（通常・短時間）、アフタースクール、英会話の月謝をまとめて確認できます。",
+            "デイケア（通常・10:00〜15:00・短時間）、アフタースクール、英会話の月謝をまとめて確認できます。",
           cta: "体験・相談はこちら",
           featuredLabel: "おすすめ",
           note:
-            "入会金はプログラムによって異なります。デイケア通常・アフタースクールは ¥30,000、短時間デイケアは ¥40,000、英会話は ¥15,000（いずれも初回のみ）です。",
+            "入会金はプログラムによって異なります。通常デイケア・10:00〜15:00デイケア・アフタースクールは ¥30,000、短時間デイケアは ¥40,000、英会話は ¥15,000（いずれも初回のみ）です。",
           plans: [
             {
-              name: "デイケア（通常・短時間）",
+              name: "デイケア（通常・10:00〜15:00・短時間）",
               price: "¥12,000〜¥62,000 / 月",
-              meta: "月〜金（8:00〜17:00 / 9:00〜12:00・10:00〜14:00）",
+              meta: "月〜金（8:00〜17:00 / 10:00〜15:00 / 9:00〜12:00 / 10:00〜14:00）",
               features: ["週1〜5回", "通常デイケア: おやつ代 月額 ¥3,000", "延長: 30分 ¥600〜¥700（コースにより異なります）"],
             },
             {
@@ -69,18 +69,18 @@ const PricingSection = () => {
         }
       : {
           label: "Pricing",
-          title: "Updated Tuition Overview",
+          title: "Tuition Overview",
           subtitle:
-            "See monthly tuition for daycare (full/short day), after-school, and one-hour Eikaiwa programs.",
+            "See monthly tuition for daycare (full day, 10:00-15:00, and short-hour), after-school, and one-hour Eikaiwa programs.",
           cta: "Book trial / consult",
           featuredLabel: "Recommended",
           note:
-            "Admission fees vary by program: full-day daycare and after-school are ¥30,000, short-hour daycare is ¥40,000, and Eikaiwa is ¥15,000 (all one-time).",
+            "Admission fees vary by program: full-day daycare, 10:00-15:00 daycare, and after-school are ¥30,000, short-hour daycare is ¥40,000, and Eikaiwa is ¥15,000 (all one-time).",
           plans: [
             {
-              name: "Daycare (full & short day)",
+              name: "Daycare (full, 10:00-15:00 & short-hour)",
               price: "¥12,000-62,000 / month",
-              meta: "Monday-Friday (8:00-17:00 / 9:00-12:00 or 10:00-14:00)",
+              meta: "Monday-Friday (8:00-17:00 / 10:00-15:00 / 9:00-12:00 / 10:00-14:00)",
               features: [
                 "1 to 5 days per week",
                 "Full-day daycare snack fee: ¥3,000 monthly",
@@ -132,7 +132,7 @@ const PricingSection = () => {
               return (
                 <article
                   key={plan.name}
-                  className={`relative rounded-[2rem] border-2 p-6 shadow-[0_10px_24px_rgba(15,23,42,0.08)] ${theme.wrapper} ${
+                  className={`relative rounded-[2rem] border-2 p-6 shadow-[0_10px_24px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_30px_rgba(15,23,42,0.14)] ${theme.wrapper} ${
                     plan.featured ? "md:-translate-y-2" : ""
                   }`}
                 >

@@ -24,6 +24,13 @@ body {
   /* color: var(--foreground); */
   font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 a {

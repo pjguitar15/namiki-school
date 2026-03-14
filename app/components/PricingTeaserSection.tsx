@@ -51,7 +51,7 @@ const PricingTeaserSection = () => {
             {
               icon: LuCalendarDays,
               title: 'Multiple time slots',
-              text: 'Includes 8:00-17:00 / 9:00-12:00 / 10:00-14:00, plus after-school options from 15:00.',
+              text: 'Includes 8:00-17:00 / 10:00-15:00 / 9:00-12:00 / 10:00-14:00, plus after-school 14:00-18:00.',
             },
             {
               icon: LuGift,

@@ -96,13 +96,15 @@ const organizationJsonLd = {
   telephone: "080-2015-6832",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "331-1 Shimohiratsuka",
+    streetAddress: "1193-1 Sasagi",
     addressLocality: "Tsukuba",
     addressRegion: "Ibaraki",
-    postalCode: "305-0813",
+    postalCode: "305-0043",
     addressCountry: "JP",
   },
-  sameAs: ["https://maps.app.goo.gl/YMADehE4bSCPtSHL9"],
+  sameAs: [
+    "https://www.google.com/maps?q=1193-1%20Sasagi%20Tsukuba-shi%20Ibaraki-ken%20Japan%20305-0043",
+  ],
 };
 
 export default function RootLayout({

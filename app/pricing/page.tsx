@@ -4,7 +4,6 @@ import AnnouncementBar from "../components/AnnouncementBar";
 import AfterSchoolRatesSection from "../components/AfterSchoolRatesSection";
 import ContactSection from "../components/ContactSection";
 import DaycareRatesSection from "../components/DaycareRatesSection";
-import DaycareRatesShortDaySection from "../components/DaycareRatesShortDaySection";
 import EikaiwaRatesSection from "../components/EikaiwaRatesSection";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -14,7 +13,7 @@ import { createPageMetadata } from "../constants/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Pricing for Daycare, Eikaiwa, and After-School",
   description:
-    "View tuition and fees for daycare, short-day daycare, Eikaiwa, and after-school English programs at Namiki English School.",
+    "View tuition and fees for full-day daycare, 10:00-15:00 daycare, short-hour daycare, Eikaiwa, and after-school English programs at Namiki English School.",
   path: "/pricing",
   keywords: [
     "Namiki English School pricing",
@@ -33,7 +32,6 @@ const PricingPage = () => {
       <main className="flex flex-1 flex-col gap-10 bg-white">
         <PricingSection />
         <DaycareRatesSection />
-        <DaycareRatesShortDaySection />
         <AfterSchoolRatesSection />
         <EikaiwaRatesSection />
         <ContactSection />

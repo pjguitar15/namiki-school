@@ -109,18 +109,10 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="flex items-end justify-between gap-3">
+            <div>
               <p className="text-xs text-white/95">
                 {isJa ? "体験レッスンは随時受付中です。" : "Trial lessons available year-round."}
               </p>
-              <Image
-                src="/classoom/3.jpg"
-                alt={isJa ? "教室で使う学習教材" : "Learning materials used in the classroom"}
-                width={190}
-                height={190}
-                className="h-auto w-[110px] rounded-xl object-cover md:w-[150px]"
-                sizes="(min-width: 768px) 150px, 110px"
-              />
             </div>
           </div>
         </WideContainer>
@@ -134,3 +126,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+

@@ -12,9 +12,10 @@ type ContactSectionProps = {
 const ContactSection = ({ variant = "compact" }: ContactSectionProps) => {
   const { content, language } = useLanguage();
   const isPage = variant === "page";
-  const mapUrl = "https://maps.app.goo.gl/YMADehE4bSCPtSHL9";
+  const mapUrl =
+    "https://www.google.com/maps?q=1193-1%20Sasagi%20Tsukuba-shi%20Ibaraki-ken%20Japan%20305-0043";
   const mapEmbedUrl =
-    "https://www.google.com/maps?q=331-1%20Shimohiratsuka%20Tsukuba%20Ibaraki%20305-0813%20Japan&output=embed";
+    "https://www.google.com/maps?q=1193-1%20Sasagi%20Tsukuba-shi%20Ibaraki-ken%20Japan%20305-0043&output=embed";
   const mapLabel = language === "ja" ? "Open in Google Maps" : "Open in Google Maps";
   const mapTitle = language === "ja" ? "Google Map" : "Google Map";
 
@@ -91,7 +92,7 @@ const ContactSection = ({ variant = "compact" }: ContactSectionProps) => {
                       {flyerCopy.location}
                     </p>
                     <p className="mt-2 text-sm text-slate-700">
-                      331-1 Shimohiratsuka Tsukuba, Ibaraki 305-0813, Japan
+                      1193-1 Sasagi, Tsukuba-shi, Ibaraki-ken, Japan 305-0043
                     </p>
                   </article>
                 </div>

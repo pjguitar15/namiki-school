@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -26,8 +26,9 @@ const Hero = () => {
         <div className='pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.25),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.15),transparent_30%),radial-gradient(circle_at_40%_70%,rgba(255,255,255,0.12),transparent_30%)]' />
         <WideContainer
           id='home'
-          className='relative z-10 grid min-h-[34rem] items-center gap-6 md:min-h-[40rem] md:grid-cols-[1.1fr_0.9fr]'
+          className='relative z-10 flex min-h-[34rem] flex-col md:min-h-[40rem]'
         >
+          {/* LEFT */}
           <div className='max-w-2xl'>
             <div className='space-y-6 pb-20 pt-12 text-left text-white md:pb-24 md:pt-14'>
               <span className='inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-sm font-semibold uppercase tracking-wide backdrop-blur'>
@@ -72,17 +73,6 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className='relative mx-auto w-full max-w-[25rem] pb-8 md:max-w-[29rem] md:pb-0'>
-            <Image
-              src='/hero-img.png'
-              alt='Hero illustration'
-              width={900}
-              height={900}
-              priority
-              className='h-auto w-full object-contain drop-shadow-[0_16px_28px_rgba(15,23,42,0.28)]'
-              sizes='(min-width: 768px) 38vw, 72vw'
-            />
-          </div>
         </WideContainer>
 
         <div className='pointer-events-none absolute inset-x-0 bottom-0 z-20 h-[72px] md:h-[102px]'>
@@ -94,7 +84,7 @@ const Hero = () => {
           >
             <path
               d='M0,78 C220,18 480,20 720,78 C960,136 1220,138 1440,84 L1440,160 L0,160 Z'
-              fill='#ffffff'
+              fill='#f8fafc'
             />
           </svg>
         </div>

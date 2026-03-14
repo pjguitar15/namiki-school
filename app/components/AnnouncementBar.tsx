@@ -5,17 +5,18 @@ import { useLanguage } from "../providers/LanguageProvider";
 
 const AnnouncementBar = () => {
   const { language } = useLanguage();
-  const mapUrl = "https://maps.app.goo.gl/YMADehE4bSCPtSHL9";
+  const mapUrl =
+    "https://www.google.com/maps?q=1193-1%20Sasagi%20Tsukuba-shi%20Ibaraki-ken%20Japan%20305-0043";
 
   const copy = {
     en: {
-      phone: "+029-828-5990",
-      address: "331-1 Shimohiratsuka Tsukuba, Ibaraki 305-0813, Japan",
+      phone: "080-2015-6832",
+      address: "1193-1 Sasagi, Tsukuba-shi, Ibaraki-ken, Japan 305-0043",
       hours: "Monday - Friday : 8:00 - 18:00",
     },
     ja: {
-      phone: "+029-828-5990",
-      address: "〒305-0813 茨城県つくば市下平塚331-1",
+      phone: "080-2015-6832",
+      address: "〒305-0043 茨城県つくば市大角豆1193-1",
       hours: "月曜日 - 金曜日 : 8:00 - 18:00",
     },
   } as const;
@@ -26,7 +27,7 @@ const AnnouncementBar = () => {
     <div className="bg-[#c7add1] px-4 py-2 text-[#1f2557]">
       <div className="mx-auto flex max-w-[100rem] flex-wrap items-center justify-center gap-x-6 gap-y-1 text-xs font-semibold md:text-sm">
         <a
-          href="tel:+0298285990"
+          href="tel:08020156832"
           className="inline-flex items-center gap-2 transition hover:opacity-80"
         >
           <FiPhone aria-hidden="true" />

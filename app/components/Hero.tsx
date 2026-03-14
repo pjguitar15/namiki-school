@@ -72,7 +72,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className='relative mx-auto w-full max-w-[25rem] pb-8 md:max-w-[29rem] md:pb-0'>
+          {/* <div className='relative mx-auto w-full max-w-[25rem] pb-8 md:max-w-[29rem] md:pb-0'>
             <Image
               src='/hero-img.png'
               alt='Hero illustration'
@@ -82,7 +82,7 @@ const Hero = () => {
               className='h-auto w-full object-contain drop-shadow-[0_16px_28px_rgba(15,23,42,0.28)]'
               sizes='(min-width: 768px) 38vw, 72vw'
             />
-          </div>
+          </div> */}
         </WideContainer>
 
         <div className='pointer-events-none absolute inset-x-0 bottom-0 z-20 h-[72px] md:h-[102px]'>

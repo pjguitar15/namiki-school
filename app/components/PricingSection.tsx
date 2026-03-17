@@ -44,7 +44,7 @@ const PricingSection = () => {
           cta: "体験・相談はこちら",
           featuredLabel: "おすすめ",
           note:
-            "入会金はプログラムによって異なります。通常デイケア（8:00〜17:00）・10:00〜15:00デイケア・アフタースクールは ¥50,000、短時間デイケアは ¥40,000、英会話は ¥15,000（いずれも初回のみ）です。",
+            "入会金はプログラムによって異なります。通常デイケア（8:00〜17:00）・10:00〜15:00デイケアは ¥50,000、アフタースクールは ¥30,000、短時間デイケアは ¥40,000、英会話は ¥15,000（いずれも初回のみ）です。",
           plans: [
             {
               name: "デイケア（通常・10:00〜15:00・短時間）",
@@ -75,7 +75,7 @@ const PricingSection = () => {
           cta: "Book trial / consult",
           featuredLabel: "Recommended",
           note:
-            "Admission fees vary by program: full-day daycare (8:00-17:00), 10:00-15:00 daycare, and after-school are ¥50,000, short-hour daycare is ¥40,000, and Eikaiwa is ¥15,000 (all one-time).",
+            "Admission fees vary by program: full-day daycare (8:00-17:00) and 10:00-15:00 daycare are ¥50,000, after-school is ¥30,000, short-hour daycare is ¥40,000, and Eikaiwa is ¥15,000 (all one-time).",
           plans: [
             {
               name: "Daycare (full, 10:00-15:00 & short-hour)",

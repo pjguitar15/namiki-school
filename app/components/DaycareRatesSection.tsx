@@ -68,7 +68,7 @@ const DaycareRatesSection = () => {
               { label: "週5回（月〜金）", amount: "¥62,000" },
             ],
             otherFees: [
-              { label: "入会金（初回のみ）", amount: "¥30,000" },
+              { label: "入会金（初回のみ）", amount: "¥50,000" },
               { label: "教材費（6ヶ月ごと）", amount: "¥8,000" },
               { label: "施設費（6ヶ月ごと）", amount: "¥8,000" },
               { label: "おやつ代（月額）", amount: "¥3,000" },
@@ -164,7 +164,7 @@ const DaycareRatesSection = () => {
               { label: "5 days per week", amount: "¥62,000" },
             ],
             otherFees: [
-              { label: "Admission fee (one-time)", amount: "¥30,000" },
+              { label: "Admission fee (one-time)", amount: "¥50,000" },
               { label: "Materials fee (every 6 months)", amount: "¥8,000" },
               { label: "Facility fee (every 6 months)", amount: "¥8,000" },
               { label: "Snack fee (monthly)", amount: "¥3,000" },

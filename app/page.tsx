@@ -7,25 +7,26 @@ import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import HomeActionCtaSection from './components/HomeActionCtaSection'
 import Hero from "./components/Hero";
-import MontessoriFeatureSection from "./components/MontessoriFeatureSection";
+import HiringSpotlightSection from './components/HiringSpotlightSection'
+import MontessoriFeatureSection from './components/MontessoriFeatureSection'
 import Navbar from './components/Navbar'
 import PricingTeaserSection from './components/PricingTeaserSection'
-import TestimonialsSection from "./components/TestimonialsSection";
-import { createPageMetadata } from "./constants/seo";
+import TestimonialsSection from './components/TestimonialsSection'
+import { createPageMetadata } from './constants/seo'
 
 export const metadata: Metadata = createPageMetadata({
-  title: "English Daycare and Eikaiwa in Tsukuba",
+  title: 'English Daycare and Eikaiwa in Tsukuba',
   description:
-    "Namiki English School offers daycare, Eikaiwa, and after-school English programs in Tsukuba for ages 2 and up.",
-  path: "/",
+    'Namiki English School offers daycare, Eikaiwa, and after-school English programs in Tsukuba for ages 2 and up.',
+  path: '/',
   keywords: [
-    "English school Tsukuba",
-    "Tsukuba daycare English",
-    "Eikaiwa for kids Tsukuba",
-    "After-school English Tsukuba",
+    'English school Tsukuba',
+    'Tsukuba daycare English',
+    'Eikaiwa for kids Tsukuba',
+    'After-school English Tsukuba',
   ],
-  image: "/og-thumbnail.png",
-});
+  image: '/og-thumbnail.png',
+})
 
 export default function Home() {
   return (
@@ -86,6 +87,8 @@ export default function Home() {
           imageSrc='/classoom/1.jpg'
           reverse={true}
         />
+        <HiringSpotlightSection />
+
         {/* <MontessoriFeatureSection
           eyebrow={{
             ja: 'アフタースクール',

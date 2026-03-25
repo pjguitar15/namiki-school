@@ -36,6 +36,9 @@ export const metadata: Metadata = {
     "Eikaiwa Tsukuba",
     "After-school English program",
     "Ibaraki English school",
+    "つくば 英会話 子ども",
+    "つくば 英語 保育",
+    "つくば アフタースクール 英語",
   ],
   alternates: {
     canonical: "/",
@@ -89,11 +92,23 @@ export const metadata: Metadata = {
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
+  "@type": "Preschool",
+  "@id": `${siteUrl}/#organization`,
   name: siteName,
+  description: defaultDescription,
   url: siteUrl,
   email: "tsukubanamikienglishschool@gmail.com",
-  telephone: "080-2015-6832",
+  telephone: "+81-80-2015-6832",
+  priceRange: "¥¥",
+  areaServed: ["Tsukuba", "Ibaraki"],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "18:00",
+    },
+  ],
   address: {
     "@type": "PostalAddress",
     streetAddress: "1193-1 Sasagi",
@@ -102,6 +117,8 @@ const organizationJsonLd = {
     postalCode: "305-0043",
     addressCountry: "JP",
   },
+  hasMap:
+    "https://www.google.com/maps?q=1193-1%20Sasagi%20Tsukuba-shi%20Ibaraki-ken%20Japan%20305-0043",
   sameAs: [
     "https://www.google.com/maps?q=1193-1%20Sasagi%20Tsukuba-shi%20Ibaraki-ken%20Japan%20305-0043",
   ],

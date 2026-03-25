@@ -30,6 +30,9 @@ const PricingPage = () => {
       <AnnouncementBar />
       <Navbar />
       <main className="flex flex-1 flex-col gap-10 bg-white">
+        <h1 className="sr-only">
+          Pricing for Daycare, Eikaiwa, and After-School in Tsukuba
+        </h1>
         <PricingSection />
         <DaycareRatesSection />
         <AfterSchoolRatesSection />

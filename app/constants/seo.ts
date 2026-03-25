@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 
 export const siteName = "Namiki English School";
+const fallbackSiteUrl = "https://www.namiki-english.com";
+const envSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
 export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
-  "https://namikienglishschool.com";
+  envSiteUrl && /(^https:\/\/)(www\.)?namiki-english\.com$/i.test(envSiteUrl)
+    ? envSiteUrl
+    : fallbackSiteUrl;
 export const defaultOgImage = "/og-thumbnail.png";
 export const brandIcon = "/namiki-logo.png";
 

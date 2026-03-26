@@ -19,63 +19,66 @@ const AfterSchoolRatesSection = () => {
   const { language } = useLanguage();
 
   const copy =
-    language === "ja"
+    language === 'ja'
       ? {
-          eyebrow: "アフタースクール料金",
-          title: "After-School English Program",
-          subtitle: "アフタースクール英語プログラム（月〜金 14:00〜18:00）",
-          schedule: "月〜金 14:00〜18:00",
+          eyebrow: 'アフタースクール料金',
+          title: 'After-School English Program',
+          subtitle: 'アフタースクール英語プログラム（月〜金 14:00〜18:00）',
+          schedule: '月〜金 14:00〜18:00',
           intro:
-            "放課後に英語を楽しく学べるプログラムです。会話、フォニックス、リーディング、ライティング、アクティビティを通して英語力を伸ばします。",
-          tuitionTitle: "月謝",
-          otherFeesTitle: "その他の費用",
-          trialTitle: "無料体験レッスン",
+            '放課後に英語を楽しく学べるプログラムです。会話、フォニックス、リーディング、ライティング、アクティビティを通して英語力を伸ばします。',
+          tuitionTitle: '月謝',
+          otherFeesTitle: 'その他の費用',
+          trialTitle: '無料体験レッスン',
           trialBody:
-            "ご入会前に、アフタースクール英語プログラムの無料体験レッスンを受けることができます。",
-          tablePlan: "プラン",
-          tablePrice: "月謝",
+            'ご入会前に、アフタースクール英語プログラムの無料体験レッスンを受けることができます。',
+          tablePlan: 'プラン',
+          tablePrice: '月謝',
           tuition: [
-            { plan: "週1回", price: "¥14,000" },
-            { plan: "週2回", price: "¥24,000" },
-            { plan: "週3回", price: "¥33,000" },
-            { plan: "週4回", price: "¥40,000" },
-            { plan: "週5回", price: "¥46,000" },
+            { plan: '週1回', price: '¥14,000' },
+            { plan: '週2回', price: '¥24,000' },
+            { plan: '週3回', price: '¥33,000' },
+            { plan: '週4回', price: '¥40,000' },
+            { plan: '週5回', price: '¥46,000' },
           ] as TuitionRow[],
           fees: [
-            { label: "入会金（初回のみ）", amount: "¥30,000" },
-            { label: "教材費（6ヶ月ごと）", amount: "¥8,000" },
-            { label: "施設費（6ヶ月ごと）", amount: "¥8,000" },
-            { label: "おやつ代（学校お迎え込み・月額）", amount: "¥3,000" },
+            { label: '入会金（初回のみ）', amount: '¥30,000' },
+            { label: '教材費（6ヶ月ごと）', amount: '¥8,000' },
+            { label: '施設費（6ヶ月ごと）', amount: '¥12,000' },
+            { label: 'おやつ代（学校お迎え込み・月額）', amount: '¥3,000' },
           ] as FeeLine[],
         }
       : {
-          eyebrow: "After School Pricing",
-          title: "After-School English Program",
-          subtitle: "After-School English Program (Monday-Friday 14:00-18:00)",
-          schedule: "Monday-Friday 2:00 PM-6:00 PM",
+          eyebrow: 'After School Pricing',
+          title: 'After-School English Program',
+          subtitle: 'After-School English Program (Monday-Friday 14:00-18:00)',
+          schedule: 'Monday-Friday 2:00 PM-6:00 PM',
           intro:
-            "Our After-School Program provides a fun and supportive place for children to continue learning English after school. Students practice conversation, phonics, reading, writing, and communication through enjoyable activities.",
-          tuitionTitle: "Tuition Fees",
-          otherFeesTitle: "Other Fees",
-          trialTitle: "Free Trial Lesson",
+            'Our After-School Program provides a fun and supportive place for children to continue learning English after school. Students practice conversation, phonics, reading, writing, and communication through enjoyable activities.',
+          tuitionTitle: 'Tuition Fees',
+          otherFeesTitle: 'Other Fees',
+          trialTitle: 'Free Trial Lesson',
           trialBody:
-            "We offer a free trial lesson so families can experience our After-School English program before enrollment.",
-          tablePlan: "Plan",
-          tablePrice: "Monthly Tuition",
+            'We offer a free trial lesson so families can experience our After-School English program before enrollment.',
+          tablePlan: 'Plan',
+          tablePrice: 'Monthly Tuition',
           tuition: [
-            { plan: "1 day per week", price: "¥14,000" },
-            { plan: "2 days per week", price: "¥24,000" },
-            { plan: "3 days per week", price: "¥33,000" },
-            { plan: "4 days per week", price: "¥40,000" },
-            { plan: "5 days per week", price: "¥46,000" },
+            { plan: '1 day per week', price: '¥14,000' },
+            { plan: '2 days per week', price: '¥24,000' },
+            { plan: '3 days per week', price: '¥33,000' },
+            { plan: '4 days per week', price: '¥40,000' },
+            { plan: '5 days per week', price: '¥46,000' },
           ] as TuitionRow[],
           fees: [
-            { label: "Admission fee (one-time)", amount: "¥30,000" },
-            { label: "Materials fee (every 6 months)", amount: "¥8,000" },
-            { label: "Facility fee (every 6 months)", amount: "¥8,000" },
-            { label: "Snack fee (with school pick-up, monthly)", amount: "¥3,000" },
+            { label: 'Admission fee (one-time)', amount: '¥30,000' },
+            { label: 'Materials fee (every 6 months)', amount: '¥8,000' },
+            { label: 'Facility fee (every 6 months)', amount: '¥12,000' },
+            {
+              label: 'Snack fee (with school pick-up, monthly)',
+              amount: '¥3,000',
+            },
           ] as FeeLine[],
-        };
+        }
 
   return (
     <FadeIn>
@@ -166,4 +169,3 @@ const AfterSchoolRatesSection = () => {
 };
 
 export default AfterSchoolRatesSection;
-

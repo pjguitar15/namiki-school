@@ -12,6 +12,7 @@ import MontessoriFeatureSection from './components/MontessoriFeatureSection'
 import Navbar from './components/Navbar'
 import PricingTeaserSection from './components/PricingTeaserSection'
 import TestimonialsSection from './components/TestimonialsSection'
+import TwoVerticalImageSection from './components/TwoVerticalImageSection'
 import { createPageMetadata } from './constants/seo'
 
 export const metadata: Metadata = createPageMetadata({
@@ -35,6 +36,7 @@ export default function Home() {
       <Navbar />
       <main className='flex flex-1 flex-col gap-2'>
         <Hero />
+        <TwoVerticalImageSection />
         <HomeActionCtaSection />
         <PricingTeaserSection />
         <MontessoriFeatureSection

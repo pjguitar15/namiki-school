@@ -359,7 +359,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
           '今後ともどうぞよろしくお願い申し上げます。',
         ],
         signoff: 'Sincerely,',
-        signerTitle: 'Namiki English Schoolより',
+        signerTitle: 'Celia Keino',
       },
       story: {
         title: '私たちのストーリー',
@@ -824,7 +824,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
           'We sincerely appreciate your continued support and cooperation as we work together for your child’s bright future.',
         ],
         signoff: '敬具',
-        signerTitle: 'Namiki English School Team',
+        signerTitle: 'Celia Keino',
       },
       story: {
         title: 'Our Story',

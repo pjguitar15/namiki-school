@@ -8,6 +8,7 @@ import WideContainer from "./WideContainer";
 const Footer = () => {
   const { content, language } = useLanguage();
   const isJa = language === "ja";
+  const instagramUrl = "https://www.instagram.com/namikienglishschool?igsh=M2NyMHJtd2wxazZw";
 
   return (
     <footer className="bg-white pt-6">
@@ -103,6 +104,14 @@ const Footer = () => {
                   </a>
                   <a href={`tel:${content.contact.phone}`} className="block text-cyan-100 hover:text-cyan-200">
                     {content.contact.phoneLabel}
+                  </a>
+                  <a
+                    href={instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-cyan-100 hover:text-cyan-200"
+                  >
+                    {isJa ? "Instagramを見る" : "Follow us on Instagram"}
                   </a>
                   <p>{content.contact.hours}</p>
                 </div>

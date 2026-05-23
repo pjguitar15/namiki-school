@@ -7,7 +7,7 @@ import FadeIn from "./FadeIn";
 import { useLanguage } from "../providers/LanguageProvider";
 
 const HomeActionCtaSection = () => {
-  const { language } = useLanguage();
+  const { href, language } = useLanguage();
 
   const copy =
     language === "ja"
@@ -103,7 +103,7 @@ const HomeActionCtaSection = () => {
                   <h3 className="mt-4 text-2xl font-extrabold text-slate-900">{action.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-slate-700 md:text-base">{action.body}</p>
                   <Link
-                    href={action.href}
+                    href={href(action.href)}
                     className={`mt-5 inline-flex h-11 items-center justify-center rounded-full px-5 text-sm font-bold text-white transition ${action.button}`}
                   >
                     {action.cta}

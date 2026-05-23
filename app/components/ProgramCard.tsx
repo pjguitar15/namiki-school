@@ -3,12 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Program } from "../constants/content";
+import { useLanguage } from "../providers/LanguageProvider";
 
 type Props = {
   program: Program;
 };
 
 const ProgramCard = ({ program }: Props) => {
+  const { href } = useLanguage();
   const { title, duration, bulletPoints, ctaLabel, accentColor, image, category } =
     program;
   const toneMap: Record<string, { surface: string; chip: string; dot: string }> = {
@@ -65,7 +67,7 @@ const ProgramCard = ({ program }: Props) => {
           ))}
         </ul>
         <Link
-          href="/contact"
+          href={href("/contact")}
           className={`mt-auto inline-flex w-full items-center justify-center rounded-full px-4 py-3 text-sm font-semibold shadow-md transition hover:translate-y-[-1px] hover:shadow-lg ${tones.chip}`}
         >
           {ctaLabel}

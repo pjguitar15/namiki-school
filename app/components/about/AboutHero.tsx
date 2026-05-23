@@ -7,7 +7,7 @@ import FadeIn from '../FadeIn'
 import WideContainer from '../WideContainer'
 
 const AboutHero = () => {
-  const { content } = useLanguage()
+  const { content, href, language } = useLanguage()
   const hero = content.aboutPage.hero
 
   return (
@@ -38,16 +38,16 @@ const AboutHero = () => {
             <p className='max-w-2xl text-lg text-white/90'>{hero.description}</p>
             <div className='flex flex-wrap gap-3 pt-2'>
               <Link
-                href='/admissions'
+                href={href('/admissions')}
                 className='inline-flex h-11 items-center justify-center rounded-full bg-white px-6 text-sm font-bold text-cyan-700 shadow-md transition hover:bg-cyan-50'
               >
-                Admissions
+                {language === 'ja' ? '入学案内' : 'Admissions'}
               </Link>
               <Link
-                href='/pricing'
+                href={href('/pricing')}
                 className='inline-flex h-11 items-center justify-center rounded-full border border-white/70 px-6 text-sm font-bold text-white transition hover:bg-white/10'
               >
-                View Pricing
+                {language === 'ja' ? '料金を見る' : 'View Pricing'}
               </Link>
             </div>
           </div>

@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 
+import type { LanguageCode } from "./content";
+import { localizePath } from "./i18n";
+
 export const siteName = "Namiki English School";
+export const siteDescription =
+  "Bilingual English school in Tsukuba, Japan offering daycare, Eikaiwa, and after-school programs for ages 2+.";
 const fallbackSiteUrl = "https://www.namiki-english.com";
 const envSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
 export const siteUrl =
@@ -14,6 +19,7 @@ type PageMetadataInput = {
   title: string;
   description: string;
   path: string;
+  locale: LanguageCode;
   keywords?: string[];
   image?: string;
 };
@@ -22,6 +28,7 @@ export const createPageMetadata = ({
   title,
   description,
   path,
+  locale,
   keywords = [],
   image = defaultOgImage,
 }: PageMetadataInput): Metadata => ({
@@ -29,14 +36,19 @@ export const createPageMetadata = ({
   description,
   keywords,
   alternates: {
-    canonical: path,
+    canonical: localizePath(path, locale),
+    languages: {
+      ja: localizePath(path, "ja"),
+      en: localizePath(path, "en"),
+    },
   },
   openGraph: {
     type: "website",
     title,
     description,
     siteName,
-    url: path,
+    url: localizePath(path, locale),
+    locale: locale === "ja" ? "ja_JP" : "en_US",
     images: [
       {
         url: image,

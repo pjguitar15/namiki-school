@@ -16,7 +16,7 @@ import FadeIn from "./FadeIn";
 import { useLanguage } from "../providers/LanguageProvider";
 
 const HiringPageContent = () => {
-  const { language } = useLanguage();
+  const { href, language } = useLanguage();
 
   const copy =
     language === "ja"
@@ -204,7 +204,7 @@ const HiringPageContent = () => {
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Link
-                href="/contact"
+                href={href("/contact")}
                 className="inline-flex h-12 items-center justify-center rounded-full bg-[#0f172a] px-6 text-sm font-bold text-white transition hover:bg-[#020617]"
               >
                 {copy.ctaPrimary}

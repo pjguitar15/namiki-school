@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 import AboutSection from "./components/AboutSection";
 import AnnouncementBar from "./components/AnnouncementBar";
 import ClassesOverviewSection from './components/ClassesOverviewSection'
@@ -13,23 +13,8 @@ import Navbar from './components/Navbar'
 import PricingTeaserSection from './components/PricingTeaserSection'
 import TestimonialsSection from './components/TestimonialsSection'
 import TwoVerticalImageSection from './components/TwoVerticalImageSection'
-import { createPageMetadata } from './constants/seo'
 
-export const metadata: Metadata = createPageMetadata({
-  title: 'English Daycare and Eikaiwa in Tsukuba',
-  description:
-    'Namiki English School offers daycare, Eikaiwa, and after-school English programs in Tsukuba for ages 2 and up.',
-  path: '/',
-  keywords: [
-    'English school Tsukuba',
-    'Tsukuba daycare English',
-    'Eikaiwa for kids Tsukuba',
-    'After-school English Tsukuba',
-  ],
-  image: '/og-thumbnail.png',
-})
-
-export default function Home() {
+export function HomePageView() {
   return (
     <div className='flex min-h-screen flex-col'>
       <AnnouncementBar />
@@ -151,4 +136,8 @@ export default function Home() {
       <Footer />
     </div>
   )
+}
+
+export default function Page() {
+  redirect("/ja");
 }

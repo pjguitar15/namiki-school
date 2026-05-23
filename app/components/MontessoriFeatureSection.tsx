@@ -62,7 +62,7 @@ const MontessoriFeatureSection = ({
   reverse = false,
   isImageRounded = false,
 }: MontessoriFeatureSectionProps) => {
-  const { language } = useLanguage()
+  const { href, language } = useLanguage()
 
   return (
     <FadeIn>
@@ -86,7 +86,7 @@ const MontessoriFeatureSection = ({
                 {description[language]}
               </p>
               <Link
-                href={ctaHref}
+                href={href(ctaHref)}
                 className='inline-flex h-[58px] min-w-[150px] items-center justify-center rounded-full bg-[#f15a42] px-8 text-base font-semibold text-white transition hover:brightness-95 md:h-[64px] md:min-w-[170px] md:text-lg'
               >
                 {ctaLabel[language]}

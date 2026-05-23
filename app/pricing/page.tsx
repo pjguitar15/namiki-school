@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 
 import AnnouncementBar from "../components/AnnouncementBar";
 import AfterSchoolRatesSection from "../components/AfterSchoolRatesSection";
@@ -8,23 +8,8 @@ import EikaiwaRatesSection from "../components/EikaiwaRatesSection";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import PricingSection from "../components/PricingSection";
-import { createPageMetadata } from "../constants/seo";
 
-export const metadata: Metadata = createPageMetadata({
-  title: "Pricing for Daycare, Eikaiwa, and After-School",
-  description:
-    "View tuition and fees for full-day daycare, 10:00-15:00 daycare, short-hour daycare, Eikaiwa, and after-school English programs at Namiki English School.",
-  path: "/pricing",
-  keywords: [
-    "Namiki English School pricing",
-    "Tsukuba English school tuition",
-    "Daycare English fees Tsukuba",
-    "Eikaiwa rates Tsukuba",
-  ],
-  image: "/assets/asset-5.jpg",
-});
-
-const PricingPage = () => {
+export function PricingPageView() {
   return (
     <div className="flex min-h-screen flex-col">
       <AnnouncementBar />
@@ -42,6 +27,8 @@ const PricingPage = () => {
       <Footer />
     </div>
   );
-};
+}
 
-export default PricingPage;
+export default function Page() {
+  redirect("/ja/pricing");
+}

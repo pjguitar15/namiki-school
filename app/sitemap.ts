@@ -1,51 +1,27 @@
 import type { MetadataRoute } from "next";
+
+import { locales } from "./constants/i18n";
 import { siteUrl } from "./constants/seo";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+const defaultLastModified = "2026-05-23";
 
-  return [
-    {
-      url: siteUrl,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${siteUrl}/about`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${siteUrl}/programs`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${siteUrl}/pricing`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${siteUrl}/admissions`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${siteUrl}/contact`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      url: `${siteUrl}/hiring`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.4,
-    },
-  ];
+const routes = [
+  { path: "", changeFrequency: "weekly" as const, priority: 1 },
+  { path: "/about", changeFrequency: "monthly" as const, priority: 0.8 },
+  { path: "/programs", changeFrequency: "weekly" as const, priority: 0.9 },
+  { path: "/pricing", changeFrequency: "weekly" as const, priority: 0.9 },
+  { path: "/admissions", changeFrequency: "weekly" as const, priority: 0.9 },
+  { path: "/contact", changeFrequency: "weekly" as const, priority: 0.95 },
+  { path: "/hiring", changeFrequency: "monthly" as const, priority: 0.4 },
+];
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  return locales.flatMap((locale) =>
+    routes.map(({ path, changeFrequency, priority }) => ({
+      url: `${siteUrl}/${locale}${path}`,
+      lastModified: defaultLastModified,
+      changeFrequency,
+      priority,
+    }))
+  );
 }

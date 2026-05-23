@@ -17,6 +17,7 @@ type FeeLine = {
 
 const AfterSchoolRatesSection = () => {
   const { language } = useLanguage();
+  const trialLabel = language === "ja" ? "無料体験" : "Trial";
 
   const copy =
     language === 'ja'
@@ -156,7 +157,7 @@ const AfterSchoolRatesSection = () => {
             <div className="space-y-2">
               <p className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.16em] text-white/90">
                 <LuGift />
-                Trial
+                {trialLabel}
               </p>
               <h3 className="text-2xl font-extrabold md:text-3xl">{copy.trialTitle}</h3>
               <p className="text-sm text-white/90 md:text-base">{copy.trialBody}</p>

@@ -81,7 +81,7 @@ const Illustration = () => (
 );
 
 const BackToSchoolSection = () => {
-  const { content } = useLanguage();
+  const { content, href } = useLanguage();
   const copy = content.backToSchool;
 
   return (
@@ -111,7 +111,7 @@ const BackToSchoolSection = () => {
               </h2>
               <p className="text-base leading-relaxed text-slate-700 md:max-w-xl">{copy.body}</p>
               <Link
-                href={copy.ctaHref}
+                href={href(copy.ctaHref)}
                 className="inline-flex h-11 items-center justify-center rounded-full border border-teal-500 px-5 text-sm font-semibold text-teal-700 transition hover:-translate-y-0.5 hover:bg-white/80 hover:text-teal-800"
               >
                 {copy.ctaLabel}

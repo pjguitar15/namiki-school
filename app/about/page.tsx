@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 
 import AnnouncementBar from "../components/AnnouncementBar";
 import Container from "../components/Container";
@@ -12,28 +12,16 @@ import HighlightsSection from "../components/about/HighlightsSection";
 import MessageToParentsSection from "../components/about/MessageToParentsSection";
 import StorySection from "../components/about/StorySection";
 import ValuesSection from "../components/about/ValuesSection";
-import { createPageMetadata } from "../constants/seo";
-
-export const metadata: Metadata = createPageMetadata({
-  title: "About Namiki English School",
-  description:
-    "Learn about Namiki English School's vision, teaching approach, values, and family-centered English education in Tsukuba.",
-  path: "/about",
-  keywords: [
-    "About Namiki English School",
-    "Tsukuba English school philosophy",
-    "English education values",
-    "Family style English school Japan",
-  ],
-  image: "/classoom/4.jpg",
-});
-
-const AboutPage = () => {
+export function AboutPageView({ faqJsonLd }: { faqJsonLd: object }) {
   return (
     <div className="flex min-h-screen flex-col">
       <AnnouncementBar />
       <Navbar />
       <main className="flex flex-1 flex-col bg-white">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
         <AboutHero />
         <Container id="about" className="space-y-16 py-10 md:space-y-20 md:py-16">
           <StorySection />
@@ -48,6 +36,8 @@ const AboutPage = () => {
       <Footer />
     </div>
   );
-};
+}
 
-export default AboutPage;
+export default function Page() {
+  redirect("/ja/about");
+}

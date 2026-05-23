@@ -1,15 +1,22 @@
 'use client';
 
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useContext, useEffect } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import {
   LANGUAGE_CONTENT,
   LanguageCode,
   LanguageContent,
 } from "../constants/content";
+import {
+  getAlternateLocale,
+  localizeHref,
+  replaceLocaleInPathname,
+} from "../constants/i18n";
 
 type LanguageContextValue = {
   language: LanguageCode;
   content: LanguageContent;
+  href: (path: string) => string;
   toggleLanguage: () => void;
   setLanguage: (lang: LanguageCode) => void;
 };
@@ -18,33 +25,43 @@ const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 const STORAGE_KEY = "namiki-language";
 
-export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
-  const [language, setLanguageState] = useState<LanguageCode>("ja");
+export const LanguageProvider = ({
+  children,
+  locale,
+}: {
+  children: React.ReactNode;
+  locale: LanguageCode;
+}) => {
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
-    const stored = window.localStorage.getItem(STORAGE_KEY) as LanguageCode | null;
-    if (stored === "ja" || stored === "en") {
-      setLanguageState(stored);
+    window.localStorage.setItem(STORAGE_KEY, locale);
+    document.documentElement.lang = locale;
+  }, [locale]);
+
+  const href = (path: string) => localizeHref(path, locale);
+
+  const setLanguage = (lang: LanguageCode) => {
+    if (lang === locale) {
+      return;
     }
-  }, []);
 
-  useEffect(() => {
-    window.localStorage.setItem(STORAGE_KEY, language);
-  }, [language]);
+    const nextPath = replaceLocaleInPathname(pathname || "/", lang);
+    window.localStorage.setItem(STORAGE_KEY, lang);
+    router.push(nextPath);
+  };
 
-  const setLanguage = (lang: LanguageCode) => setLanguageState(lang);
   const toggleLanguage = () =>
-    setLanguageState((prev) => (prev === "ja" ? "en" : "ja"));
+    setLanguage(getAlternateLocale(locale));
 
-  const value = useMemo(
-    () => ({
-      language,
-      content: LANGUAGE_CONTENT[language],
-      toggleLanguage,
-      setLanguage,
-    }),
-    [language]
-  );
+  const value = {
+    language: locale,
+    content: LANGUAGE_CONTENT[locale],
+    href,
+    toggleLanguage,
+    setLanguage,
+  };
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
 };

@@ -6,7 +6,7 @@ import { useLanguage } from "../providers/LanguageProvider";
 import WideContainer from "./WideContainer";
 
 const Footer = () => {
-  const { content, language } = useLanguage();
+  const { content, language, href } = useLanguage();
   const isJa = language === "ja";
   const instagramUrl = "https://www.instagram.com/namikienglishschool?igsh=M2NyMHJtd2wxazZw";
 
@@ -61,13 +61,13 @@ const Footer = () => {
 
             <div className="flex flex-wrap gap-3">
               <Link
-                href="/contact"
+                href={href("/contact")}
                 className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-teal-800 transition hover:bg-slate-100"
               >
                 {isJa ? "無料体験を予約" : "Book Trial"}
               </Link>
               <Link
-                href="/programs"
+                href={href("/programs")}
                 className="rounded-full border border-white/70 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/20"
               >
                 {isJa ? "プログラムを見る" : "View Programs"}
@@ -85,7 +85,7 @@ const Footer = () => {
                   {content.navItems.map((item) => (
                     <Link
                       key={item.href}
-                      href={item.href}
+                      href={href(item.href)}
                       className="block text-white transition hover:text-cyan-200"
                     >
                       {item.label}

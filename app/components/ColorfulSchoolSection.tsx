@@ -59,7 +59,6 @@ const spanClass = (span: 1 | 2 | undefined, axis: 'col' | 'row') => {
 };
 
 const ColorfulSchoolSection = ({
-  hero,
   intro,
   mosaicTiles,
 }: ColorfulSchoolSectionProps) => {

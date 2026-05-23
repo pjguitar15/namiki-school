@@ -7,7 +7,7 @@ import { useLanguage } from "../providers/LanguageProvider";
 import WideContainer from "./WideContainer";
 
 const Navbar = () => {
-  const { content, language, toggleLanguage } = useLanguage();
+  const { content, language, href, toggleLanguage } = useLanguage();
   const [open, setOpen] = useState(false);
 
   const closeMenu = () => setOpen(false);
@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-30 w-full bg-white shadow-sm backdrop-blur">
       <WideContainer className="flex items-center justify-between py-4">
-        <Link href="/" className="flex items-center gap-3">
+        <Link href={href("/")} className="flex items-center gap-3">
           <Image
             src="/namiki-logo.png"
             alt="Namiki English School logo"
@@ -42,7 +42,7 @@ const Navbar = () => {
           {content.navItems.map((item) => (
             <Link
               key={item.href}
-              href={item.href}
+              href={href(item.href)}
               className="transition hover:text-teal-600"
             >
               {item.label}
@@ -60,7 +60,7 @@ const Navbar = () => {
             {language === "ja" ? "日本語 / EN" : "EN / 日本語"}
           </button>
           <Link
-            href="/contact"
+            href={href("/contact")}
             className="rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-orange-200 transition hover:bg-orange-600"
           >
             {language === "ja" ? "お問合せ" : "Contact"}
@@ -85,7 +85,7 @@ const Navbar = () => {
       {open && (
         <div className="fixed inset-0 z-40 bg-white">
           <WideContainer className="flex items-center justify-between py-4">
-            <Link href="#home" className="flex items-center gap-3" onClick={closeMenu}>
+            <Link href={href("/")} className="flex items-center gap-3" onClick={closeMenu}>
               <Image
                 src="/namiki-logo.png"
                 alt="Namiki English School logo"
@@ -127,7 +127,7 @@ const Navbar = () => {
               {content.navItems.map((item) => (
                 <Link
                   key={item.href}
-                  href={item.href}
+                  href={href(item.href)}
                   onClick={closeMenu}
                   className="py-3 transition hover:text-teal-600"
                 >
@@ -147,7 +147,7 @@ const Navbar = () => {
                 {language === "ja" ? "日本語 / EN" : "EN / 日本語"}
               </button>
               <Link
-                href="/contact"
+                href={href("/contact")}
                 onClick={closeMenu}
                 className="inline-flex w-full items-center justify-center rounded-lg bg-orange-500 px-4 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-orange-600"
               >

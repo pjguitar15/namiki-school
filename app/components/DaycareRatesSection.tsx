@@ -40,6 +40,7 @@ const DaycareRatesSection = () => {
   const { language } = useLanguage();
 
   const isJa = language === "ja";
+  const trialLabel = isJa ? "無料体験" : "Trial";
 
   const copy = isJa
     ? {
@@ -74,6 +75,7 @@ const DaycareRatesSection = () => {
               // { label: 'おやつ代（月額）', amount: '¥3,000' },
               { label: '延長料金（17:00以降）30分', amount: '¥700' },
             ],
+            ctaLabel: '体験レッスンを予約',
           },
           {
             id: 'mid-day',
@@ -100,6 +102,7 @@ const DaycareRatesSection = () => {
               { label: '施設費（6ヶ月ごと）', amount: '¥12,000' },
               { label: '延長料金 30分', amount: '¥700' },
             ],
+            ctaLabel: '体験レッスンを予約',
           },
           {
             id: 'short-hour',
@@ -330,10 +333,10 @@ const DaycareRatesSection = () => {
                   </div>
 
                   <div className="rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-500 to-teal-500 p-4 text-white">
-                    <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-white/90">
-                      <LuGift />
-                      Trial
-                    </p>
+                      <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-white/90">
+                        <LuGift />
+                        {trialLabel}
+                      </p>
                     <p className="mt-1 text-base font-extrabold">{variant.trialTitle}</p>
                     <p className="mt-1 text-xs text-white/90">{variant.trialBody}</p>
                   </div>

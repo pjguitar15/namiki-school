@@ -1,5 +1,4 @@
 "use client";
-// test
 
 import Link from "next/link";
 import { LuCalendarDays, LuCoins, LuGift, LuSparkles } from "react-icons/lu";
@@ -8,7 +7,7 @@ import FadeIn from "./FadeIn";
 import { useLanguage } from "../providers/LanguageProvider";
 
 const PricingTeaserSection = () => {
-  const { language } = useLanguage();
+  const { href, language } = useLanguage();
 
   const copy =
     language === 'ja'
@@ -80,7 +79,7 @@ const PricingTeaserSection = () => {
               </div>
 
               <Link
-                href="/pricing"
+                href={href("/pricing")}
                 className="inline-flex h-12 items-center justify-center rounded-full bg-[#ff7a1a] px-6 text-sm font-bold text-white shadow-[0_8px_18px_rgba(249,115,22,0.35)] transition hover:bg-[#ef6c00]"
               >
                 {copy.cta}

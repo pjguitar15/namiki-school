@@ -7,7 +7,7 @@ import FadeIn from "./FadeIn";
 import { useLanguage } from "../providers/LanguageProvider";
 
 const HiringSpotlightSection = () => {
-  const { language } = useLanguage();
+  const { href, language } = useLanguage();
 
   const copy =
     language === "ja"
@@ -87,7 +87,7 @@ const HiringSpotlightSection = () => {
 
               <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
                 <Link
-                  href="/contact"
+                  href={href("/contact")}
                   className="inline-flex h-12 items-center justify-center rounded-full bg-[#1d3557] px-6 text-sm font-bold text-white transition hover:bg-[#14263f]"
                 >
                   {copy.ctaPrimary}

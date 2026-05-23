@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { Geist, Geist_Mono, Nunito } from "next/font/google";
-import { brandIcon, defaultOgImage, siteName, siteUrl } from "./constants/seo";
+
+import {
+  brandIcon,
+  defaultOgImage,
+  siteDescription,
+  siteName,
+  siteUrl,
+} from "./constants/seo";
+import { defaultLocale, isValidLocale } from "./constants/i18n";
 import "./globals.css";
-import { LanguageProvider } from "./providers/LanguageProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,16 +27,14 @@ const nunito = Nunito({
   subsets: ["latin"],
 });
 
-const defaultDescription =
-  "Bilingual English school in Tsukuba, Japan offering daycare, Eikaiwa, and after-school programs for ages 2+.";
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  applicationName: siteName,
   title: {
     default: siteName,
     template: `%s | ${siteName}`,
   },
-  description: defaultDescription,
+  description: siteDescription,
   keywords: [
     "Namiki English School",
     "Tsukuba English school",
@@ -36,12 +42,18 @@ export const metadata: Metadata = {
     "Eikaiwa Tsukuba",
     "After-school English program",
     "Ibaraki English school",
-    "つくば 英会話 子ども",
-    "つくば 英語 保育",
-    "つくば アフタースクール 英語",
+    "English lessons for children in Japan",
+    "Preschool English Tsukuba",
   ],
   alternates: {
     canonical: "/",
+  },
+  manifest: "/manifest.webmanifest",
+  category: "education",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
   icons: {
     icon: [
@@ -56,7 +68,7 @@ export const metadata: Metadata = {
     url: "/",
     siteName,
     title: siteName,
-    description: defaultDescription,
+    description: siteDescription,
     images: [
       {
         url: defaultOgImage,
@@ -69,7 +81,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: siteName,
-    description: defaultDescription,
+    description: siteDescription,
     images: [
       {
         url: defaultOgImage,
@@ -95,11 +107,11 @@ const organizationJsonLd = {
   "@type": "Preschool",
   "@id": `${siteUrl}/#organization`,
   name: siteName,
-  description: defaultDescription,
+  description: siteDescription,
   url: siteUrl,
   email: "tsukubanamikienglishschool@gmail.com",
   telephone: "+81-80-2015-6832",
-  priceRange: "¥¥",
+  priceRange: "JPY",
   areaServed: ["Tsukuba", "Ibaraki"],
   openingHoursSpecification: [
     {
@@ -124,21 +136,40 @@ const organizationJsonLd = {
   ],
 };
 
-export default function RootLayout({
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
+  url: siteUrl,
+  name: siteName,
+  description: siteDescription,
+  inLanguage: ["ja", "en"],
+};
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headerStore = await headers();
+  const requestedLocale = headerStore.get("x-current-locale");
+  const documentLanguage =
+    requestedLocale && isValidLocale(requestedLocale)
+      ? requestedLocale
+      : defaultLocale;
+
   return (
-    <html lang="en">
+    <html lang={documentLanguage}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} bg-white text-slate-900 antialiased [&_h1]:font-(family-name:--font-nunito) [&_h2]:font-(family-name:--font-nunito) [&_h3]:font-(family-name:--font-nunito) [&_h4]:font-(family-name:--font-nunito) [&_h5]:font-(family-name:--font-nunito) [&_h6]:font-(family-name:--font-nunito) [&_h1]:font-extrabold [&_h2]:font-extrabold [&_h3]:font-extrabold [&_h4]:font-extrabold [&_h5]:font-extrabold [&_h6]:font-extrabold`}
       >
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([websiteJsonLd, organizationJsonLd]),
+          }}
         />
-        <LanguageProvider>{children}</LanguageProvider>
+        {children}
       </body>
     </html>
   );

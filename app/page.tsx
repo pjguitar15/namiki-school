@@ -11,6 +11,7 @@ import HiringSpotlightSection from './components/HiringSpotlightSection'
 import MontessoriFeatureSection from './components/MontessoriFeatureSection'
 import Navbar from './components/Navbar'
 import PricingTeaserSection from './components/PricingTeaserSection'
+import SummerSchoolPromoSection from './components/SummerSchoolPromoSection'
 import TestimonialsSection from './components/TestimonialsSection'
 import TwoVerticalImageSection from './components/TwoVerticalImageSection'
 
@@ -21,6 +22,7 @@ export function HomePageView() {
       <Navbar />
       <main className='flex flex-1 flex-col gap-2'>
         <Hero />
+        <SummerSchoolPromoSection />
         <TwoVerticalImageSection />
         <HomeActionCtaSection />
         <PricingTeaserSection />

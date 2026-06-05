@@ -118,6 +118,51 @@ export type SchoolShowcaseCopy = {
   )[];
 };
 
+export type SummerSchoolCopy = {
+  titlePrimary: string;
+  titleSecondary: string;
+  year: string;
+  keywords: string[];
+  ctaLabel: string;
+  imageAlt: string;
+  page: {
+    weeklyThemesTitle: string;
+    dailyScheduleTitle: string;
+    activitiesTitle: string;
+    tuitionTitle: string;
+    registrationTitle: string;
+    benefitsTitle: string;
+    locationTitle: string;
+    locationText: string;
+    agesTitle: string;
+    agesText: string;
+    taglinePrimary: string;
+    taglineSecondary: string;
+    tableHeaders: {
+      program: string;
+      fee: string;
+    };
+    themes: {
+      week: string;
+      title: string;
+      bullets: string[];
+    }[];
+    schedule: {
+      time: string;
+      label: string;
+    }[];
+    activities: string[];
+    fees: {
+      program: string;
+      fee: string;
+    }[];
+    registrationItems: string[];
+    benefits: string[];
+    activityImageAlt: string;
+    celebrationImageAlt: string;
+  };
+};
+
 export type LanguageContent = {
   navItems: NavItem[];
   backToSchool: BackToSchoolCopy;
@@ -171,6 +216,7 @@ export type LanguageContent = {
     heroTitle: string;
     heroDescription: string;
   };
+  summerSchool: SummerSchoolCopy;
   colorSquaresSection: ColorSquaresSectionCopy;
   schoolShowcaseSection: SchoolShowcaseCopy;
 };
@@ -501,6 +547,108 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
     programsPage: {
       heroTitle: 'プログラム・レベル一覧',
       heroDescription: '年齢や目的に合わせて選べるコースをご用意しています。',
+    },
+    summerSchool: {
+      titlePrimary: 'サマー',
+      titleSecondary: 'スクール',
+      year: '2026',
+      keywords: ['楽しい', '学ぶ', '探究', '英語イマージョン'],
+      ctaLabel: '詳しく見る',
+      imageAlt: 'サマースクールで活動する子どもたち',
+      page: {
+        weeklyThemesTitle: '週間テーマ',
+        dailyScheduleTitle: '1日のスケジュール',
+        activitiesTitle: '含まれるアクティビティ',
+        tuitionTitle: '授業料',
+        registrationTitle: '登録費',
+        benefitsTitle: '特典',
+        locationTitle: '場所',
+        locationText: 'Namiki English School, Tsukuba',
+        agesTitle: '対象年齢',
+        agesText: '2〜12歳',
+        taglinePrimary: '思い出に残る夏を。',
+        taglineSecondary: '未来につながる学びを。',
+        tableHeaders: {
+          program: 'プログラム',
+          fee: '料金',
+        },
+        themes: [
+          {
+            week: '第1週:',
+            title: '世界をめぐろう',
+            bullets: ['パスポート作り', '世界の国旗', '世界の文化ゲーム', '国紹介プレゼンテーション'],
+          },
+          {
+            week: '第2週:',
+            title: '小さな科学者',
+            bullets: ['火山実験', 'スライム実験', '泡のサイエンス', 'STEMチャレンジ'],
+          },
+          {
+            week: '第3週:',
+            title: '海の冒険',
+            bullets: ['海の生き物クラフト', '宝探し', '水遊びアクティビティ', '海の英語表現'],
+          },
+          {
+            week: '第4週:',
+            title: 'ヒーローとお仕事',
+            bullets: ['お医者さんの日', 'エンジニアチャレンジ', '消防士ミッション', '将来のお仕事ロールプレイ'],
+          },
+          {
+            week: '第5週:',
+            title: '自然探検隊',
+            bullets: ['ガーデニング', '昆虫発見', '自然散策', '環境アクティビティ'],
+          },
+          {
+            week: '第6週:',
+            title: 'サマーフェスティバル',
+            bullets: ['日本のお祭りゲーム', '水風船アクティビティ', 'ダンスパーティー', 'サマー修了式'],
+          },
+        ],
+        schedule: [
+          { time: '8:00 - 9:00', label: '登園・自由遊び' },
+          { time: '9:00 - 9:30', label: 'モーニングサークル' },
+          { time: '9:30 - 10:30', label: '英語レッスン' },
+          { time: '10:30 - 11:30', label: 'テーマ活動' },
+          { time: '11:30 - 12:30', label: '昼食' },
+          { time: '12:30 - 1:30', label: 'ストーリータイム / 静かな時間' },
+          { time: '1:30 - 2:30', label: 'クラフト・プロジェクト' },
+          { time: '2:30 - 3:30', label: 'ゲーム・屋外活動' },
+          { time: '3:30 - 4:00', label: 'おやつ' },
+          { time: '4:00 - 5:00', label: '自由遊び・お迎え' },
+        ],
+        activities: [
+          '英語イマージョン',
+          'アート&クラフト',
+          '科学実験',
+          'クッキング',
+          '屋外ゲーム',
+          '水遊びの日',
+          '音楽とダンス',
+          'ストーリーテリング',
+          'STEMプロジェクト',
+          'チームチャレンジ',
+          '国際文化デー',
+          'サマーフェスティバル',
+        ],
+        fees: [
+          { program: '1日', fee: '¥5,000' },
+          { program: '3日', fee: '¥14,000' },
+          { program: '5日', fee: '¥22,000' },
+          { program: '1週間', fee: '¥25,000' },
+          { program: '2週間', fee: '¥45,000' },
+          { program: '4週間', fee: '¥80,000' },
+          { program: '夏休み全期間', fee: '¥110,000' },
+        ],
+        registrationItems: [
+          '登録費: ¥5,000',
+          '教材費: ¥3,000',
+          '施設費: ¥5,000',
+          '延長保育: 30分 ¥600',
+        ],
+        benefits: ['修了証', '毎週の写真アップデート', 'サマー終了パーティー'],
+        activityImageAlt: 'サマークラスの活動写真',
+        celebrationImageAlt: 'サマークラスのイベント写真',
+      },
     },
     colorSquaresSection: {
       eyebrow: '教室の心理学',
@@ -984,6 +1132,108 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       heroTitle: 'Programs & Levels',
       heroDescription:
         'Choose the course that matches your age, pace, and goals.',
+    },
+    summerSchool: {
+      titlePrimary: 'SUMMER',
+      titleSecondary: 'SCHOOL',
+      year: '2026',
+      keywords: ['Fun', 'Learn', 'Explore', 'English Immersion'],
+      ctaLabel: 'More Details',
+      imageAlt: 'Children enjoying summer school activities',
+      page: {
+        weeklyThemesTitle: 'Weekly Themes',
+        dailyScheduleTitle: 'Daily Schedule',
+        activitiesTitle: 'Activities Included',
+        tuitionTitle: 'Tuition Fees',
+        registrationTitle: 'Registration Fee',
+        benefitsTitle: 'Special Benefits',
+        locationTitle: 'Location',
+        locationText: 'Namiki English School, Tsukuba',
+        agesTitle: 'Ages',
+        agesText: '2 - 12 years old',
+        taglinePrimary: 'A summer to remember.',
+        taglineSecondary: 'A future to inspire.',
+        tableHeaders: {
+          program: 'Program',
+          fee: 'Fee',
+        },
+        themes: [
+          {
+            week: 'Week 1:',
+            title: 'Around the World',
+            bullets: ['Passport Making', 'International Flags', 'World Culture Games', 'Country Presentations'],
+          },
+          {
+            week: 'Week 2:',
+            title: 'Little Scientists',
+            bullets: ['Volcano Experiments', 'Slime Lab', 'Bubble Science', 'STEM Challenges'],
+          },
+          {
+            week: 'Week 3:',
+            title: 'Ocean Adventure',
+            bullets: ['Sea Animal Crafts', 'Treasure Hunt', 'Water Activities', 'Ocean Vocabulary'],
+          },
+          {
+            week: 'Week 4:',
+            title: 'Superheroes & Careers',
+            bullets: ['Doctor Day', 'Engineer Challenge', 'Firefighter Mission', 'Future Career Role Play'],
+          },
+          {
+            week: 'Week 5:',
+            title: 'Nature Explorers',
+            bullets: ['Gardening', 'Insect Discovery', 'Nature Walk', 'Environmental Activities'],
+          },
+          {
+            week: 'Week 6:',
+            title: 'Summer Festival Week',
+            bullets: ['Japanese Festival Games', 'Water Balloon Activities', 'Dance Party', 'Summer Graduation Ceremony'],
+          },
+        ],
+        schedule: [
+          { time: '8:00 - 9:00', label: 'Arrival & Free Play' },
+          { time: '9:00 - 9:30', label: 'Morning Circle' },
+          { time: '9:30 - 10:30', label: 'English Lesson' },
+          { time: '10:30 - 11:30', label: 'Theme Activity' },
+          { time: '11:30 - 12:30', label: 'Lunch' },
+          { time: '12:30 - 1:30', label: 'Story Time / Quiet Time' },
+          { time: '1:30 - 2:30', label: 'Crafts & Projects' },
+          { time: '2:30 - 3:30', label: 'Games & Outdoor Activities' },
+          { time: '3:30 - 4:00', label: 'Snack Time' },
+          { time: '4:00 - 5:00', label: 'Free Play & Pick-Up' },
+        ],
+        activities: [
+          'English Immersion',
+          'Arts & Crafts',
+          'Science Experiments',
+          'Cooking Activities',
+          'Outdoor Games',
+          'Water Play Days',
+          'Music & Dance',
+          'Storytelling',
+          'STEM Projects',
+          'Team Challenges',
+          'International Culture Days',
+          'Summer Festival',
+        ],
+        fees: [
+          { program: '1 Day', fee: '¥5,000' },
+          { program: '3 Days', fee: '¥14,000' },
+          { program: '5 Days', fee: '¥22,000' },
+          { program: '1 Week', fee: '¥25,000' },
+          { program: '2 Weeks', fee: '¥45,000' },
+          { program: '4 Weeks', fee: '¥80,000' },
+          { program: 'Full Summer', fee: '¥110,000' },
+        ],
+        registrationItems: [
+          'Registration Fee: ¥5,000',
+          'Materials Fee: ¥3,000',
+          'Facility Fee: ¥5,000',
+          'Extended Care: ¥600 / 30 minutes',
+        ],
+        benefits: ['Certificate of Completion', 'Weekly Photo Updates', 'End-of-Summer Party'],
+        activityImageAlt: 'Summer class activity photo',
+        celebrationImageAlt: 'Summer class celebration photo',
+      },
     },
     colorSquaresSection: {
       eyebrow: 'Classroom Psychology',

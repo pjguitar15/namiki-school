@@ -6,6 +6,7 @@ import {
   FaCalendarDays,
   FaCarSide,
   FaCertificate,
+  FaCheck,
   FaChildren,
   FaClipboardList,
   FaDroplet,
@@ -230,6 +231,32 @@ export function SummerClassPageView() {
               ))}
             </div>
           </div>
+
+          <section className={`mt-8 overflow-hidden rounded-2xl border border-[#6eb7ff] bg-[#0968f4] text-white shadow-[0_18px_42px_rgba(9,104,244,0.24)] ${hoverLift}`}>
+            <div className='relative isolate grid gap-6 px-6 py-7 sm:px-8 md:grid-cols-[0.9fr_1.1fr] md:items-center'>
+              <div className='absolute -right-8 -top-10 h-32 w-32 rounded-full bg-white/10' />
+              <div className='absolute bottom-0 left-8 h-16 w-40 rounded-t-full bg-[#ffc20f]/20' />
+              <div className='relative'>
+                <p className='mb-3 flex items-center gap-3 font-(family-name:--font-nunito) text-2xl font-black leading-tight sm:text-3xl'>
+                  <GiPartyPopper className='shrink-0 text-[#ffc20f]' />
+                  {page.earlyBird.title}
+                </p>
+                <p className='max-w-[31rem] font-(family-name:--font-nunito) text-3xl font-black leading-tight text-white sm:text-4xl'>
+                  {page.earlyBird.deadline}
+                </p>
+              </div>
+              <div className='relative grid gap-3 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2'>
+                {page.earlyBird.perks.map((perk) => (
+                  <div key={perk} className='flex min-h-[5rem] items-center gap-4 rounded-xl border border-white/25 bg-white/12 px-4 py-3 font-(family-name:--font-nunito) text-xl font-black leading-tight shadow-[0_10px_24px_rgba(0,48,138,0.18)] backdrop-blur'>
+                    <span className='flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#ffc20f] text-2xl text-[#21335f]'>
+                      <FaCheck />
+                    </span>
+                    <span>{perk}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
 
           <div className='mt-8 grid gap-7 lg:grid-cols-3'>
             <article className={`rounded-2xl border border-[#d9c7f1] bg-gradient-to-br from-[#fbfaff] to-white p-5 ${hoverLift}`}>

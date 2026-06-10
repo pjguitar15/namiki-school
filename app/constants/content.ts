@@ -152,6 +152,11 @@ export type SummerSchoolCopy = {
       label: string;
     }[];
     activities: string[];
+    earlyBird: {
+      title: string;
+      deadline: string;
+      perks: string[];
+    };
     fees: {
       program: string;
       fee: string;
@@ -601,7 +606,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
           {
             week: '第6週:',
             title: 'サマーフェスティバル',
-            bullets: ['日本のお祭りゲーム', '水風船アクティビティ', 'ダンスパーティー', 'サマー修了式'],
+            bullets: ['日本のお祭りゲーム', '水風船アクティビティ', 'ダンスパーティー'],
           },
         ],
         schedule: [
@@ -630,6 +635,11 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
           '国際文化デー',
           'サマーフェスティバル',
         ],
+        earlyBird: {
+          title: '早期申込キャンペーン',
+          deadline: '2026年6月10日〜8月31日',
+          perks: ['登録費無料', '優先案内・優先枠確保'],
+        },
         fees: [
           { program: '1日', fee: '¥5,000' },
           { program: '3日', fee: '¥14,000' },
@@ -1186,7 +1196,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
           {
             week: 'Week 6:',
             title: 'Summer Festival Week',
-            bullets: ['Japanese Festival Games', 'Water Balloon Activities', 'Dance Party', 'Summer Graduation Ceremony'],
+            bullets: ['Japanese Festival Games', 'Water Balloon Activities', 'Dance Party'],
           },
         ],
         schedule: [
@@ -1215,6 +1225,11 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
           'International Culture Days',
           'Summer Festival',
         ],
+        earlyBird: {
+          title: 'Early Bird Promotion',
+          deadline: 'June 10 to August 31, 2026',
+          perks: ['Registration Fee FREE', 'Priority Placement'],
+        },
         fees: [
           { program: '1 Day', fee: '¥5,000' },
           { program: '3 Days', fee: '¥14,000' },

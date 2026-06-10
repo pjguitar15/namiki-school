@@ -2,7 +2,9 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { FaCheck } from 'react-icons/fa6'
 import { HiArrowRight } from 'react-icons/hi2'
+import { GiPartyPopper } from 'react-icons/gi'
 import { useLanguage } from '../providers/LanguageProvider'
 import WideContainer from './WideContainer'
 
@@ -118,9 +120,33 @@ const SummerSchoolPromoSection = () => {
               <KeywordLine keywords={copy.keywords} />
             </div>
 
+            <div className='mt-6 max-w-[35rem] rounded-2xl border border-[#8fdfff] bg-[#0968f4] p-3 text-white shadow-[0_10px_24px_rgba(9,104,244,0.18)] sm:p-4'>
+              <div className='flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between'>
+                <div className='min-w-0'>
+                  <p className='flex items-center gap-2 font-(family-name:--font-nunito) text-base font-black leading-tight sm:text-lg'>
+                    <GiPartyPopper className='shrink-0 text-[#ffc20f]' />
+                    <span>{copy.page.earlyBird.title}</span>
+                  </p>
+                  <p className='mt-1 font-(family-name:--font-nunito) text-xl font-black leading-tight sm:text-2xl'>
+                    {copy.page.earlyBird.deadline}
+                  </p>
+                </div>
+                <div className='grid gap-2 text-sm font-bold leading-tight text-white sm:min-w-[11rem]'>
+                  {copy.page.earlyBird.perks.map((perk) => (
+                    <span key={perk} className='flex items-center gap-2'>
+                      <span className='flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffc20f] text-xs text-[#21335f]'>
+                        <FaCheck />
+                      </span>
+                      <span>{perk}</span>
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
             <Link
               href={href('/summer-class')}
-              className='mt-7 inline-flex min-h-12 w-fit min-w-[13.5rem] items-center justify-center gap-3 rounded-xl bg-[#3a1d94] px-6 py-3 font-(family-name:--font-nunito) text-base font-black uppercase tracking-normal text-white shadow-[0_4px_0_rgba(28,15,86,0.2),0_12px_20px_rgba(58,29,148,0.22)] ring-[3px] ring-white transition hover:-translate-y-0.5 hover:bg-[#4725aa] focus:outline-none focus:ring-[#ffcf35] sm:min-w-[16.5rem] sm:text-lg lg:min-h-14 lg:min-w-[20rem] lg:text-xl'
+              className='mt-5 inline-flex min-h-12 w-fit min-w-[13.5rem] items-center justify-center gap-3 rounded-xl bg-[#3a1d94] px-6 py-3 font-(family-name:--font-nunito) text-base font-black uppercase tracking-normal text-white shadow-[0_4px_0_rgba(28,15,86,0.2),0_12px_20px_rgba(58,29,148,0.22)] ring-[3px] ring-white transition hover:-translate-y-0.5 hover:bg-[#4725aa] focus:outline-none focus:ring-[#ffcf35] sm:min-w-[16.5rem] sm:text-lg lg:min-h-14 lg:min-w-[20rem] lg:text-xl'
             >
               {copy.ctaLabel}
               <HiArrowRight aria-hidden='true' className='h-7 w-7 lg:h-8 lg:w-8' />

@@ -637,7 +637,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         ],
         earlyBird: {
           title: '早期申込キャンペーン',
-          deadline: '2026年6月10日〜8月31日',
+          deadline: '2026年6月30日までにご登録ください',
           perks: ['登録費無料', '優先案内・優先枠確保'],
         },
         fees: [
@@ -1227,7 +1227,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         ],
         earlyBird: {
           title: 'Early Bird Promotion',
-          deadline: 'June 10 to August 31, 2026',
+          deadline: 'Register before June 30, 2026',
           perks: ['Registration Fee FREE', 'Priority Placement'],
         },
         fees: [

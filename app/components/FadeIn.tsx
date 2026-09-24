@@ -7,9 +7,10 @@ type Props = {
   children: ReactNode;
   delay?: number;
   className?: string;
+  viewportAmount?: number;
 };
 
-const FadeIn = ({ children, delay = 0, className = "" }: Props) => {
+const FadeIn = ({ children, delay = 0, className = "", viewportAmount = 0.15 }: Props) => {
   const id = useId();
 
   const preset = useMemo(() => {
@@ -29,7 +30,7 @@ const FadeIn = ({ children, delay = 0, className = "" }: Props) => {
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.15, margin: "0px 0px -6% 0px" }}
+      viewport={{ once: false, amount: viewportAmount, margin: "0px 0px -6% 0px" }}
       variants={{
         hidden: {
           opacity: 0,

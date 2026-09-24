@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { LuBadgeDollarSign, LuBookText, LuGift } from "react-icons/lu";
 import Container from "./Container";
@@ -10,6 +10,14 @@ type FeeLine = {
   amount: string;
 };
 
+const tuition = [
+  { days: 1, oneHour: "¥11,000", twoHours: "¥19,000" },
+  { days: 2, oneHour: "¥20,000", twoHours: "¥34,000" },
+  { days: 3, oneHour: "¥28,000", twoHours: "¥47,000" },
+  { days: 4, oneHour: "¥35,000", twoHours: "¥58,000" },
+  { days: 5, oneHour: "¥41,000", twoHours: "¥68,000" },
+];
+
 const EikaiwaRatesSection = () => {
   const { language } = useLanguage();
   const trialLabel = language === "ja" ? "無料体験" : "Trial";
@@ -18,46 +26,42 @@ const EikaiwaRatesSection = () => {
     language === "ja"
       ? {
           eyebrow: "英会話料金",
-          title: "Eikaiwa Program (1 Hour Lessons)",
-          subtitle: "英会話プログラム（1時間レッスン）",
+          title: "Eikaiwa Program (1 or 2 Hour Lessons)",
+          subtitle: "英会話プログラム（1時間・2時間レッスン）",
           tuitionTitle: "月額授業料",
+          daysHeading: "週の通学日数",
+          oneHourHeading: "1時間",
+          twoHoursHeading: "2時間",
+          tuitionNote: "月謝は週の通学日数に基づきます。レッスン時間は1日1時間または2時間です。",
           otherFeesTitle: "その他費用",
           trialTitle: "無料体験レッスン実施中",
           trialBody:
-            "ご入会前に1時間英会話レッスンを体験できる無料体験レッスンを実施しています。",
-          tuition: [
-            { label: "1時間 週1回", amount: "¥11,000" },
-            { label: "1時間 週2回", amount: "¥20,000" },
-            { label: "1時間 週3回", amount: "¥28,000" },
-            { label: "1時間 週4回", amount: "¥35,000" },
-            { label: "1時間 週5回", amount: "¥40,000" },
-          ] as FeeLine[],
+            "ご入会前に英会話レッスンを体験できる無料体験レッスンを実施しています。",
           otherFees: [
-            { label: "入会金（初回のみ）", amount: "¥15,000" },
-            { label: "年間教材費", amount: "¥9,000" },
-            { label: "施設費（年1回）", amount: "¥7,000" },
+            { label: "入会金（初回のみ）", amount: "¥40,000" },
+            { label: "教材費（6ヶ月ごと）", amount: "¥8,000" },
+            { label: "施設費（6ヶ月ごと）", amount: "¥8,000" },
+            { label: "延長料金（30分ごと）", amount: "¥700" },
           ] as FeeLine[],
         }
       : {
           eyebrow: "Eikaiwa Pricing",
-          title: "Eikaiwa Program (1 Hour Lessons)",
-          subtitle: "One-hour conversation lessons",
+          title: "Eikaiwa Program (1 or 2 Hour Lessons)",
+          subtitle: "One- or two-hour conversation lessons",
           tuitionTitle: "Tuition Fees (Monthly)",
+          daysHeading: "Days per Week",
+          oneHourHeading: "1 Hour",
+          twoHoursHeading: "2 Hours",
+          tuitionNote: "Monthly tuition is based on the number of days attended each week. Lesson options: 1 hour or 2 hours per day.",
           otherFeesTitle: "Other Fees",
           trialTitle: "Free Trial Available",
           trialBody:
-            "We offer a free trial lesson so students can experience our one-hour Eikaiwa class before enrollment.",
-          tuition: [
-            { label: "1 hour / once a week", amount: "¥11,000" },
-            { label: "1 hour / twice a week", amount: "¥20,000" },
-            { label: "1 hour / three times a week", amount: "¥28,000" },
-            { label: "1 hour / four times a week", amount: "¥35,000" },
-            { label: "1 hour / five times a week", amount: "¥40,000" },
-          ] as FeeLine[],
+            "We offer a free trial lesson so students can experience our Eikaiwa classes before enrollment.",
           otherFees: [
-            { label: "Admission fee (one-time)", amount: "¥15,000" },
-            { label: "Annual materials fee", amount: "¥9,000" },
-            { label: "Facility fee (annual)", amount: "¥7,000" },
+            { label: "Admission fee (one-time)", amount: "¥40,000" },
+            { label: "Materials fee (every 6 months)", amount: "¥8,000" },
+            { label: "Facility fee (every 6 months)", amount: "¥8,000" },
+            { label: "Extension fee / 30 minutes", amount: "¥700" },
           ] as FeeLine[],
         };
 
@@ -85,17 +89,28 @@ const EikaiwaRatesSection = () => {
                 <h3 className="text-2xl font-extrabold text-slate-900">{copy.tuitionTitle}</h3>
               </div>
 
-              <ul className="space-y-3">
-                {copy.tuition.map((item) => (
-                  <li
-                    key={item.label}
-                    className="flex items-center justify-between gap-3 rounded-2xl bg-amber-50 px-4 py-3"
-                  >
-                    <span className="text-sm font-semibold text-slate-700 md:text-base">{item.label}</span>
-                    <span className="text-base font-extrabold text-amber-700 md:text-lg">{item.amount}</span>
-                  </li>
-                ))}
-              </ul>
+              <table className="w-full table-fixed text-left text-xs sm:text-sm">
+                <caption className="sr-only">{copy.tuitionTitle}</caption>
+                <thead>
+                  <tr className="border-b border-amber-200 text-slate-700">
+                    <th scope="col" className="w-[40%] px-2 py-3 font-semibold">{copy.daysHeading}</th>
+                    <th scope="col" className="px-2 py-3 text-right font-semibold">{copy.oneHourHeading}</th>
+                    <th scope="col" className="px-2 py-3 text-right font-semibold">{copy.twoHoursHeading}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {tuition.map((row) => (
+                    <tr key={row.days} className="border-b border-amber-100 odd:bg-amber-50">
+                      <th scope="row" className="px-2 py-4 font-semibold text-slate-700">
+                        {language === "ja" ? `週${row.days}日` : `${row.days} ${row.days === 1 ? "day" : "days"}`}
+                      </th>
+                      <td className="whitespace-nowrap px-2 py-4 text-right font-extrabold text-amber-700">{row.oneHour}</td>
+                      <td className="whitespace-nowrap px-2 py-4 text-right font-extrabold text-amber-700">{row.twoHours}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <p className="mt-4 text-sm leading-relaxed text-slate-600">{copy.tuitionNote}</p>
             </article>
 
             <article className="rounded-3xl border-2 border-rose-200 bg-white p-6 shadow-[0_12px_26px_rgba(15,23,42,0.08)] md:p-8">
@@ -113,7 +128,7 @@ const EikaiwaRatesSection = () => {
                     className="flex items-center justify-between gap-3 rounded-2xl bg-rose-50 px-4 py-3"
                   >
                     <span className="text-sm font-semibold text-slate-700 md:text-base">{item.label}</span>
-                    <span className="text-base font-extrabold text-rose-700 md:text-lg">{item.amount}</span>
+                    <span className="shrink-0 text-base font-extrabold text-rose-700 md:text-lg">{item.amount}</span>
                   </li>
                 ))}
               </ul>

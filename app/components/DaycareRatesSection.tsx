@@ -28,6 +28,7 @@ type Variant = {
   trialBody: string;
   tuition: FeeLine[];
   otherFees: FeeLine[];
+  notes: string[];
   options?: HourLine[];
   optionsTitle?: string;
   recommendedLabel?: string;
@@ -62,18 +63,24 @@ const DaycareRatesSection = () => {
             trialBody:
               'ご入会前に英語デイケアを体験できる無料体験レッスンをご用意しています。',
             tuition: [
-              { label: '週1回', amount: '¥19,000' },
-              { label: '週2回', amount: '¥32,500' },
-              { label: '週3回', amount: '¥44,000' },
-              { label: '週4回', amount: '¥53,000' },
-              { label: '週5回（月〜金）', amount: '¥62,000' },
+              { label: '週1回', amount: '¥18,000' },
+              { label: '週2回', amount: '¥30,000' },
+              { label: '週3回', amount: '¥42,000' },
+              { label: '週4回', amount: '¥52,000' },
+              { label: '週5回（月〜金）', amount: '¥70,000' },
             ],
             otherFees: [
               { label: '入会金（初回のみ）', amount: '¥50,000' },
               { label: '教材費（6ヶ月ごと）', amount: '¥8,000' },
               { label: '施設費（6ヶ月ごと）', amount: '¥12,000' },
-              // { label: 'おやつ代（月額）', amount: '¥3,000' },
-              { label: '延長料金（17:00以降）30分', amount: '¥700' },
+              { label: '保険料（年額）', amount: '¥5,000' },
+              { label: '延長保育（30分ごと）', amount: '¥700' },
+            ],
+            notes: [
+              '保育時間：月曜日から金曜日、午前8:00から午後5:00までです。',
+              '保険料には、園児の傷害保険およびスクール安全保険が含まれます。',
+              '昼食サービスを別途ご利用の場合を除き、お弁当をご持参ください。',
+              '空き状況、見学、無料体験レッスンについてはお問い合わせください。',
             ],
             ctaLabel: '体験レッスンを予約',
           },
@@ -90,17 +97,23 @@ const DaycareRatesSection = () => {
             trialBody:
               'ご入会前に英語デイケアを体験できる無料体験レッスンをご用意しています。',
             tuition: [
-              { label: '週1回', amount: '¥15,000' },
-              { label: '週2回', amount: '¥25,000' },
-              { label: '週3回', amount: '¥35,000' },
-              { label: '週4回', amount: '¥44,000' },
-              { label: '週5回', amount: '¥52,000' },
+              { label: '週1回', amount: '¥20,000' },
+              { label: '週2回', amount: '¥34,000' },
+              { label: '週3回', amount: '¥46,000' },
+              { label: '週4回', amount: '¥56,000' },
+              { label: '週5回', amount: '¥65,000' },
             ],
             otherFees: [
               { label: '入会金（初回のみ）', amount: '¥50,000' },
               { label: '教材費（6ヶ月ごと）', amount: '¥8,000' },
               { label: '施設費（6ヶ月ごと）', amount: '¥12,000' },
-              { label: '延長料金 30分', amount: '¥700' },
+              { label: '保険料（年額）', amount: '¥5,000' },
+              { label: '延長保育（30分ごと）', amount: '¥700' },
+            ],
+            notes: [
+              '遊び・歌・ストーリー・アクティビティ・日常会話を通して、子どもたちは自然に英語を学びます。',
+              'お弁当、水筒、着替え、室内履きをご用意ください。',
+              '延長保育は事前予約でご利用いただけます。',
             ],
             ctaLabel: '体験レッスンを予約',
           },
@@ -119,24 +132,31 @@ const DaycareRatesSection = () => {
             recommendedLabel: 'おすすめ',
             optionsTitle: 'プログラム時間',
             options: [
-              { label: 'オプション1', time: '月〜金 9:00〜12:00' },
+              { label: 'オプション1', time: '月〜金 9:00〜13:00' },
               { label: 'オプション2', time: '月〜金 10:00〜14:00' },
             ],
             tuition: [
-              { label: '週1回', amount: '¥12,000' },
-              { label: '週2回', amount: '¥20,000' },
-              { label: '週3回', amount: '¥28,000' },
-              { label: '週4回', amount: '¥35,000' },
-              { label: '週5回', amount: '¥42,000' },
+              { label: '週1回', amount: '¥14,000' },
+              { label: '週2回', amount: '¥24,000' },
+              { label: '週3回', amount: '¥33,000' },
+              { label: '週4回', amount: '¥41,000' },
+              { label: '週5回', amount: '¥48,000' },
             ],
             otherFees: [
-              { label: '入会金（初回のみ）', amount: '¥40,000' },
+              { label: '入会金（初回のみ）', amount: '¥50,000' },
               { label: '教材費（6ヶ月ごと）', amount: '¥8,000' },
               { label: '施設費（6ヶ月ごと）', amount: '¥12,000' },
-              { label: '延長料金 30分', amount: '¥600' },
+              { label: '保険料（年額）', amount: '¥5,000' },
+              { label: '延長保育（30分ごと）', amount: '¥700' },
             ],
             contactTitle: 'お問い合わせ',
             contactLine: 'Namiki English School / 080-2015-6832',
+            notes: [
+              '遊び・歌・ストーリー・アクティビティ・日常会話を通して、自然に英語を学びます。',
+              'お弁当、水筒、着替え、室内履きをご用意ください。',
+              '保険料は、生徒のけがに備える保険および学校安全補償に充てられます。',
+              '延長保育は事前予約でご利用いただけます。',
+            ],
             ctaLabel: '体験レッスンを予約',
           },
         ] as Variant[],
@@ -160,21 +180,27 @@ const DaycareRatesSection = () => {
             trialBody:
               'We offer a free trial lesson so families can experience our English daycare before enrollment.',
             tuition: [
-              { label: '1 day per week', amount: '¥19,000' },
-              { label: '2 days per week', amount: '¥32,500' },
-              { label: '3 days per week', amount: '¥44,000' },
-              { label: '4 days per week', amount: '¥53,000' },
-              { label: '5 days per week', amount: '¥62,000' },
+              { label: '1 day per week', amount: '¥18,000' },
+              { label: '2 days per week', amount: '¥30,000' },
+              { label: '3 days per week', amount: '¥42,000' },
+              { label: '4 days per week', amount: '¥52,000' },
+              { label: '5 days per week', amount: '¥70,000' },
             ],
             otherFees: [
               { label: 'Admission fee (one-time)', amount: '¥50,000' },
               { label: 'Materials fee (every 6 months)', amount: '¥8,000' },
               { label: 'Facility fee (every 6 months)', amount: '¥12,000' },
-              // { label: 'Snack fee (monthly)', amount: '¥3,000' },
+              { label: 'Insurance fee (annual)', amount: '¥5,000' },
               {
-                label: 'Extension fee / 30 minutes (after 17:00)',
+                label: 'Extended care / 30 minutes',
                 amount: '¥700',
               },
+            ],
+            notes: [
+              'Daycare hours: Monday to Friday, 8:00 AM - 5:00 PM.',
+              'The insurance fee supports student accident and school safety coverage.',
+              'Parents may bring a packed lunch unless lunch service is arranged separately.',
+              'Please contact us for availability, a school visit, or a free trial lesson.',
             ],
             ctaLabel: 'Book Trial',
           },
@@ -191,17 +217,23 @@ const DaycareRatesSection = () => {
             trialBody:
               'We offer a free trial lesson so families can experience our English daycare before enrollment.',
             tuition: [
-              { label: '1 day per week', amount: '¥15,000' },
-              { label: '2 days per week', amount: '¥25,000' },
-              { label: '3 days per week', amount: '¥35,000' },
-              { label: '4 days per week', amount: '¥44,000' },
-              { label: '5 days per week', amount: '¥52,000' },
+              { label: '1 day per week', amount: '¥20,000' },
+              { label: '2 days per week', amount: '¥34,000' },
+              { label: '3 days per week', amount: '¥46,000' },
+              { label: '4 days per week', amount: '¥56,000' },
+              { label: '5 days per week', amount: '¥65,000' },
             ],
             otherFees: [
               { label: 'Admission fee (one-time)', amount: '¥50,000' },
               { label: 'Materials fee (every 6 months)', amount: '¥8,000' },
               { label: 'Facility fee (every 6 months)', amount: '¥12,000' },
-              { label: 'Extension fee / 30 minutes', amount: '¥700' },
+              { label: 'Insurance fee (annual)', amount: '¥5,000' },
+              { label: 'Extended care / 30 minutes', amount: '¥700' },
+            ],
+            notes: [
+              'Children learn English naturally through play, songs, stories, activities, and daily conversation.',
+              'Please bring a packed lunch, water bottle, spare clothes, and indoor shoes.',
+              'Extended care is available by advance reservation.',
             ],
             ctaLabel: 'Book Trial',
           },
@@ -220,31 +252,38 @@ const DaycareRatesSection = () => {
             recommendedLabel: 'Recommended',
             optionsTitle: 'Program Hours',
             options: [
-              { label: 'Option 1', time: 'Monday-Friday 9:00-12:00' },
+              { label: 'Option 1', time: 'Monday-Friday 9:00-13:00' },
               { label: 'Option 2', time: 'Monday-Friday 10:00-14:00' },
             ],
             tuition: [
-              { label: '1 day per week', amount: '¥12,000' },
-              { label: '2 days per week', amount: '¥20,000' },
-              { label: '3 days per week', amount: '¥28,000' },
-              { label: '4 days per week', amount: '¥35,000' },
-              { label: '5 days per week', amount: '¥42,000' },
+              { label: '1 day per week', amount: '¥14,000' },
+              { label: '2 days per week', amount: '¥24,000' },
+              { label: '3 days per week', amount: '¥33,000' },
+              { label: '4 days per week', amount: '¥41,000' },
+              { label: '5 days per week', amount: '¥48,000' },
             ],
             otherFees: [
-              { label: 'Admission fee (one-time)', amount: '¥40,000' },
+              { label: 'Admission fee (one-time)', amount: '¥50,000' },
               { label: 'Materials fee (every 6 months)', amount: '¥8,000' },
               { label: 'Facility fee (every 6 months)', amount: '¥12,000' },
-              { label: 'Extension fee / 30 minutes', amount: '¥600' },
+              { label: 'Insurance fee (annual)', amount: '¥5,000' },
+              { label: 'Extended care / 30 minutes', amount: '¥700' },
             ],
             contactTitle: 'Contact',
             contactLine: 'Namiki English School / 080-2015-6832',
+            notes: [
+              'Children learn English through play, songs, stories, activities, and daily conversation.',
+              'Please bring a packed lunch, water bottle, spare clothes, and indoor shoes.',
+              'Insurance fee supports student accident and school safety coverage.',
+              'Extended care is available by advance reservation.',
+            ],
             ctaLabel: 'Book Trial',
           },
         ] as Variant[],
       }
 
   return (
-    <FadeIn>
+    <FadeIn viewportAmount={0.05}>
       <section className="relative overflow-hidden bg-[#f8fbff] py-16 md:py-20">
         <div className="pointer-events-none absolute -top-16 right-0 h-44 w-44 rounded-full bg-cyan-200/40 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-16 left-0 h-52 w-52 rounded-full bg-orange-200/45 blur-3xl" />
@@ -292,7 +331,7 @@ const DaycareRatesSection = () => {
                         {variant.options.map((opt) => (
                           <li
                             key={opt.label}
-                            className="flex items-center justify-between rounded-lg bg-white px-2.5 py-2 text-xs font-semibold text-slate-700"
+                            className="flex flex-wrap items-center justify-between gap-2 rounded-lg bg-white px-2.5 py-2 text-xs font-semibold text-slate-700"
                           >
                             <span>{opt.label}</span>
                             <span>{opt.time}</span>
@@ -308,10 +347,10 @@ const DaycareRatesSection = () => {
                       {variant.tuition.map((item) => (
                         <li
                           key={item.label}
-                          className="flex items-center justify-between rounded-xl bg-slate-50 px-3 py-2 text-sm"
+                          className="flex items-center justify-between gap-3 rounded-xl bg-slate-50 px-3 py-2 text-sm"
                         >
                           <span className="text-slate-700">{item.label}</span>
-                          <span className="font-extrabold text-slate-900">{item.amount}</span>
+                          <span className="shrink-0 font-extrabold text-slate-900">{item.amount}</span>
                         </li>
                       ))}
                     </ul>
@@ -323,13 +362,27 @@ const DaycareRatesSection = () => {
                       {variant.otherFees.map((item) => (
                         <li
                           key={item.label}
-                          className="flex items-center justify-between rounded-xl bg-slate-50 px-3 py-2 text-sm"
+                          className="flex items-center justify-between gap-3 rounded-xl bg-slate-50 px-3 py-2 text-sm"
                         >
                           <span className="text-slate-700">{item.label}</span>
-                          <span className="font-extrabold text-slate-900">{item.amount}</span>
+                          <span className="shrink-0 font-extrabold text-slate-900">{item.amount}</span>
                         </li>
                       ))}
                     </ul>
+                  </div>
+
+                  <div className="rounded-2xl bg-cyan-50/50 p-4">
+                    <h4 className="text-sm font-bold text-slate-900">
+                      {isJa ? "プログラムについて" : "Program Notes"}
+                    </h4>
+                    <ul className="mt-2 list-disc space-y-2 pl-4 text-sm leading-relaxed text-slate-700">
+                      {variant.notes.map((note) => <li key={note}>{note}</li>)}
+                    </ul>
+                    <p className="mt-3 text-sm font-bold text-cyan-800">
+                      {variant.id === "full-day"
+                        ? (isJa ? "英語で広がる、お子さまのグローバルな未来！" : "Give Your Child a Global Future Through English!")
+                        : (isJa ? "楽しく・安心・英語環境" : "Fun · Safe · English Immersion")}
+                    </p>
                   </div>
 
                   <div className="rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-500 to-teal-500 p-4 text-white">

@@ -293,7 +293,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
     programs: [
       {
         title: 'デイケアプログラム',
-        duration: '月〜金 / 8:00-18:00',
+        duration: '月〜金 / 8:00-17:00',
         category: '2歳以上対象',
         bulletPoints: [
           '遊びを通した英語イマージョン',
@@ -307,7 +307,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       },
       {
         title: '英会話クラス',
-        duration: '平日開講',
+        duration: '1日1時間または2時間 / 週1〜5日',
         category: '2歳以上対象の英会話プログラム',
         bulletPoints: [
           'スピーキングとリスニング練習',
@@ -537,7 +537,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       highlights: [
         {
           title: '柔軟なスケジュール',
-          detail: '平日 8:00-18:00 / 週1-3回まで選択可能。',
+          detail: '週1〜5日から選択可能。プログラムごとの時間帯は料金ページをご確認ください。',
         },
         {
           title: '少人数クラス',
@@ -866,7 +866,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
     programs: [
       {
         title: 'Daycare Program',
-        duration: 'Mon-Fri / 8:00 AM-6:00 PM',
+        duration: 'Mon-Fri / 8:00 AM-5:00 PM',
         category: 'Ages 2 and up',
         bulletPoints: [
           'Play-based English immersion',
@@ -880,7 +880,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       },
       {
         title: 'Eikaiwa Classes',
-        duration: 'Weekday classes',
+        duration: '1 or 2 hours per day / 1–5 days per week',
         category: 'Interactive classes for ages 2 and up',
         bulletPoints: [
           'Speaking and listening practice',
@@ -1126,7 +1126,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       highlights: [
         {
           title: 'Flexible schedule',
-          detail: 'Weekdays 8:00–18:00, choose 1–3 sessions per week.',
+          detail: 'Choose 1–5 days per week. See the pricing page for each program’s hours.',
         },
         {
           title: 'Small classes',

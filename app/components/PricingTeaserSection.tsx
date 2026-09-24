@@ -26,7 +26,7 @@ const PricingTeaserSection = () => {
             {
               icon: LuCalendarDays,
               title: '時間帯いろいろ',
-              text: '8:00〜17:00、9:00〜12:00、10:00〜14:00、15:00 放課後の各コースあり。',
+              text: '8:00〜17:00、10:00〜15:00、9:00〜13:00、10:00〜14:00、放課後14:00〜18:00の各コースあり。',
             },
             {
               icon: LuGift,
@@ -39,7 +39,7 @@ const PricingTeaserSection = () => {
           eyebrow: 'Pricing Guide',
           title: 'Find the best plan for your child',
           description:
-            'Compare daycare, after-school, and one-hour Eikaiwa plans in one place. Choose by days and schedule.',
+            'Compare daycare, after-school, and one- or two-hour Eikaiwa plans in one place. Choose by days and schedule.',
           cta: 'View Pricing',
           cards: [
             {
@@ -50,7 +50,7 @@ const PricingTeaserSection = () => {
             {
               icon: LuCalendarDays,
               title: 'Multiple time slots',
-              text: 'Includes 8:00-17:00 / 10:00-15:00 / 9:00-12:00 / 10:00-14:00, plus after-school 14:00-18:00.',
+              text: 'Includes 8:00-17:00 / 10:00-15:00 / 9:00-13:00 / 10:00-14:00, plus after-school 14:00-18:00.',
             },
             {
               icon: LuGift,

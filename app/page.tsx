@@ -36,8 +36,8 @@ export function HomePageView() {
             en: 'Natural English growth in a safe daycare setting',
           }}
           description={{
-            ja: '2歳以上のお子さまを対象に、安全で温かく、英語に触れる豊かな環境を提供します。月曜日から金曜日、午前8時から午後6時まで開校し、遊びを通した英語イマージョン、歌・フォニックス・絵本活動、日常生活習慣と社会性の育成、創造活動と身体活動を通して、自然に英語コミュニケーション力を身につける、自信に満ちた子どもたちを育てます。',
-            en: 'Our Day Care Program provides a safe, warm, and English-rich environment for children aged 2 years old and up. Operating Monday to Friday from 8:00 AM to 6:00 PM, we focus on play-based English immersion, songs/phonics/storytelling, daily routines and social skill development, and creative arts and physical activities to nurture confident, happy learners who naturally acquire English communication skills.',
+            ja: '2歳以上のお子さまを対象に、安全で温かく、英語に触れる豊かな環境を提供します。月曜日から金曜日、午前8時から午後5時まで開校し、遊びを通した英語イマージョン、歌・フォニックス・絵本活動、日常生活習慣と社会性の育成、創造活動と身体活動を通して、自然に英語コミュニケーション力を身につける、自信に満ちた子どもたちを育てます。',
+            en: 'Our Day Care Program provides a safe, warm, and English-rich environment for children aged 2 years old and up. Operating Monday to Friday from 8:00 AM to 5:00 PM, we focus on play-based English immersion, songs/phonics/storytelling, daily routines and social skill development, and creative arts and physical activities to nurture confident, happy learners who naturally acquire English communication skills.',
           }}
           ctaLabel={{
             ja: 'デイケア料金を見る',
@@ -105,8 +105,8 @@ export function HomePageView() {
         /> */}
         <MontessoriFeatureSection
           eyebrow={{
-            ja: '1時間英会話レッスン',
-            en: '1-Hour Eikaiwa Lessons',
+            ja: '1時間・2時間英会話レッスン',
+            en: '1- or 2-Hour Eikaiwa Lessons',
           }}
           title={{
             ja: '会話中心で自信がつく英会話クラス',

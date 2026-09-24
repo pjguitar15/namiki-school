@@ -44,13 +44,13 @@ const PricingSection = () => {
           cta: "体験・相談はこちら",
           featuredLabel: "おすすめ",
           note:
-            "入会金はプログラムによって異なります。通常デイケア（8:00〜17:00）・10:00〜15:00デイケアは ¥50,000、アフタースクールは ¥30,000、短時間デイケアは ¥40,000、英会話は ¥15,000（いずれも初回のみ）です。",
+            "入会金はプログラムによって異なります。デイケア（通常・10:00〜15:00・短時間）は ¥50,000、アフタースクールは ¥30,000、英会話は ¥40,000（いずれも初回のみ）です。",
           plans: [
             {
               name: "デイケア（通常・10:00〜15:00・短時間）",
-              price: "¥12,000〜¥62,000 / 月",
-              meta: "月〜金（8:00〜17:00 / 10:00〜15:00 / 9:00〜12:00 / 10:00〜14:00）",
-              features: ["週1〜5回", "通常デイケア: おやつ代 月額 ¥3,000", "延長: 30分 ¥600〜¥700（コースにより異なります）"],
+              price: "¥14,000〜¥70,000 / 月",
+              meta: "月〜金（8:00〜17:00 / 10:00〜15:00 / 9:00〜13:00 / 10:00〜14:00）",
+              features: ["週1〜5回", "保険料 年額 ¥5,000", "延長保育: 30分 ¥700"],
             },
             {
               name: "アフタースクール（14:00〜18:00）",
@@ -60,10 +60,10 @@ const PricingSection = () => {
               featured: true,
             },
             {
-              name: "英会話（1時間レッスン）",
-              price: "¥11,000〜¥40,000 / 月",
+              name: "英会話（1時間・2時間レッスン）",
+              price: "¥11,000〜¥68,000 / 月",
               meta: "週1〜5回",
-              features: ["入会金 ¥15,000（初回のみ）", "年間教材費 ¥9,000", "施設費（年1回）¥7,000"],
+              features: ["入会金 ¥40,000（初回のみ）", "教材費 ¥8,000（6ヶ月ごと）", "施設費 ¥8,000（6ヶ月ごと）"],
             },
           ] as Plan[],
         }
@@ -71,20 +71,20 @@ const PricingSection = () => {
           label: "Pricing",
           title: "Tuition Overview",
           subtitle:
-            "See monthly tuition for daycare (full day, 10:00-15:00, and short-hour), after-school, and one-hour Eikaiwa programs.",
+            "See monthly tuition for daycare (full day, 10:00-15:00, and short-hour), after-school, and one- or two-hour Eikaiwa programs.",
           cta: "Book trial / consult",
           featuredLabel: "Recommended",
           note:
-            "Admission fees vary by program: full-day daycare (8:00-17:00) and 10:00-15:00 daycare are ¥50,000, after-school is ¥30,000, short-hour daycare is ¥40,000, and Eikaiwa is ¥15,000 (all one-time).",
+            "Admission fees vary by program: all daycare options are ¥50,000, after-school is ¥30,000, and Eikaiwa is ¥40,000 (all one-time).",
           plans: [
             {
               name: "Daycare (full, 10:00-15:00 & short-hour)",
-              price: "¥12,000-62,000 / month",
-              meta: "Monday-Friday (8:00-17:00 / 10:00-15:00 / 9:00-12:00 / 10:00-14:00)",
+              price: "¥14,000-70,000 / month",
+              meta: "Monday-Friday (8:00-17:00 / 10:00-15:00 / 9:00-13:00 / 10:00-14:00)",
               features: [
                 "1 to 5 days per week",
-                "Full-day daycare snack fee: ¥3,000 monthly",
-                "Extension: ¥600-¥700 / 30 mins (varies by course)",
+                "Insurance fee: ¥5,000 annually",
+                "Extended care: ¥700 / 30 minutes",
               ],
             },
             {
@@ -99,13 +99,13 @@ const PricingSection = () => {
               featured: true,
             },
             {
-              name: "Eikaiwa (1-hour lessons)",
-              price: "¥11,000-40,000 / month",
+              name: "Eikaiwa (1- or 2-hour lessons)",
+              price: "¥11,000-68,000 / month",
               meta: "1 to 5 lessons per week",
               features: [
-                "Admission fee: ¥15,000 (one-time)",
-                "Annual materials fee: ¥9,000",
-                "Facility fee: ¥7,000 (annual)",
+                "Admission fee: ¥40,000 (one-time)",
+                "Materials fee: ¥8,000 (every 6 months)",
+                "Facility fee: ¥8,000 (every 6 months)",
               ],
             },
           ] as Plan[],

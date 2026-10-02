@@ -22,11 +22,11 @@ const HiringPageContent = () => {
     language === "ja"
       ? {
           badge: "\u63a1\u7528\u60c5\u5831",
-          title: "\u82f1\u8a9e\u6559\u5e2b\u52df\u96c6",
+          title: "\u4fdd\u80b2\u58eb\u52df\u96c6",
           subtitle:
             "\u5b50\u3069\u3082\u306e\u6210\u9577\u3092\u652f\u3048\u308b\u6559\u5ba4\u904b\u55b6\u306e\u30e1\u30f3\u30d0\u30fc\u3092\u52df\u96c6\u4e2d\u3002\u6559\u80b2\u696d\u754c\u306e\u7d4c\u9a13\u306f\u554f\u3044\u307e\u305b\u3093\u3002",
           quickFacts: [
-            { icon: LuBriefcaseBusiness, label: "\u8077\u7a2e", value: "English Teacher / Support Staff" },
+            { icon: LuBriefcaseBusiness, label: "\u8077\u7a2e", value: "保育士 / Support Staff" },
             { icon: LuUsers, label: "\u5bfe\u8c61\u5e74\u9f62", value: "2\u6b73\u301c\u5c0f\u5b66\u751f" },
             { icon: LuGraduationCap, label: "\u5fdc\u52df\u6761\u4ef6", value: "\u30b3\u30df\u30e5\u30cb\u30b1\u30fc\u30b7\u30e7\u30f3\u529b\u3068\u8cac\u4efb\u611f" },
             { icon: LuBadgeCheck, label: "\u7d4c\u9a13", value: "\u672a\u7d4c\u9a13\u53ef" },
@@ -80,7 +80,7 @@ const HiringPageContent = () => {
           subtitle:
             "We are hiring friendly, reliable educators and classroom support staff. No prior teaching experience is required.",
           quickFacts: [
-            { icon: LuBriefcaseBusiness, label: "Role", value: "English Teacher / Support Staff" },
+            { icon: LuBriefcaseBusiness, label: "Role", value: "Hoikoshi Teacher / Support Staff" },
             { icon: LuUsers, label: "Age Group", value: "2 years old to elementary" },
             { icon: LuGraduationCap, label: "Baseline", value: "Communication skills and responsibility" },
             { icon: LuBadgeCheck, label: "Experience", value: "No experience required" },

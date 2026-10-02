@@ -19,7 +19,7 @@ export async function generateMetadata({
     locale: lang,
     keywords: [
       "Namiki English School hiring",
-      "English teacher jobs Tsukuba",
+      "Hoikoshi Teacher jobs Tsukuba",
       "School support staff jobs Japan",
       "No experience required teaching job",
     ],

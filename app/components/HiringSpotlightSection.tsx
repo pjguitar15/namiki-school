@@ -13,10 +13,10 @@ const HiringSpotlightSection = () => {
     language === "ja"
       ? {
           hiring: "NOW HIRING",
-          title: "英語教師募集中",
+          title: "保育士募集中",
           subtitle: "子どもが好きで、英語教育に情熱のある先生を募集しています。",
           quickFacts: [
-            { icon: LuBriefcaseBusiness, label: "募集職種", value: "English Teacher" },
+            { icon: LuBriefcaseBusiness, label: "募集職種", value: "保育士" },
             { icon: LuUsers, label: "対象", value: "Preschool・Kindergarten・Elementary" },
             { icon: LuGraduationCap, label: "応募条件", value: "学士以上（学部生相談可）" },
   { icon: LuBadgeCheck, label: "経験", value: "未経験可" },
@@ -39,10 +39,10 @@ const HiringSpotlightSection = () => {
         }
       : {
           hiring: "NOW HIRING",
-          title: "English Teacher Wanted",
+          title: "Hoikoshi Teacher Wanted",
           subtitle: "We are looking for passionate teachers who love working with children.",
           quickFacts: [
-            { icon: LuBriefcaseBusiness, label: "Position", value: "English Teacher" },
+            { icon: LuBriefcaseBusiness, label: "Position", value: "Hoikoshi Teacher" },
             { icon: LuUsers, label: "Students", value: "Preschool, Kindergarten, Elementary" },
             { icon: LuGraduationCap, label: "Qualification", value: "Bachelor's degree or undergraduate" },
   { icon: LuBadgeCheck, label: "Experience", value: "No experience required" },

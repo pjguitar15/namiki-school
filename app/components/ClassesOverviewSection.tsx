@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { LuBaby, LuBookOpenCheck, LuClock3, LuPencilLine } from "react-icons/lu";
+import { LuBookOpenCheck, LuClock3, LuPencilLine } from "react-icons/lu";
 import Container from "./Container";
 import FadeIn from "./FadeIn";
 import { useLanguage } from "../providers/LanguageProvider";
@@ -22,23 +22,13 @@ const ClassesOverviewSection = () => {
           eyebrow: 'クラス概要',
           heading: 'Namiki English School クラス案内',
           subheading:
-            '年齢と発達に合わせた4つのクラスで、楽しく実践的に英語力を育てます。',
+            'お子さまの年齢や学び方に合わせてクラスをお選びいただけます。',
           cards: [
             {
-              title: 'プリスクール',
-              age: '2〜3歳',
+              title: '英会話プログラム',
+              age: '3歳以上',
               description:
-                '安全で温かい環境の中、歌・フォニックス・絵本・日常活動を通して楽しく英語を学びます。',
-              points: [
-                '歌・フォニックス・絵本・日常活動',
-                '安全で温かい学習環境',
-              ],
-            },
-            {
-              title: 'キンダーガーテン',
-              age: '4〜6歳',
-              description:
-                '参加型レッスンと創造的な活動を通して、語彙力・スピーキング力・初期の読み書き力を育てます。',
+                '歌やフォニックス、物語を取り入れた遊びを通して、語彙力、話す自信、読み書きの基礎を育てます。',
               points: ['参加型レッスン', '創造的な活動で実践力を育成'],
             },
             {
@@ -61,23 +51,13 @@ const ClassesOverviewSection = () => {
           eyebrow: 'Classes Overview',
           heading: 'Namiki English School Class Guide',
           subheading:
-            'For age-based classes designed to build practical English skills in a joyful way.',
+            'Explore English conversation, elementary immersion and after-school classes.',
           cards: [
             {
-              title: 'Preschool Class',
-              age: 'Ages 2-3',
+              title: 'Eikaiwa Programme',
+              age: 'Ages 3 and up',
               description:
-                'Play-based English learning through songs, phonics, storytelling, and daily routines in a safe environment.',
-              points: [
-                'Songs, phonics, storytelling, and daily routines',
-                'Safe and nurturing environment',
-              ],
-            },
-            {
-              title: 'Kindergarten Class',
-              age: 'Ages 4-6',
-              description:
-                'Interactive lessons and creative activities to develop vocabulary, speaking confidence, and early literacy.',
+                'Children learn through play, songs, phonics and storytelling to build vocabulary, speaking confidence and early literacy.',
               points: [
                 'Builds vocabulary and speaking confidence',
                 'Develops early reading and writing skills',
@@ -108,12 +88,6 @@ const ClassesOverviewSection = () => {
 
   const themes = [
     {
-      card: "bg-[#ffe3f1] border-[#ff8ec1]",
-      iconWrap: "bg-[#ff4f96] text-white",
-      badge: "bg-[#ff4f96] text-white",
-      dot: "bg-[#ff4f96]",
-    },
-    {
       card: "bg-[#dff4ff] border-[#6ecfff]",
       iconWrap: "bg-[#1da5e8] text-white",
       badge: "bg-[#1da5e8] text-white",
@@ -133,7 +107,7 @@ const ClassesOverviewSection = () => {
     },
   ] as const;
 
-  const icons = [LuBaby, LuPencilLine, LuBookOpenCheck, LuClock3];
+  const icons = [LuPencilLine, LuBookOpenCheck, LuClock3];
 
   return (
     <FadeIn>
@@ -148,12 +122,12 @@ const ClassesOverviewSection = () => {
             <p className="text-base text-slate-600 md:text-lg">{copy.subheading}</p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {copy.cards.map((card, index) => {
               const Icon = icons[index % icons.length];
               const theme = themes[index % themes.length];
-              const isFourToSixCard = card.age.includes("4") && card.age.includes("6");
-              const isSixToTwelveCard = card.age.includes("6") && card.age.includes("12");
+              const isEikaiwaCard = index === 0;
+              const isElementaryCard = index === 1;
 
               return (
                 <article
@@ -175,12 +149,12 @@ const ClassesOverviewSection = () => {
                   <p className="mt-3 text-sm leading-relaxed text-slate-700 md:text-base">
                     {card.description}
                   </p>
-                  {isFourToSixCard ? (
+                  {isEikaiwaCard ? (
                     <div className="mt-4 grid grid-cols-2 gap-2">
                       <div className="relative h-24 overflow-hidden rounded-xl">
                         <Image
                           src="/assets/asset-4.jpg"
-                          alt="Kindergarten activity"
+                          alt="English conversation activity"
                           fill
                           className="object-cover"
                           sizes="(min-width: 1280px) 140px, 45vw"
@@ -189,7 +163,7 @@ const ClassesOverviewSection = () => {
                       <div className="relative h-24 overflow-hidden rounded-xl">
                         <Image
                           src="/assets/asset-5.jpg"
-                          alt="Kindergarten classroom"
+                          alt="English conversation classroom"
                           fill
                           className="object-cover"
                           sizes="(min-width: 1280px) 140px, 45vw"
@@ -197,7 +171,7 @@ const ClassesOverviewSection = () => {
                       </div>
                     </div>
                   ) : null}
-                  {isSixToTwelveCard ? (
+                  {isElementaryCard ? (
                     <div className="mt-4 grid grid-cols-3 gap-2">
                       <div className="relative h-24 overflow-hidden rounded-xl">
                         <Image

@@ -89,36 +89,17 @@ const ProgramsPageView = () => {
     },
   ];
 
-  const learningFlow = [
-    {
-      step: isJa ? 'Step 1' : 'Step 1',
-      title: isJa ? 'ウォームアップ会話' : 'Warm-Up Conversation',
-      detail: isJa
-        ? '前回の復習とスピーキングで、英語モードに切り替えます。'
-        : 'Short review + guided speaking to switch into English mode.',
-    },
-    {
-      step: isJa ? 'Step 2' : 'Step 2',
-      title: isJa ? 'フォニックス・語彙' : 'Phonics and Vocabulary',
-      detail: isJa
-        ? '正しい音・アクセントを身につけ、使える語彙を増やします。'
-        : 'Builds sound accuracy and practical word bank.',
-    },
-    {
-      step: isJa ? 'Step 3' : 'Step 3',
-      title: isJa ? '読解・表現活動' : 'Reading and Expression',
-      detail: isJa
-        ? '年齢別テキストとアクティビティで理解力と表現力を伸ばします。'
-        : 'Age-level texts and activities grow comprehension and expression.',
-    },
-    {
-      step: isJa ? 'Step 4' : 'Step 4',
-      title: isJa ? 'アウトプットと振り返り' : 'Output and Feedback',
-      detail: isJa
-        ? '発表やロールプレイで定着。保護者向けフィードバックも実施。'
-        : 'Presentation/roleplay for retention, plus parent-facing progress feedback.',
-    },
-  ];
+  const lessonOptions = isJa
+    ? [
+        { title: '1時間の英会話クラス', detail: '3歳以上で英語が初めてのお子さまや、短めのレッスンから始めたいお子さまに。歌や絵本、短いゲームを通して、英語を聞いたり話したりすることに少しずつ慣れていきます。' },
+        { title: '2時間の英会話クラス', detail: '英語を使う時間を増やしたいお子さまに。毎回のテーマに沿って会話で単語や表現を学び、ゲームや工作などの体験活動で実際に使います。' },
+        { title: '放課後英語プログラム', detail: '6〜12歳が対象で、月曜日から金曜日に開講します。工作やグループ活動で、あいさつや道具の貸し借り、順番を譲り合うときに使う日常英語を練習します。発表や宿題のサポートを通して、学力と表現力も育てます。' },
+      ]
+    : [
+        { title: '1-hour Eikaiwa', detail: 'For children ages 3 and up who are new to English or prefer a shorter lesson. Children build confidence in listening and speaking through songs, stories and short games.' },
+        { title: '2-hour Eikaiwa', detail: 'For children ready for a longer lesson and more time to use English. Each session has a theme. Children learn words and phrases through conversation, then use them in games, crafts or hands-on projects.' },
+        { title: 'After-School English Programme', detail: 'For children ages 6 to 12, Monday to Friday. Children practise everyday English by greeting classmates, asking for materials and taking turns in group activities. Presentations and homework support help build academic and communication skills.' },
+      ];
 
   const outcomes = isJa
     ? [
@@ -328,39 +309,20 @@ const ProgramsPageView = () => {
             </div>
           </section>
 
-          <section className='grid gap-8 rounded-3xl border border-cyan-200 bg-gradient-to-br from-cyan-50 via-white to-sky-50 p-6 md:grid-cols-2 md:p-10'>
+          <section aria-labelledby='lesson-options' className='rounded-3xl border border-cyan-200 bg-gradient-to-br from-cyan-50 via-white to-sky-50 p-6 md:p-10'>
             <FadeIn>
-              <div className='space-y-3'>
-                <p className='text-sm font-semibold uppercase tracking-[0.2em] text-cyan-700'>
-                  {isJa ? 'レッスン設計' : 'Weekly Learning Flow'}
-                </p>
-                <h2 className='text-3xl text-slate-900'>
-                  {isJa
-                    ? '成果が出る、1回の授業の進め方'
-                    : 'How each lesson creates measurable progress'}
-                </h2>
-                <p className='text-sm leading-relaxed text-slate-700'>
-                  {isJa
-                    ? '「楽しい」だけで終わらず、入力と出力をバランスよく設計。毎回の積み上げで着実に伸ばします。'
-                    : 'Designed to balance input and output so every class contributes to real language gains.'}
-                </p>
+              <h2 id='lesson-options' className='mb-6 text-3xl text-slate-900'>
+                {isJa ? 'お子さまに合った英語プログラム' : 'Choose the right English programme for your child'}
+              </h2>
+              <div className='grid gap-4 md:grid-cols-3'>
+                {lessonOptions.map((item) => (
+                  <article key={item.title} className='rounded-2xl bg-white p-5 ring-1 ring-cyan-100'>
+                    <h3 className='text-xl text-slate-900'>{item.title}</h3>
+                    <p className='mt-2 text-sm leading-relaxed text-slate-700'>{item.detail}</p>
+                  </article>
+                ))}
               </div>
             </FadeIn>
-            <div className='space-y-4'>
-              {learningFlow.map((item, index) => (
-                <FadeIn key={item.title} delay={index * 0.05}>
-                  <div className='rounded-2xl bg-white/80 p-4 ring-1 ring-cyan-100'>
-                    <p className='text-xs font-semibold uppercase tracking-wide text-cyan-700'>
-                      {item.step}
-                    </p>
-                    <h3 className='mt-1 text-lg text-slate-900'>
-                      {item.title}
-                    </h3>
-                    <p className='mt-1 text-sm text-slate-700'>{item.detail}</p>
-                  </div>
-                </FadeIn>
-              ))}
-            </div>
           </section>
 
           <section className='grid gap-6 md:grid-cols-2'>

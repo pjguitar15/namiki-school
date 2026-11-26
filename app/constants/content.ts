@@ -308,7 +308,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       {
         title: '英会話クラス',
         duration: '1日1時間または2時間 / 週1〜5日',
-        category: '2歳以上対象の英会話プログラム',
+        category: '3歳以上対象の英会話プログラム',
         bulletPoints: [
           'スピーキングとリスニング練習',
           'フォニックスと発音強化',
@@ -413,26 +413,26 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         signerTitle: 'Celia Keino',
       },
       story: {
-        title: '私たちのストーリー',
+        title: '英語が身近に感じられる場所',
         paragraphs: [
-          '地域の子どもたちが、英語で自分の気持ちを伝えられるように。そんな思いからスタートしました。',
-          '歌やゲームだけで終わらず、リーディング・ライティング・スピーキング・フォニックスをバランスよく学び、アウトプットを重ねることで自信を育てています。',
-          '2歳から大人まで、一人ひとりに合わせたサポートで「できた！」を積み重ねます。',
+          '並木英語スクールは、つくば市にある家族経営の子ども向け英語スクールです。安心して過ごせる温かい環境で、遊びや会話、日々の活動を通して英語を使う経験を重ねます。',
+          '英会話では、歌や絵本、ゲームを通して、自己紹介や順番をお願いするときなど、すぐに使える表現を練習します。放課後は、工作やグループゲーム、読書、共同制作の中で自然に英語を使います。',
+          '一人ひとりが安心して英語を使ってみることができ、「伝わった！」という喜びを感じられることを大切にしています。',
         ],
         image: '/classoom/4.jpg',
       },
       values: [
         {
-          title: 'Curiosity',
-          body: '好奇心を大切にし、楽しく英語に触れ続ける環境をつくります。',
+          title: 'ビジョン',
+          body: '日本で、子どもたちが自信と国際的な視野、高いコミュニケーション力を育む、信頼されるファミリースタイルのインターナショナル英語スクールを目指します。',
         },
         {
-          title: 'Confidence',
-          body: '小さな成功体験を積み重ね、自分の言葉で伝える勇気を育てます。',
+          title: 'ミッション',
+          body: '安心で温かい環境の中で質の高い英語教育を提供し、2歳から12歳までの子どもたちが自信を持って英語を話せるよう育てます。一人ひとりの成長を支え、ご家庭や地域との信頼関係を築きます。',
         },
         {
-          title: 'Community',
-          body: '家庭と教室が一緒に成長を見守り、支え合うコミュニティを目指します。',
+          title: '教育理念',
+          body: '英語は、安心して挑戦できる環境で、楽しく自然に学ぶものだと考えています。英語力に加え、思いやりや人間性、国際的な視野も育てます。',
         },
       ],
       highlights: [
@@ -881,7 +881,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       {
         title: 'Eikaiwa Classes',
         duration: '1 or 2 hours per day / 1–5 days per week',
-        category: 'Interactive classes for ages 2 and up',
+        category: 'Interactive classes for ages 3 and up',
         bulletPoints: [
           'Speaking and listening practice',
           'Phonics and pronunciation',
@@ -985,26 +985,26 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         signerTitle: 'Celia Keino',
       },
       story: {
-        title: 'Our Story',
+        title: 'A place to feel at home in English',
         paragraphs: [
-          'We began with a simple goal: help local learners share their own feelings in English.',
-          'We balance reading, writing, speaking, listening, and phonics—plus projects and presentations to lock in confidence.',
-          'From preschoolers to adults, we tailor support so everyone can stack up “I did it!” moments.',
+          'Namiki English School is a family-run English school for children in Tsukuba. In a warm, welcoming space, children use English through play, conversation and everyday activities.',
+          'In Eikaiwa, children practise phrases they can use right away through songs, stories and games. In the after-school programme, they use English while making crafts, playing group games, reading and working on projects together.',
+          'Our goal is for every child to feel comfortable trying English and proud when they make themselves understood.',
         ],
         image: '/classoom/4.jpg',
       },
       values: [
         {
-          title: '好奇心',
-          body: 'We keep English fun and approachable so learners stay curious.',
+          title: 'Vision',
+          body: 'To become a trusted, family-style international English school in Japan where children grow with confidence, global awareness and strong communication skills.',
         },
         {
-          title: '自信',
-          body: 'Frequent, small wins build the courage to speak in their own words.',
+          title: 'Mission',
+          body: 'We provide high-quality English education in a warm, safe environment, nurture confident speakers ages 2 to 12, support each child’s learning journey and build strong partnerships with families and the community.',
         },
         {
-          title: 'つながり',
-          body: 'Families and teachers partner to celebrate growth together.',
+          title: 'Philosophy',
+          body: 'We believe learning English should be joyful, natural and meaningful. Children learn best when they feel safe, encouraged and inspired. We nurture language skills, character, kindness and a global mindset.',
         },
       ],
       highlights: [

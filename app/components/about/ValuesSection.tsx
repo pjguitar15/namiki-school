@@ -10,17 +10,9 @@ const ValuesSection = () => {
   return (
     <FadeIn>
       <section className="space-y-7">
-        <div className="space-y-2 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-700">Values</p>
-          <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">
-            {language === "ja" ? "大切にしていること" : "What we value most"}
-          </h2>
-          <p className="text-base text-slate-600">
-            {language === "ja"
-              ? "学びを支える3つの柱で、長く続く英語力と人間力を育てます。"
-              : "Three pillars that support steady language growth and character development."}
-          </p>
-        </div>
+        <h2 className="text-center text-3xl font-bold text-slate-900 md:text-4xl">
+          {language === "ja" ? "ビジョン・ミッション・教育理念" : "Vision, Mission and Philosophy"}
+        </h2>
 
         <div className="grid gap-5 md:grid-cols-3">
           {values.map((value, index) => {

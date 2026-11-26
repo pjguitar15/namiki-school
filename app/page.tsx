@@ -1,7 +1,6 @@
 import { redirect } from "next/navigation";
 import AboutSection from "./components/AboutSection";
 import AnnouncementBar from "./components/AnnouncementBar";
-import ClassesOverviewSection from './components/ClassesOverviewSection'
 import ColorfulSchoolSectionLocalized from "./components/ColorfulSchoolSectionLocalized";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
@@ -22,56 +21,58 @@ export function HomePageView() {
       <Navbar />
       <main className='flex flex-1 flex-col gap-2'>
         <Hero />
-        <MontessoriFeatureSection
-          eyebrow={{
-            ja: '1時間・2時間英会話レッスン',
-            en: '1- or 2-Hour Eikaiwa Lessons',
-          }}
-          title={{
-            ja: '会話中心で自信がつく英会話クラス',
-            en: 'Conversation-first Eikaiwa that builds confidence',
-          }}
-          description={{
-            ja: '3歳以上のお子さま向けの1時間または2時間のレッスンです。歌や絵本、ゲームを通して、英語を聞いたり話したりする自信を育てます。',
-            en: 'One- or two-hour English conversation lessons for children ages 3 and up. Songs, stories and games help children build confidence in listening and speaking.',
-          }}
-          ctaLabel={{
-            ja: '英会話レッスンを見る',
-            en: 'Explore Eikaiwa lessons',
-          }}
-          ctaHref='/programs#lesson-options'
-          imageAlt={{
-            ja: '英会話レッスンで学ぶ生徒',
-            en: 'Students in Eikaiwa lesson',
-          }}
-          imageSrc='/assets/asset-8.jpg'
-          reverse={false}
-        />
-        <MontessoriFeatureSection
-          eyebrow={{
-            ja: 'アフタースクール',
-            en: 'After School Program',
-          }}
-          title={{
-            ja: '放課後に使える英語を学ぶ',
-            en: 'Use English in everyday activities after school',
-          }}
-          description={{
-            ja: '6〜12歳を対象に、月曜日から金曜日まで開講します。工作やグループ活動を通して日常の英語を練習し、宿題もサポートします。',
-            en: 'For children ages 6 to 12, Monday to Friday. Children practise everyday English through crafts and group activities, with support for homework.',
-          }}
-          ctaLabel={{
-            ja: '放課後プログラムを見る',
-            en: 'Explore After School',
-          }}
-          ctaHref='/programs#after-school'
-          imageAlt={{
-            ja: '放課後プログラムに参加する子どもたち',
-            en: 'Students in after-school program',
-          }}
-          imageSrc='/assets/asset-7.jpg'
-          reverse={true}
-        />
+        <div id='programs' className='scroll-mt-24'>
+          <MontessoriFeatureSection
+            eyebrow={{
+              ja: '1時間・2時間英会話レッスン',
+              en: '1- or 2-Hour Eikaiwa Lessons',
+            }}
+            title={{
+              ja: '会話中心で自信がつく英会話クラス',
+              en: 'Conversation-first Eikaiwa that builds confidence',
+            }}
+            description={{
+              ja: '3歳以上のお子さま向けの1時間または2時間のレッスンです。歌や絵本、ゲームを通して、英語を聞いたり話したりする自信を育てます。',
+              en: 'One- or two-hour English conversation lessons for children ages 3 and up. Songs, stories and games help children build confidence in listening and speaking.',
+            }}
+            ctaLabel={{
+              ja: '英会話レッスンを見る',
+              en: 'Explore Eikaiwa lessons',
+            }}
+            ctaHref='/programs#lesson-options'
+            imageAlt={{
+              ja: '英会話レッスンで学ぶ生徒',
+              en: 'Students in Eikaiwa lesson',
+            }}
+            imageSrc='/assets/asset-8.jpg'
+            reverse={false}
+          />
+          <MontessoriFeatureSection
+            eyebrow={{
+              ja: 'アフタースクール',
+              en: 'After School Program',
+            }}
+            title={{
+              ja: '放課後に使える英語を学ぶ',
+              en: 'Use English in everyday activities after school',
+            }}
+            description={{
+              ja: '6〜12歳を対象に、月曜日から金曜日まで開講します。工作やグループ活動を通して日常の英語を練習し、宿題もサポートします。',
+              en: 'For children ages 6 to 12, Monday to Friday. Children practise everyday English through crafts and group activities, with support for homework.',
+            }}
+            ctaLabel={{
+              ja: '放課後プログラムを見る',
+              en: 'Explore After School',
+            }}
+            ctaHref='/programs#after-school'
+            imageAlt={{
+              ja: '放課後プログラムに参加する子どもたち',
+              en: 'Students in after-school program',
+            }}
+            imageSrc='/assets/asset-7.jpg'
+            reverse={true}
+          />
+        </div>
         <SummerSchoolPromoSection />
         <TwoVerticalImageSection />
         <HomeActionCtaSection />
@@ -105,7 +106,6 @@ export function HomePageView() {
 
         <ColorfulSchoolSectionLocalized />
         <AboutSection />
-        <ClassesOverviewSection />
         {/* <ProjectsSection /> */}
         <TestimonialsSection />
         <ContactSection />

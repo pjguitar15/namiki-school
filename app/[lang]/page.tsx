@@ -12,14 +12,13 @@ export async function generateMetadata({
   const { lang } = await params;
 
   return createPageMetadata({
-    title: "English Daycare and Eikaiwa in Tsukuba",
+    title: "Eikaiwa and After-School English in Tsukuba",
     description:
-      "Namiki English School offers daycare, Eikaiwa, and after-school English programs in Tsukuba for ages 2 and up.",
+      "Namiki English School offers Eikaiwa and after-school English programs in Tsukuba for ages 3 and up.",
     path: "/",
     locale: lang,
     keywords: [
       "English school Tsukuba",
-      "Tsukuba daycare English",
       "Eikaiwa for kids Tsukuba",
       "After-school English Tsukuba",
     ],

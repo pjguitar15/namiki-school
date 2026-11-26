@@ -38,7 +38,6 @@ export const metadata: Metadata = {
   keywords: [
     "Namiki English School",
     "Tsukuba English school",
-    "English daycare Tsukuba",
     "Eikaiwa Tsukuba",
     "After-school English program",
     "Ibaraki English school",

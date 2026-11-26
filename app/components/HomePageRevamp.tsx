@@ -24,12 +24,12 @@ const HomePageRevamp = () => {
   const trustPoints =
     language === 'ja'
       ? [
-          '2歳から始められる英語環境',
+          '3歳から始められる英語環境',
           '少人数でしっかり対話',
           'ご家庭とつながる丁寧なフィードバック',
         ]
       : [
-          'English support from age 2 and up',
+          'English support from age 3 and up',
           'Small-group classes with real speaking time',
           'Close communication with families',
         ];
@@ -39,7 +39,7 @@ const HomePageRevamp = () => {
       ? [
           {
             label: '対象年齢',
-            value: '2歳から',
+            value: '3歳から',
             detail: '初めての英語でも安心',
           },
           {
@@ -56,7 +56,7 @@ const HomePageRevamp = () => {
       : [
           {
             label: 'Starting Age',
-            value: '2+ years',
+            value: '3+ years',
             detail: 'A gentle start for first-time learners',
           },
           {
@@ -106,11 +106,6 @@ const HomePageRevamp = () => {
     language === 'ja'
       ? [
           {
-            title: 'デイケア',
-            body: '長時間の英語環境で、生活の中から自然に表現を身につけます。',
-            image: '/assets/asset-1.jpg',
-          },
-          {
             title: '英会話',
             body: '会話中心の1時間レッスンで、自信と発音を育てます。',
             image: '/assets/asset-8.jpg',
@@ -122,11 +117,6 @@ const HomePageRevamp = () => {
           },
         ]
       : [
-          {
-            title: 'Daycare',
-            body: 'A longer English environment where language grows naturally through the day.',
-            image: '/assets/asset-1.jpg',
-          },
           {
             title: 'Eikaiwa',
             body: 'Focused one-hour lessons that build confidence, pronunciation, and interaction.',
@@ -151,7 +141,7 @@ const HomePageRevamp = () => {
           programEyebrow: 'Programs',
           programTitle: '年齢と目的に合わせて選べる3つの学び方',
           programBody:
-            'デイケア、英会話、アフタースクールを明確に見せ、どの家庭にも合う入口をつくります。',
+            '英会話とアフタースクールを明確に見せ、どの家庭にも合う入口をつくります。',
           approachEyebrow: 'Our Approach',
           approachTitle: '英語力だけで終わらせない学びの設計',
           approachBody:
@@ -178,7 +168,7 @@ const HomePageRevamp = () => {
           programEyebrow: 'Programs',
           programTitle: 'Three clear learning paths for different ages and goals',
           programBody:
-            'The homepage should make the difference between daycare, Eikaiwa, and after-school obvious at a glance.',
+            'The homepage should make the difference between Eikaiwa and after-school obvious at a glance.',
           approachEyebrow: 'Our Approach',
           approachTitle: 'A learning design that goes beyond vocabulary drills',
           approachBody:

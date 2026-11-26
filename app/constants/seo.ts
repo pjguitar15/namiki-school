@@ -5,7 +5,7 @@ import { localizePath } from "./i18n";
 
 export const siteName = "Namiki English School";
 export const siteDescription =
-  "Bilingual English school in Tsukuba, Japan offering daycare, Eikaiwa, and after-school programs for ages 2+.";
+  "Bilingual English school in Tsukuba, Japan offering Eikaiwa and after-school programs for ages 3+.";
 const fallbackSiteUrl = "https://www.namiki-english.com";
 const envSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
 export const siteUrl =

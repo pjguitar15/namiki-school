@@ -28,31 +28,6 @@ export function HomePageView() {
         <PricingTeaserSection />
         <MontessoriFeatureSection
           eyebrow={{
-            ja: 'デイケアプログラム',
-            en: 'Daycare Program',
-          }}
-          title={{
-            ja: '安心の環境で英語を自然に身につける',
-            en: 'Natural English growth in a safe daycare setting',
-          }}
-          description={{
-            ja: '2歳以上のお子さまを対象に、安全で温かく、英語に触れる豊かな環境を提供します。月曜日から金曜日、午前8時から午後5時まで開校し、遊びを通した英語イマージョン、歌・フォニックス・絵本活動、日常生活習慣と社会性の育成、創造活動と身体活動を通して、自然に英語コミュニケーション力を身につける、自信に満ちた子どもたちを育てます。',
-            en: 'Our Day Care Program provides a safe, warm, and English-rich environment for children aged 2 years old and up. Operating Monday to Friday from 8:00 AM to 5:00 PM, we focus on play-based English immersion, songs/phonics/storytelling, daily routines and social skill development, and creative arts and physical activities to nurture confident, happy learners who naturally acquire English communication skills.',
-          }}
-          ctaLabel={{
-            ja: 'デイケア料金を見る',
-            en: 'See daycare rates',
-          }}
-          ctaHref='/pricing'
-          imageAlt={{
-            ja: 'デイケアクラスで学ぶ子どもたち',
-            en: 'Children learning in daycare class',
-          }}
-          imageSrc='/assets/asset-1.jpg'
-          reverse={false}
-        />
-        <MontessoriFeatureSection
-          eyebrow={{
             ja: '\u30b9\u30af\u30fc\u30eb\u30b3\u30f3\u30bb\u30d7\u30c8',
             en: 'School Concept',
           }}
@@ -113,8 +88,8 @@ export function HomePageView() {
             en: 'Conversation-first Eikaiwa that builds confidence',
           }}
           description={{
-            ja: '2歳以上のお子さまを対象に、参加型の英会話レッスンを提供しています。自信・発音・語彙力・自然なコミュニケーション力を育て、スピーキングとリスニング練習、フォニックスと発音強化、語彙力と文章作り、ロールプレイと参加型アクティビティを通して、自然で効果的に英語で自己表現ができる、自信あるコミュニケーターを育てます。',
-            en: 'Our Eikaiwa Program provides interactive English conversation lessons for children aged 2 years old and up. Classes focus on building confidence, pronunciation, vocabulary, and natural communication skills. Through speaking and listening practice, phonics and pronunciation, vocabulary and sentence building, and role play with interactive activities, we develop confident English communicators who can express themselves naturally and effectively.',
+            ja: '3歳以上のお子さまを対象に、参加型の英会話レッスンを提供しています。自信・発音・語彙力・自然なコミュニケーション力を育て、スピーキングとリスニング練習、フォニックスと発音強化、語彙力と文章作り、ロールプレイと参加型アクティビティを通して、自然で効果的に英語で自己表現ができる、自信あるコミュニケーターを育てます。',
+            en: 'Our Eikaiwa Program provides interactive English conversation lessons for children aged 3 and up. Classes focus on building confidence, pronunciation, vocabulary, and natural communication skills. Through speaking and listening practice, phonics and pronunciation, vocabulary and sentence building, and role play with interactive activities, we develop confident English communicators who can express themselves naturally and effectively.',
           }}
           ctaLabel={{
             ja: '英会話料金を見る',

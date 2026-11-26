@@ -40,18 +40,12 @@ const PricingSection = () => {
           label: "料金プラン",
           title: "料金一覧",
           subtitle:
-            "デイケア（通常・10:00〜15:00・短時間）、アフタースクール、英会話の月謝をまとめて確認できます。",
+            "アフタースクールと英会話の月謝をまとめて確認できます。",
           cta: "体験・相談はこちら",
           featuredLabel: "おすすめ",
           note:
-            "入会金はプログラムによって異なります。デイケア（通常・10:00〜15:00・短時間）は ¥50,000、アフタースクールは ¥30,000、英会話は ¥40,000（いずれも初回のみ）です。",
+            "入会金はプログラムによって異なります。アフタースクールは ¥30,000、英会話は ¥40,000（いずれも初回のみ）です。",
           plans: [
-            {
-              name: "デイケア（通常・10:00〜15:00・短時間）",
-              price: "¥14,000〜¥70,000 / 月",
-              meta: "月〜金（8:00〜17:00 / 10:00〜15:00 / 9:00〜13:00 / 10:00〜14:00）",
-              features: ["週1〜5回", "保険料 年額 ¥5,000", "延長保育: 30分 ¥700"],
-            },
             {
               name: "アフタースクール（14:00〜18:00）",
               price: "¥14,000〜¥46,000 / 月",
@@ -71,22 +65,12 @@ const PricingSection = () => {
           label: "Pricing",
           title: "Tuition Overview",
           subtitle:
-            "See monthly tuition for daycare (full day, 10:00-15:00, and short-hour), after-school, and one- or two-hour Eikaiwa programs.",
+            "See monthly tuition for after-school and one- or two-hour Eikaiwa programs.",
           cta: "Book trial / consult",
           featuredLabel: "Recommended",
           note:
-            "Admission fees vary by program: all daycare options are ¥50,000, after-school is ¥30,000, and Eikaiwa is ¥40,000 (all one-time).",
+            "Admission fees vary by program: after-school is ¥30,000, and Eikaiwa is ¥40,000 (all one-time).",
           plans: [
-            {
-              name: "Daycare (full, 10:00-15:00 & short-hour)",
-              price: "¥14,000-70,000 / month",
-              meta: "Monday-Friday (8:00-17:00 / 10:00-15:00 / 9:00-13:00 / 10:00-14:00)",
-              features: [
-                "1 to 5 days per week",
-                "Insurance fee: ¥5,000 annually",
-                "Extended care: ¥700 / 30 minutes",
-              ],
-            },
             {
               name: "After-School (14:00-18:00)",
               price: "¥14,000-46,000 / month",
@@ -125,7 +109,7 @@ const PricingSection = () => {
             <p className="text-base text-slate-600">{copy.subtitle}</p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             {copy.plans.map((plan, index) => {
               const theme = cardThemes[index % cardThemes.length];
 

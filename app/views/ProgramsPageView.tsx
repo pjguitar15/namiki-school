@@ -32,7 +32,7 @@ const ProgramsPageView = () => {
       },
       {
         label: isJa ? '対象年齢' : 'Age Range',
-        value: isJa ? '2歳〜中学生' : 'Ages 2 to Jr. High',
+        value: isJa ? '3歳以上' : 'Ages 3 and up',
       },
       {
         label: isJa ? '保護者サポート' : 'Parent Updates',
@@ -45,8 +45,8 @@ const ProgramsPageView = () => {
     {
       title: isJa ? '送り迎えしやすい時間設計' : 'Family-Friendly Scheduling',
       body: isJa
-        ? '平日中心の時間割で、保育園・学校との両立をサポート。'
-        : 'Weekday-centered schedules that fit daycare and school routines.',
+        ? '平日中心の時間割で、学校やご家庭の予定との両立をサポートします。'
+        : 'Weekday schedules that fit around school and family routines.',
     },
     {
       title: isJa ? '毎回の成長が見える' : 'Visible Weekly Progress',
@@ -64,8 +64,8 @@ const ProgramsPageView = () => {
 
   const pathways = [
     {
-      title: isJa ? '2〜6歳' : 'Ages 2-6',
-      subtitle: isJa ? 'Daycare / Early Years' : 'Daycare / Early Years',
+      title: isJa ? '3〜6歳' : 'Ages 3-6',
+      subtitle: isJa ? '幼児向け英会話' : 'Early Years Eikaiwa',
       body: isJa
         ? '歌・遊び・フォニックスで英語の音に自然に親しみ、話す土台を作ります。'
         : 'Songs, play, and phonics build a natural ear for English and early speaking confidence.',
@@ -295,12 +295,12 @@ const ProgramsPageView = () => {
                 </p>
                 <h2 className='text-3xl text-slate-900'>
                   {isJa
-                    ? '目的に合わせて選べる3つの主力プログラム'
-                    : 'Three core programs for different goals'}
+                    ? '目的に合わせて選べる英語プログラム'
+                    : 'English programs for different goals'}
                 </h2>
               </div>
             </FadeIn>
-            <div className='grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
+            <div className='grid gap-8 md:grid-cols-2'>
               {content.programs.map((program, index) => (
                 <FadeIn key={program.title} delay={index * 0.05}>
                   <ProgramCard program={program} />

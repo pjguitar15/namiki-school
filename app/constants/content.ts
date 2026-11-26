@@ -253,7 +253,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       badge: '明るく、のびのび学ぶ英語教室',
       headline: '英語をもっとやさしくしよう',
       subheadline:
-        '2歳から大人まで、自信を持って英語を話せるように。少人数クラスと楽しいアクティビティで、学ぶ喜びを育てます。',
+        '3歳から大人まで、自信を持って英語を話せるように。少人数クラスと楽しいアクティビティで、学ぶ喜びを育てます。',
       ctaPrimary: '体験レッスンを予約',
       ctaSecondary: '詳しく見る',
       stats: [
@@ -283,7 +283,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       },
       {
         title: 'ミッション',
-        body: '安心で温かい環境の中で質の高い英語教育を提供し、2歳から12歳までの子どもたちの自信ある英語力を育てます。さらに一人ひとりの個性と成長を大切にし、ご家庭や地域との強い信頼関係を築きます。',
+        body: '安心で温かい環境の中で質の高い英語教育を提供し、3歳から12歳までの子どもたちの自信ある英語力を育てます。さらに一人ひとりの個性と成長を大切にし、ご家庭や地域との強い信頼関係を築きます。',
       },
       {
         title: '教育理念',
@@ -291,20 +291,6 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       },
     ],
     programs: [
-      {
-        title: 'デイケアプログラム',
-        duration: '月〜金 / 8:00-17:00',
-        category: '2歳以上対象',
-        bulletPoints: [
-          '遊びを通した英語イマージョン',
-          '歌・フォニックス・絵本活動',
-          '日常生活習慣と社会性の育成',
-          '創造活動と身体活動',
-        ],
-        ctaLabel: 'お問い合わせ',
-        accentColor: 'bg-blue-500',
-        image: '/assets/asset-1.jpg',
-      },
       {
         title: '英会話クラス',
         duration: '1日1時間または2時間 / 週1〜5日',
@@ -390,12 +376,12 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
     aboutPage: {
       hero: {
         eyebrow: 'About the School',
-        title: '英語で伝える力を、2歳から大人まで',
+        title: '英語で伝える力を、3歳から大人まで',
         description:
           'ナミキイングリッシュスクールは、学ぶ楽しさと自信を育むために、少人数と実践的なアクティビティを大切にしています。',
         stats: [
           { label: '開校予定', value: '2026年4月' },
-          { label: '年齢層', value: '2歳〜大人' },
+          { label: '年齢層', value: '3歳〜大人' },
           { label: '講師', value: '英語に堪能な講師陣' },
         ],
       },
@@ -428,7 +414,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         },
         {
           title: 'ミッション',
-          body: '安心で温かい環境の中で質の高い英語教育を提供し、2歳から12歳までの子どもたちが自信を持って英語を話せるよう育てます。一人ひとりの成長を支え、ご家庭や地域との信頼関係を築きます。',
+          body: '安心で温かい環境の中で質の高い英語教育を提供し、3歳から12歳までの子どもたちが自信を持って英語を話せるよう育てます。一人ひとりの成長を支え、ご家庭や地域との信頼関係を築きます。',
         },
         {
           title: '教育理念',
@@ -570,7 +556,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         locationTitle: '場所',
         locationText: 'Namiki English School, Tsukuba',
         agesTitle: '対象年齢',
-        agesText: '2〜12歳',
+        agesText: '3〜12歳',
         taglinePrimary: '思い出に残る夏を。',
         taglineSecondary: '未来につながる学びを。',
         tableHeaders: {
@@ -818,7 +804,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       badge: 'A bright, interactive English classroom',
       headline: 'Let’s Make English Feel Easy',
       subheadline:
-        'For learners ages 2 and up. Small classes, friendly teachers, and activity-based lessons that build confidence.',
+        'For learners ages 3 and up. Small classes, friendly teachers, and activity-based lessons that build confidence.',
       ctaPrimary: 'Book a trial lesson',
       ctaSecondary: 'Explore programs',
       stats: [
@@ -856,7 +842,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       },
       {
         title: 'Mission',
-        body: 'To provide high-quality English education in a warm and safe environment, nurture confident speakers from ages 2 to 12, support each child’s unique learning journey, and build strong partnerships with families and the community.',
+        body: 'To provide high-quality English education in a warm and safe environment, nurture confident speakers from ages 3 to 12, support each child’s unique learning journey, and build strong partnerships with families and the community.',
       },
       {
         title: 'Philosophy',
@@ -864,20 +850,6 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
       },
     ],
     programs: [
-      {
-        title: 'Daycare Program',
-        duration: 'Mon-Fri / 8:00 AM-5:00 PM',
-        category: 'Ages 2 and up',
-        bulletPoints: [
-          'Play-based English immersion',
-          'Songs, phonics, and storytelling',
-          'Daily routines and social skill development',
-          'Creative arts and physical activities',
-        ],
-        ctaLabel: 'Contact us',
-        accentColor: 'bg-blue-500',
-        image: '/assets/asset-1.jpg',
-      },
       {
         title: 'Eikaiwa Classes',
         duration: '1 or 2 hours per day / 1–5 days per week',
@@ -963,12 +935,12 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
     aboutPage: {
       hero: {
         eyebrow: 'About the School',
-        title: 'English confidence for ages 2 and up',
+        title: 'English confidence for ages 3 and up',
         description:
           'We keep classes small and hands-on so learners of any age can enjoy English and speak with confidence.',
         stats: [
           { label: 'Opening', value: 'April 2026' },
-          { label: 'Ages', value: '2+ years' },
+          { label: 'Ages', value: '3+ years' },
           { label: 'Teachers', value: 'English-proficient team' },
         ],
       },
@@ -1000,7 +972,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         },
         {
           title: 'Mission',
-          body: 'We provide high-quality English education in a warm, safe environment, nurture confident speakers ages 2 to 12, support each child’s learning journey and build strong partnerships with families and the community.',
+          body: 'We provide high-quality English education in a warm, safe environment, nurture confident speakers ages 3 to 12, support each child’s learning journey and build strong partnerships with families and the community.',
         },
         {
           title: 'Philosophy',
@@ -1160,7 +1132,7 @@ export const LANGUAGE_CONTENT: Record<LanguageCode, LanguageContent> = {
         locationTitle: 'Location',
         locationText: 'Namiki English School, Tsukuba',
         agesTitle: 'Ages',
-        agesText: '2 - 12 years old',
+        agesText: '3 - 12 years old',
         taglinePrimary: 'A summer to remember.',
         taglineSecondary: 'A future to inspire.',
         tableHeaders: {

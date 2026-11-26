@@ -12,9 +12,9 @@ export async function generateMetadata({
   const { lang } = await params;
 
   return createPageMetadata({
-    title: "English Programs for Ages 2+",
+    title: "English Programs for Ages 3+",
     description:
-      "Explore age-based English programs at Namiki English School, including daycare, Eikaiwa, and after-school pathways in Tsukuba.",
+      "Explore age-based English programs at Namiki English School, including Eikaiwa and after-school pathways in Tsukuba.",
     path: "/programs",
     locale: lang,
     keywords: [

@@ -14,7 +14,7 @@ export async function generateMetadata({
   return createPageMetadata({
     title: "Admissions and Enrollment",
     description:
-      "Follow Namiki English School's admissions process from trial lesson to enrollment for daycare, Eikaiwa, and after-school classes.",
+      "Follow Namiki English School's admissions process from trial lesson to enrollment for Eikaiwa and after-school classes.",
     path: "/admissions",
     locale: lang,
     keywords: [

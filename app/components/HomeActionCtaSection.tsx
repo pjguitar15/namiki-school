@@ -17,7 +17,7 @@ const HomeActionCtaSection = () => {
           actions: [
             {
               title: "料金を確認",
-              body: "デイケア・英会話・アフタースクールの最新料金を一覧でチェック。",
+              body: "英会話・アフタースクールの最新料金を一覧でチェック。",
               href: "/pricing",
               cta: "料金ページへ",
               icon: LuJapaneseYen,
@@ -50,7 +50,7 @@ const HomeActionCtaSection = () => {
           actions: [
             {
               title: "Check pricing",
-              body: "View daycare, Eikaiwa, and after-school rates in one place.",
+              body: "View Eikaiwa and after-school rates in one place.",
               href: "/pricing",
               cta: "Open pricing",
               icon: LuJapaneseYen,

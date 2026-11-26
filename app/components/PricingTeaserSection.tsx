@@ -15,7 +15,7 @@ const PricingTeaserSection = () => {
           eyebrow: '料金のご案内',
           title: 'お子さまに合うプランを見つけよう',
           description:
-            'デイケア、アフタースクール、英会話の料金をまとめてチェック。回数や時間に合わせて選べます。',
+            'アフタースクールと英会話の料金をまとめてチェック。回数や時間に合わせて選べます。',
           cta: '料金ページを見る',
           cards: [
             {
@@ -39,7 +39,7 @@ const PricingTeaserSection = () => {
           eyebrow: 'Pricing Guide',
           title: 'Find the best plan for your child',
           description:
-            'Compare daycare, after-school, and one- or two-hour Eikaiwa plans in one place. Choose by days and schedule.',
+            'Compare after-school and one- or two-hour Eikaiwa plans in one place. Choose by days and schedule.',
           cta: 'View Pricing',
           cards: [
             {

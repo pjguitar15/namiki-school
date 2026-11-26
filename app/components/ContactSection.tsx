@@ -22,18 +22,18 @@ const ContactSection = ({ variant = "compact" }: ContactSectionProps) => {
   const flyerCopy =
     language === "ja"
       ? {
-          programs: "Daycare / Eikaiwa / After School",
+          programs: "Eikaiwa / After School",
           schedule: "Monday-Friday | 8:00-17:00",
-          ages: "Ages 2 and up",
+          ages: "Ages 3 and up",
           trial: "Free Trial Lesson Available!",
           callout: "Call us today to reserve your spot!",
           location: "Location",
           quickContact: "Quick Contact",
         }
       : {
-          programs: "Daycare / Eikaiwa / After School",
+          programs: "Eikaiwa / After School",
           schedule: "Monday-Friday | 8:00-17:00",
-          ages: "Ages 2 and up",
+          ages: "Ages 3 and up",
           trial: "Free Trial Lesson Available!",
           callout: "Call us today to reserve your spot!",
           location: "Location",

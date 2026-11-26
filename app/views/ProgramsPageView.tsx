@@ -62,43 +62,16 @@ const ProgramsPageView = () => {
     },
   ];
 
-  const pathways = [
-    {
-      title: isJa ? '3〜6歳' : 'Ages 3-6',
-      subtitle: isJa ? '幼児向け英会話' : 'Early Years Eikaiwa',
-      body: isJa
-        ? '歌・遊び・フォニックスで英語の音に自然に親しみ、話す土台を作ります。'
-        : 'Songs, play, and phonics build a natural ear for English and early speaking confidence.',
-      image: '/assets/asset-1.jpg',
-    },
-    {
-      title: isJa ? '小学生' : 'Elementary',
-      subtitle: isJa ? 'After School / Eikaiwa' : 'After School / Eikaiwa',
-      body: isJa
-        ? '会話に加えて読解・語彙・ライティングを強化。学校英語との相乗効果を高めます。'
-        : 'Strengthens conversation, reading, vocabulary, and writing with school-aligned support.',
-      image: '/assets/asset-4.jpg',
-    },
-    {
-      title: isJa ? '中学生' : 'Junior High',
-      subtitle: isJa ? 'Practical Communication' : 'Practical Communication',
-      body: isJa
-        ? 'ディスカッションや発表で、自分の考えを英語で伝える力を育てます。'
-        : 'Discussion and presentation-focused classes to communicate ideas clearly in English.',
-      image: '/assets/asset-8.jpg',
-    },
-  ];
-
   const lessonOptions = isJa
     ? [
         { title: '1時間の英会話クラス', detail: '3歳以上で英語が初めてのお子さまや、短めのレッスンから始めたいお子さまに。歌や絵本、短いゲームを通して、英語を聞いたり話したりすることに少しずつ慣れていきます。' },
         { title: '2時間の英会話クラス', detail: '英語を使う時間を増やしたいお子さまに。毎回のテーマに沿って会話で単語や表現を学び、ゲームや工作などの体験活動で実際に使います。' },
-        { title: '放課後英語プログラム', detail: '6〜12歳が対象で、月曜日から金曜日に開講します。工作やグループ活動で、あいさつや道具の貸し借り、順番を譲り合うときに使う日常英語を練習します。発表や宿題のサポートを通して、学力と表現力も育てます。' },
+        { id: 'after-school', title: '放課後英語プログラム', detail: '6〜12歳が対象で、月曜日から金曜日に開講します。工作やグループ活動で、あいさつや道具の貸し借り、順番を譲り合うときに使う日常英語を練習します。発表や宿題のサポートを通して、学力と表現力も育てます。' },
       ]
     : [
         { title: '1-hour Eikaiwa', detail: 'For children ages 3 and up who are new to English or prefer a shorter lesson. Children build confidence in listening and speaking through songs, stories and short games.' },
         { title: '2-hour Eikaiwa', detail: 'For children ready for a longer lesson and more time to use English. Each session has a theme. Children learn words and phrases through conversation, then use them in games, crafts or hands-on projects.' },
-        { title: 'After-School English Programme', detail: 'For children ages 6 to 12, Monday to Friday. Children practise everyday English by greeting classmates, asking for materials and taking turns in group activities. Presentations and homework support help build academic and communication skills.' },
+        { id: 'after-school', title: 'After-School English Programme', detail: 'For children ages 6 to 12, Monday to Friday. Children practise everyday English by greeting classmates, asking for materials and taking turns in group activities. Presentations and homework support help build academic and communication skills.' },
       ];
 
   const outcomes = isJa
@@ -150,12 +123,6 @@ const ProgramsPageView = () => {
     'border-cyan-200 bg-gradient-to-br from-cyan-50 to-sky-100/70',
     'border-emerald-200 bg-gradient-to-br from-emerald-50 to-lime-100/70',
     'border-orange-200 bg-gradient-to-br from-orange-50 to-amber-100/70',
-  ];
-
-  const pathwayStyles = [
-    'border-sky-200 bg-gradient-to-b from-white to-sky-50/80',
-    'border-emerald-200 bg-gradient-to-b from-white to-emerald-50/80',
-    'border-orange-200 bg-gradient-to-b from-white to-amber-50/80',
   ];
 
   return (
@@ -228,65 +195,6 @@ const ProgramsPageView = () => {
         </section>
 
         <Container className='space-y-14 py-12 md:space-y-16 md:py-16'>
-          <FadeIn>
-            <section className='grid gap-4 md:grid-cols-3'>
-              {parentPromises.map((item, index) => (
-                <article
-                  key={item.title}
-                  className={`rounded-3xl border p-6 shadow-sm ${promiseStyles[index % promiseStyles.length]}`}
-                >
-                  <h2 className='text-xl text-slate-900'>{item.title}</h2>
-                  <p className='mt-3 text-sm leading-relaxed text-slate-700'>
-                    {item.body}
-                  </p>
-                </article>
-              ))}
-            </section>
-          </FadeIn>
-
-          <section className='space-y-5'>
-            <FadeIn>
-              <div className='space-y-2'>
-                <p className='text-sm font-semibold uppercase tracking-[0.2em] text-cyan-700'>
-                  {isJa ? '年齢別ガイド' : 'Age Pathways'}
-                </p>
-                <h2 className='text-3xl text-slate-900'>
-                  {isJa
-                    ? 'お子さまの成長段階に合わせた学習ロードマップ'
-                    : 'A clear pathway for each growth stage'}
-                </h2>
-              </div>
-            </FadeIn>
-            <div className='grid gap-5 md:grid-cols-3'>
-              {pathways.map((path, index) => (
-                <FadeIn key={path.title} delay={index * 0.06}>
-                  <article
-                    className={`overflow-hidden rounded-3xl border shadow-sm ${pathwayStyles[index % pathwayStyles.length]}`}
-                  >
-                    <div className='relative h-44'>
-                      <Image
-                        src={path.image}
-                        alt={path.title}
-                        fill
-                        sizes='(min-width: 1024px) 33vw, 100vw'
-                        className='object-cover'
-                      />
-                    </div>
-                    <div className='space-y-3 p-5'>
-                      <p className='text-xs font-semibold uppercase tracking-[0.15em] text-slate-500'>
-                        {path.subtitle}
-                      </p>
-                      <h3 className='text-xl text-slate-900'>{path.title}</h3>
-                      <p className='text-sm leading-relaxed text-slate-700'>
-                        {path.body}
-                      </p>
-                    </div>
-                  </article>
-                </FadeIn>
-              ))}
-            </div>
-          </section>
-
           <section className='space-y-5'>
             <FadeIn>
               <div className='space-y-2'>
@@ -311,12 +219,12 @@ const ProgramsPageView = () => {
 
           <section aria-labelledby='lesson-options' className='rounded-3xl border border-cyan-200 bg-gradient-to-br from-cyan-50 via-white to-sky-50 p-6 md:p-10'>
             <FadeIn>
-              <h2 id='lesson-options' className='mb-6 text-3xl text-slate-900'>
+              <h2 id='lesson-options' className='mb-6 scroll-mt-24 text-3xl text-slate-900'>
                 {isJa ? 'お子さまに合った英語プログラム' : 'Choose the right English programme for your child'}
               </h2>
               <div className='grid gap-4 md:grid-cols-3'>
                 {lessonOptions.map((item) => (
-                  <article key={item.title} className='rounded-2xl bg-white p-5 ring-1 ring-cyan-100'>
+                  <article id={item.id} key={item.title} className='scroll-mt-24 rounded-2xl bg-white p-5 ring-1 ring-cyan-100'>
                     <h3 className='text-xl text-slate-900'>{item.title}</h3>
                     <p className='mt-2 text-sm leading-relaxed text-slate-700'>{item.detail}</p>
                   </article>
@@ -324,6 +232,22 @@ const ProgramsPageView = () => {
               </div>
             </FadeIn>
           </section>
+
+          <FadeIn>
+            <section className='grid gap-4 md:grid-cols-3'>
+              {parentPromises.map((item, index) => (
+                <article
+                  key={item.title}
+                  className={`rounded-3xl border p-6 shadow-sm ${promiseStyles[index % promiseStyles.length]}`}
+                >
+                  <h2 className='text-xl text-slate-900'>{item.title}</h2>
+                  <p className='mt-3 text-sm leading-relaxed text-slate-700'>
+                    {item.body}
+                  </p>
+                </article>
+              ))}
+            </section>
+          </FadeIn>
 
           <section className='grid gap-6 md:grid-cols-2'>
             <FadeIn>

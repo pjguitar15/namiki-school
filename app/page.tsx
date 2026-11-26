@@ -22,6 +22,56 @@ export function HomePageView() {
       <Navbar />
       <main className='flex flex-1 flex-col gap-2'>
         <Hero />
+        <MontessoriFeatureSection
+          eyebrow={{
+            ja: '1時間・2時間英会話レッスン',
+            en: '1- or 2-Hour Eikaiwa Lessons',
+          }}
+          title={{
+            ja: '会話中心で自信がつく英会話クラス',
+            en: 'Conversation-first Eikaiwa that builds confidence',
+          }}
+          description={{
+            ja: '3歳以上のお子さま向けの1時間または2時間のレッスンです。歌や絵本、ゲームを通して、英語を聞いたり話したりする自信を育てます。',
+            en: 'One- or two-hour English conversation lessons for children ages 3 and up. Songs, stories and games help children build confidence in listening and speaking.',
+          }}
+          ctaLabel={{
+            ja: '英会話レッスンを見る',
+            en: 'Explore Eikaiwa lessons',
+          }}
+          ctaHref='/programs#lesson-options'
+          imageAlt={{
+            ja: '英会話レッスンで学ぶ生徒',
+            en: 'Students in Eikaiwa lesson',
+          }}
+          imageSrc='/assets/asset-8.jpg'
+          reverse={false}
+        />
+        <MontessoriFeatureSection
+          eyebrow={{
+            ja: 'アフタースクール',
+            en: 'After School Program',
+          }}
+          title={{
+            ja: '放課後に使える英語を学ぶ',
+            en: 'Use English in everyday activities after school',
+          }}
+          description={{
+            ja: '6〜12歳を対象に、月曜日から金曜日まで開講します。工作やグループ活動を通して日常の英語を練習し、宿題もサポートします。',
+            en: 'For children ages 6 to 12, Monday to Friday. Children practise everyday English through crafts and group activities, with support for homework.',
+          }}
+          ctaLabel={{
+            ja: '放課後プログラムを見る',
+            en: 'Explore After School',
+          }}
+          ctaHref='/programs#after-school'
+          imageAlt={{
+            ja: '放課後プログラムに参加する子どもたち',
+            en: 'Students in after-school program',
+          }}
+          imageSrc='/assets/asset-7.jpg'
+          reverse={true}
+        />
         <SummerSchoolPromoSection />
         <TwoVerticalImageSection />
         <HomeActionCtaSection />
@@ -53,56 +103,6 @@ export function HomePageView() {
         />
         <HiringSpotlightSection />
 
-        {/* <MontessoriFeatureSection
-          eyebrow={{
-            ja: 'アフタースクール',
-            en: 'After School Program',
-          }}
-          title={{
-            ja: '放課後を学びのゴールデンタイムに',
-            en: 'Turn after-school hours into growth time',
-          }}
-          description={{
-            ja: '学校後の時間を活かして、英語学習と宿題サポートをバランスよく実施。フォニックス・リーディング・ライティング・会話力を段階的に伸ばします。',
-            en: 'We blend English immersion with homework support after school, helping learners build phonics, reading, writing, and conversation skills step by step.',
-          }}
-          ctaLabel={{
-            ja: 'アフタースクール料金',
-            en: 'View after-school rates',
-          }}
-          ctaHref='/pricing'
-          imageAlt={{
-            ja: '放課後プログラムに参加する子どもたち',
-            en: 'Students in after-school program',
-          }}
-          imageSrc='/assets/asset-7.jpg'
-          reverse={true}
-        /> */}
-        <MontessoriFeatureSection
-          eyebrow={{
-            ja: '1時間・2時間英会話レッスン',
-            en: '1- or 2-Hour Eikaiwa Lessons',
-          }}
-          title={{
-            ja: '会話中心で自信がつく英会話クラス',
-            en: 'Conversation-first Eikaiwa that builds confidence',
-          }}
-          description={{
-            ja: '3歳以上のお子さまを対象に、参加型の英会話レッスンを提供しています。自信・発音・語彙力・自然なコミュニケーション力を育て、スピーキングとリスニング練習、フォニックスと発音強化、語彙力と文章作り、ロールプレイと参加型アクティビティを通して、自然で効果的に英語で自己表現ができる、自信あるコミュニケーターを育てます。',
-            en: 'Our Eikaiwa Program provides interactive English conversation lessons for children aged 3 and up. Classes focus on building confidence, pronunciation, vocabulary, and natural communication skills. Through speaking and listening practice, phonics and pronunciation, vocabulary and sentence building, and role play with interactive activities, we develop confident English communicators who can express themselves naturally and effectively.',
-          }}
-          ctaLabel={{
-            ja: '英会話料金を見る',
-            en: 'See Eikaiwa rates',
-          }}
-          ctaHref='/pricing'
-          imageAlt={{
-            ja: '英会話レッスンで学ぶ生徒',
-            en: 'Students in Eikaiwa lesson',
-          }}
-          imageSrc='/assets/asset-8.jpg'
-          reverse={false}
-        />
         <ColorfulSchoolSectionLocalized />
         <AboutSection />
         <ClassesOverviewSection />
